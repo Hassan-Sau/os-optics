@@ -1,24 +1,39 @@
-name: Feature or documentation
-description: Suggest a capability, guide, or translation.
+name: Feature, engine change or documentation
+description: Propose a capability, engine change, guide, or translation.
 title: "[Idea] "
 body:
   - type: markdown
     attributes:
       value: |
-        Write your suggestion in your preferred language; English is not required.
+        Please write the proposal in English; you may add your original wording below it.
+        See [CONTRIBUTING.md](https://github.com/JunLin615/os-optics/blob/main/CONTRIBUTING.md).
         User guides: [English](https://github.com/JunLin615/os-optics/blob/main/docs/en/README.md) · [简体中文](https://github.com/JunLin615/os-optics/blob/main/docs/zh-CN/README.md).
-        Maintainers: use English by default for issue summaries and triage notes; preserve the contributor's original wording.
-  - type: textarea
-    id: use_case
-    attributes:
-      label: What would you like to do?
-      description: Describe your experiment or workflow.
-    validations:
-      required: true
   - type: textarea
     id: suggestion
     attributes:
-      label: Your suggestion
-      description: Suggest a capability, documentation improvement, or translation.
+      label: Remaining work
+      description: What has to change, stated as concrete deliverables.
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Background
+      description: Optional. Your experiment or workflow, motivation, and links.
+  - type: textarea
+    id: where
+    attributes:
+      label: Where the work lives
+      description: The files or modules involved, such as a module path under `os_optics/` or a page under `docs/`.
+      placeholder: "os_optics/... or docs/en/catalog.md"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance
+      description: Checkable items — given input -> expected output, command -> result, or a test that fails before and passes after.
+      value: |
+        - [ ] 
     validations:
       required: true
