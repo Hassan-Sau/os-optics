@@ -13,6 +13,8 @@ import pytest
 from os_optics.cli import USAGE_ERROR
 from os_optics.cli import main as cli_main
 
+from deep_json import UNREADABLE_DEPTH, deep_array
+
 
 def _known_loss_catalog():
     from local_helpers import catalog_document, with_lossless_bulk
@@ -86,7 +88,7 @@ def test_a_run_whose_ids_look_like_formulas_exports_them_neutralized() -> None:
 
 # ---- A3: a damaged run directory is INCONSISTENT (exit 66), never a crash ---------------------------------------------
 
-DEEP_ARRAY = b"[" * 100_000 + b"]" * 100_000
+DEEP_ARRAY = deep_array().encode()
 
 
 def _manifest_edit(change):
@@ -114,7 +116,7 @@ TAMPERING = {
     "project_string": _manifest_edit(lambda m: m.__setitem__("project", "x")),
     "manifest_deep": _write("manifest.json", DEEP_ARRAY),
     "ray_data_deep": _write("ray_data.json", DEEP_ARRAY),
-    "project_deep": _write("project.json", b'{"a":' * 100_000 + b"1" + b"}" * 100_000),
+    "project_deep": _write("project.json", b'{"a":' * UNREADABLE_DEPTH + b"1" + b"}" * UNREADABLE_DEPTH),
 }
 
 
@@ -155,7 +157,7 @@ def test_a_damaged_run_directory_is_inconsistent_and_never_crashes(case: str, go
 
 # ---- A2: malformed JSON text is a structured refusal ------------------------------------------------------------------
 
-DEEP_TEXT = "[" * 100_000 + "]" * 100_000
+DEEP_TEXT = deep_array()
 BIGINT_TEXT = '{"schema": "opensci.project", "n": ' + "9" * 5000 + "}"
 MALFORMED = {"deep": DEEP_TEXT.encode(), "bigint": BIGINT_TEXT.encode(), "latin1": '{"a": "caf\xe9"}'.encode("latin-1")}
 

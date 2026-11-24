@@ -31,6 +31,7 @@ from os_optics.run_control import RUN_PHASES, RunStopped, monitored
 from os_optics.run_monitor import RunMonitor
 
 from composition_helpers import laser, power_target, project_of, screen
+from deep_json import deep_array
 
 PHASES_RUN = ["lower", "preflight", "trace", "preflight", "emitters", "observation_results", "untraced_light", "bounds",
               "exposures", "interference", "targets", "result", "ray_paths", "model_scope", "record", "scene"]
@@ -2194,9 +2195,6 @@ def test_a_configuration_run_in_place_stays_whole_when_a_write_into_it_stops(tmp
 
 # ------------------------------------------------------------------ a hand-edited manifest
 
-_DEEP = 100_000
-
-
 @pytest.mark.parametrize("edit", ["unhashable_name", "files_not_a_list", "odd_entries", "nested_too_deeply", "outside_name",
                                   "outside_configuration"])
 @pytest.mark.parametrize("outcome", ATTEMPTS)
@@ -2231,7 +2229,7 @@ def test_a_hand_edited_manifest_never_crashes_a_run_and_names_nothing_outside(tm
                                       {"directory": 7}, None, {"directory": "configurations/.."}]
     text = json.dumps(manifest)
     if edit == "nested_too_deeply":
-        text = text[:-1] + ", \"deep\": " + "[" * _DEEP + "]" * _DEEP + "}"
+        text = text[:-1] + ", \"deep\": " + deep_array() + "}"
     (out / MANIFEST_FILE).write_text(text, encoding="utf-8")
     before = _files(out)
     assert _cli_code(_attempt(tmp_path, outcome, out)) == EXPECTED_CODE[outcome]

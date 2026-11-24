@@ -18,6 +18,7 @@ import time
 
 import pytest
 from assembly_helpers import apply, box, datum_world, part, set_geometry, without_last_triangles
+from deep_json import UNREADABLE_DEPTH, deep_array
 from drawing_helpers import (
     DETAIL_JSON,
     FORBIDDEN_TOKENS,
@@ -1339,8 +1340,8 @@ MALFORMED = DrawingErrorCode.DETAIL_PACKAGE_MALFORMED
 FUZZ_DETAILS = {
     "deep_900": (_nested(900), {MALFORMED}),
     "deep_5000": (_nested(5000), {MALFORMED}),
-    "deep_100000": (_nested(100_000), {MALFORMED}),
-    "deep_top_level": (b"[" * 100_000 + b"]" * 100_000, {MALFORMED}),
+    "deep_unreadable": (_nested(UNREADABLE_DEPTH), {MALFORMED}),
+    "deep_top_level": (deep_array().encode(), {MALFORMED}),
     "deep_in_a_field": (_with_revision("[" * 5000 + "]" * 5000), {MALFORMED}),
     "nan": (_with_revision("NaN"), {MALFORMED}),
     "infinity": (_with_revision("Infinity"), {MALFORMED}),
@@ -1406,7 +1407,7 @@ FUZZ_PREVIEWS = {
     "deep_scene": lambda f: _resigned({**f, "scene.json": b'{"x": ' + b"[" * 5000 + b"]" * 5000 + b"}"}),
     "nan_scene": lambda f: _resigned({**f, "scene.json": f["scene.json"].replace(b'"thickness_mm": 12.7', b'"thickness_mm": NaN')}),
     "bad_utf8_scene": lambda f: _resigned({**f, "scene.json": b'{"\xff": 1}'}),
-    "deep_manifest": lambda f: {**f, "manifest.json": b"[" * 100_000 + b"]" * 100_000},
+    "deep_manifest": lambda f: {**f, "manifest.json": deep_array().encode()},
     "surrogate_manifest": lambda f: {**f, "manifest.json": b'{"schema": "\\ud800"}'},
 }
 
@@ -1430,7 +1431,7 @@ def test_fuzzed_preview_packages_are_refused_with_a_stable_code_at_every_entry_p
 
 
 def test_fuzzed_drawing_outputs_never_raise(ref, tmp_path, capsys):
-    deep = b'{"x": ' + b"[" * 100_000 + b"]" * 100_000 + b"}"
+    deep = b'{"x": ' + deep_array().encode() + b"}"
     for index, data in enumerate((deep, b"\xff\xfe", b'{"x": NaN}', b'"\\ud800"')):
         for name in (RESULT, MANIFEST):
             files = {**ref.files, name: data}
