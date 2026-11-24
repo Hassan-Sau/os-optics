@@ -22,12 +22,13 @@
 | --- | --- | --- |
 | [`os-optics`](https://pypi.org/project/os-optics/) | PyPI | 引擎：光学元件目录、仿真、结果与三维视图 |
 | [`os-optics-kit`](https://pypi.org/project/os-optics-kit/) | PyPI | 基于引擎的工具、案例和 Agent 技能 |
-| [`os-optics`](https://github.com/JunLin615/os-optics) | GitHub | 本仓库：产品文档与问题反馈 |
+| [`os-optics`](https://github.com/JunLin615/os-optics) | GitHub | 本仓库：引擎源代码、测试与发布流程，产品文档与问题反馈 |
 | [`os-optics-kit`](https://github.com/JunLin615/os-optics-kit) | GitHub | 社区仓库：工具、案例、技能与贡献 |
 
 使用 `python -m pip install "os-optics[protected]"` 安装引擎。完整案例和工具见
 [os-optics-kit](https://github.com/JunLin615/os-optics-kit)。本文档对应 os-optics **0.13.0**，
-该版本记录在 [engine-baseline.json](engine-baseline.json) 中。
+该版本记录在 [engine-baseline.json](engine-baseline.json) 中。`main` 分支上的引擎源代码是尚未发布的下一个版本：
+`pip install os-optics` 安装的是最新已发布版本。源代码自身的参考文档见 [docs/engine](docs/engine/README.md)（英文）。
 
 ## 你可以做什么
 
@@ -110,8 +111,8 @@ os-optics-kit 中的每个案例都注明了验证时使用的引擎和目录版
 
 ## 参与项目
 
-欢迎用中文或英文交流使用问题、报告 Bug，以及改进文档。[提交 Issue](https://github.com/JunLin615/os-optics/issues/new/choose)，或通过 Pull Request 贡献文档。案例、工具和技能通过 [os-optics-kit](https://github.com/JunLin615/os-optics-kit) 分享，你的 Agent 可以把完成的设计整理成案例 Pull Request。
+欢迎用中文或英文交流使用问题、报告 Bug，以及改进文档。[提交 Issue](https://github.com/JunLin615/os-optics/issues/new/choose)，或提交 Pull Request。引擎源代码位于 `src/os_optics`，测试位于 `tests`，开发说明见 [docs/engine/DEVELOPMENT.md](docs/engine/DEVELOPMENT.md)（英文）。案例、工具和技能通过 [os-optics-kit](https://github.com/JunLin615/os-optics-kit) 分享，你的 Agent 可以把完成的设计整理成案例 Pull Request。
 
 ## 许可
 
-本仓库中的文档和脚本采用 [MIT 许可证](LICENSE)。OpenSci 和 OS Optics 名称是商标；`assets/` 中的标志和品牌图形也是商标，不在该许可范围内（[assets/LICENSE](assets/LICENSE)、[TRADEMARK.md](TRADEMARK.md)）。通过 PyPI 分发的 os-optics 引擎仍采用 OpenSci Engine License，[os-optics-kit](https://github.com/JunLin615/os-optics-kit) 仍采用 MIT 许可证。
+本仓库（引擎源代码、测试、文档和脚本）采用 [MIT 许可证](LICENSE)。OpenSci 和 OS Optics 名称是商标；`assets/` 中的标志和品牌图形也是商标，不在该许可范围内（[assets/LICENSE](assets/LICENSE)、[TRADEMARK.md](TRADEMARK.md)）。从 0.14.0 起，由本源代码构建的 os-optics 版本采用 MIT 许可证分发；PyPI 上 0.13.0 及更早的版本保留其发布时的 OpenSci Engine License。[os-optics-kit](https://github.com/JunLin615/os-optics-kit) 采用 MIT 许可证。随附的第三方组件保留其各自的许可（three.js：`src/os_optics/viewer/assets/THREE_LICENSE.txt`；`tests/fixtures/materials` 中的材料数据注明了各自的来源）。

@@ -22,12 +22,14 @@ When a design is ready, continue to [OpenSci](https://opensci-optics.com/) for o
 | --- | --- | --- |
 | [`os-optics`](https://pypi.org/project/os-optics/) | PyPI | The engine: optical catalog, simulation, results and 3D view |
 | [`os-optics-kit`](https://pypi.org/project/os-optics-kit/) | PyPI | Tools, cases and agent skills built on the engine |
-| [`os-optics`](https://github.com/JunLin615/os-optics) | GitHub | This repository: product documentation and feedback |
+| [`os-optics`](https://github.com/JunLin615/os-optics) | GitHub | This repository: the engine source, its tests and release workflow, product documentation and feedback |
 | [`os-optics-kit`](https://github.com/JunLin615/os-optics-kit) | GitHub | Community repository: tools, cases, skills and contributions |
 
 Install the engine with `python -m pip install "os-optics[protected]"`. Browse worked cases
 and tools in [os-optics-kit](https://github.com/JunLin615/os-optics-kit). This documentation
 describes os-optics **0.13.0**, the release recorded in [engine-baseline.json](engine-baseline.json).
+The engine source on `main` is the next release, not yet published: `pip install os-optics` installs the latest
+published release. The source's own reference is [docs/engine](docs/engine/README.md).
 
 ## What you can do
 
@@ -111,8 +113,8 @@ Each case in os-optics-kit states the engine and catalog releases it was verifie
 
 ## Get involved
 
-Questions, bug reports, and documentation improvements are welcome in English or Chinese. [Open an issue](https://github.com/JunLin615/os-optics/issues/new/choose) or send a documentation pull request. Share cases, tools and skills through [os-optics-kit](https://github.com/JunLin615/os-optics-kit), where your agent can package a finished design as a case pull request.
+Questions, bug reports, and documentation improvements are welcome in English or Chinese. [Open an issue](https://github.com/JunLin615/os-optics/issues/new/choose) or send a pull request. The engine source is in `src/os_optics`, its tests in `tests`, and its development notes in [docs/engine/DEVELOPMENT.md](docs/engine/DEVELOPMENT.md). Share cases, tools and skills through [os-optics-kit](https://github.com/JunLin615/os-optics-kit), where your agent can package a finished design as a case pull request.
 
 ## License
 
-The documentation and scripts in this repository are available under the [MIT License](LICENSE). The OpenSci and OS Optics names are trademarks; the logo and brand artwork in `assets/` are also trademarks and are excluded from that licence ([assets/LICENSE](assets/LICENSE), [TRADEMARK.md](TRADEMARK.md)). The os-optics engine distributed on PyPI remains under the OpenSci Engine License, and [os-optics-kit](https://github.com/JunLin615/os-optics-kit) remains under the MIT License.
+This repository -- the engine source, its tests, documentation and scripts -- is available under the [MIT License](LICENSE). The OpenSci and OS Optics names are trademarks; the logo and brand artwork in `assets/` are also trademarks and are excluded from that licence ([assets/LICENSE](assets/LICENSE), [TRADEMARK.md](TRADEMARK.md)). os-optics releases built from this source, from 0.14.0 on, are distributed under the MIT License; releases 0.13.0 and earlier on PyPI keep the OpenSci Engine License they were published under. [os-optics-kit](https://github.com/JunLin615/os-optics-kit) is under the MIT License. Bundled third-party components keep their own licences (three.js: `src/os_optics/viewer/assets/THREE_LICENSE.txt`; the material data in `tests/fixtures/materials` cite their sources).
