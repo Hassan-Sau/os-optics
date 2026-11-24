@@ -1,0 +1,783 @@
+{
+  "binding": {
+    "commercial_bom": {
+      "bom_hash": {
+        "digest": "088420947cef78d5d54c12158eb87db406af89ba8038b108a3cc22d15d577af3",
+        "profile": "osc1",
+        "subject": "customer_purchase_bom"
+      }
+    },
+    "commercial_resolution_id": "0190c0de-0000-7000-8000-000000000001",
+    "local_validation_hash": {
+      "digest": "c0f82a4606af511309e1191284684d6294ffac787686d4ed11ac1d5e4f64b130",
+      "profile": "osc1",
+      "subject": "local_validation_record"
+    },
+    "preview_package_content_hash": "af9c80196e5683acce4e2b1fe1bcaaa0718d8650ad16b9b36417fe397e0359ee",
+    "preview_package_revision": 1,
+    "project": {
+      "project_hash": {
+        "digest": "63e2b862d8944b075b92f5cb02352b2efe5d12e6d33eb941ec9d85578bb3435c",
+        "profile": "osc1",
+        "subject": "project_document"
+      },
+      "project_schema": "opensci.project",
+      "project_schema_version": "2.0"
+    }
+  },
+  "customer_supplied_models": [],
+  "detail_content_hash": "e026208951eea2b0167b6fc0ee94d79e30f27321e35383d17b61647d27349105",
+  "dimensions": [
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-1",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b04-post-holder-base",
+      "to_point": {
+        "hole": [
+          14,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-2",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b04-post-holder-base",
+      "to_point": {
+        "hole": [
+          14,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "REFERENCE",
+      "dim_ref": "dim-3",
+      "from_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b04-post-holder-base"
+      },
+      "kind": "FIXATION_OFFSET",
+      "subject_part_ref": "b04-post-holder-base",
+      "to_point": {
+        "hole": [
+          14,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "NOMINAL",
+      "dim_ref": "dim-4",
+      "from_point": {
+        "datum_key": "bottom",
+        "kind": "PART_DATUM",
+        "part_ref": "b03-post"
+      },
+      "kind": "INSERTION_DEPTH",
+      "setting": {
+        "kind": "INSERTION_DEPTH",
+        "part_ref": "b03-post"
+      },
+      "subject_part_ref": "b03-post",
+      "to_point": {
+        "datum_key": "bore_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b04-post-holder-base"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-5",
+      "from_point": {
+        "datum_key": "board_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTICAL_AXIS_HEIGHT",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-6",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-7",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-8",
+      "from_point": {
+        "instance_id": "SRC",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-9",
+      "from_point": {
+        "instance_id": "SRC2",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-10",
+      "from_point": {
+        "instance_id": "SRC3",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-11",
+      "from_point": {
+        "instance_id": "SRC4",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b01-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b01-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-12",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b08-post-holder-base",
+      "to_point": {
+        "hole": [
+          10,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-13",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b08-post-holder-base",
+      "to_point": {
+        "hole": [
+          10,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "REFERENCE",
+      "dim_ref": "dim-14",
+      "from_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b08-post-holder-base"
+      },
+      "kind": "FIXATION_OFFSET",
+      "subject_part_ref": "b08-post-holder-base",
+      "to_point": {
+        "hole": [
+          10,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "NOMINAL",
+      "dim_ref": "dim-15",
+      "from_point": {
+        "datum_key": "bottom",
+        "kind": "PART_DATUM",
+        "part_ref": "b07-post"
+      },
+      "kind": "INSERTION_DEPTH",
+      "setting": {
+        "kind": "INSERTION_DEPTH",
+        "part_ref": "b07-post"
+      },
+      "subject_part_ref": "b07-post",
+      "to_point": {
+        "datum_key": "bore_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b08-post-holder-base"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-16",
+      "from_point": {
+        "datum_key": "board_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTICAL_AXIS_HEIGHT",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-17",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-18",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-19",
+      "from_point": {
+        "instance_id": "SRC",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-20",
+      "from_point": {
+        "instance_id": "SRC2",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-21",
+      "from_point": {
+        "instance_id": "SRC3",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-22",
+      "from_point": {
+        "instance_id": "SRC4",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b05-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b05-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-23",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b12-post-holder-base",
+      "to_point": {
+        "hole": [
+          6,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-24",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b12-post-holder-base",
+      "to_point": {
+        "hole": [
+          6,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "REFERENCE",
+      "dim_ref": "dim-25",
+      "from_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b12-post-holder-base"
+      },
+      "kind": "FIXATION_OFFSET",
+      "subject_part_ref": "b12-post-holder-base",
+      "to_point": {
+        "hole": [
+          6,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "NOMINAL",
+      "dim_ref": "dim-26",
+      "from_point": {
+        "datum_key": "bottom",
+        "kind": "PART_DATUM",
+        "part_ref": "b11-post"
+      },
+      "kind": "INSERTION_DEPTH",
+      "setting": {
+        "kind": "INSERTION_DEPTH",
+        "part_ref": "b11-post"
+      },
+      "subject_part_ref": "b11-post",
+      "to_point": {
+        "datum_key": "bore_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b12-post-holder-base"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-27",
+      "from_point": {
+        "datum_key": "board_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTICAL_AXIS_HEIGHT",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-28",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-29",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-30",
+      "from_point": {
+        "instance_id": "SRC",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-31",
+      "from_point": {
+        "instance_id": "SRC2",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-32",
+      "from_point": {
+        "instance_id": "SRC3",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-33",
+      "from_point": {
+        "instance_id": "SRC4",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b09-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b09-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-34",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b16-post-holder-base",
+      "to_point": {
+        "hole": [
+          2,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-35",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "FIXATION_HOLE_POSITION",
+      "subject_part_ref": "b16-post-holder-base",
+      "to_point": {
+        "hole": [
+          2,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "REFERENCE",
+      "dim_ref": "dim-36",
+      "from_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b16-post-holder-base"
+      },
+      "kind": "FIXATION_OFFSET",
+      "subject_part_ref": "b16-post-holder-base",
+      "to_point": {
+        "hole": [
+          2,
+          3
+        ],
+        "kind": "BOARD_HOLE",
+        "part_ref": "b17-breadboard"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "NOMINAL",
+      "dim_ref": "dim-37",
+      "from_point": {
+        "datum_key": "bottom",
+        "kind": "PART_DATUM",
+        "part_ref": "b15-post"
+      },
+      "kind": "INSERTION_DEPTH",
+      "setting": {
+        "kind": "INSERTION_DEPTH",
+        "part_ref": "b15-post"
+      },
+      "subject_part_ref": "b15-post",
+      "to_point": {
+        "datum_key": "bore_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b16-post-holder-base"
+      }
+    },
+    {
+      "axis": "WORLD_Z",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-38",
+      "from_point": {
+        "datum_key": "board_top",
+        "kind": "PART_DATUM",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTICAL_AXIS_HEIGHT",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-39",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "RESOLVED",
+      "dim_ref": "dim-40",
+      "from_point": {
+        "kind": "BOARD_CORNER",
+        "part_ref": "b17-breadboard"
+      },
+      "kind": "OPTIC_BOARD_POSITION",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-41",
+      "from_point": {
+        "instance_id": "SRC",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_X",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-42",
+      "from_point": {
+        "instance_id": "SRC2",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-43",
+      "from_point": {
+        "instance_id": "SRC3",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    },
+    {
+      "axis": "WORLD_Y",
+      "basis": "CUSTOMER_DESIGN",
+      "dim_ref": "dim-44",
+      "from_point": {
+        "instance_id": "SRC4",
+        "kind": "DESIGN_ANCHOR"
+      },
+      "kind": "EXTERNAL_SOURCE_STANDOFF",
+      "subject_part_ref": "b13-optic",
+      "to_point": {
+        "kind": "PART_ORIGIN",
+        "part_ref": "b13-optic"
+      }
+    }
+  ],
+  "line_display_names_zh_cn": {},
+  "release": {
+    "basis": "CONFIRMED_ORDER"
+  },
+  "schema": "opensci.assembly_detail.package",
+  "schema_version": "3.1",
+  "usage": {
+    "generated_drawings": "CUSTOMER_DELIVERABLE",
+    "permitted_uses": [
+      "GENERATE_ASSEMBLY_DRAWING"
+    ],
+    "redistribution": "NOT_PERMITTED",
+    "scope": "THIS_PROJECT",
+    "statement": "Assembly detail data of this Project's resolved assembly, for generating its Detailed Assembly Drawing. Not for redistribution. The drawing files generated from it are yours to keep and use."
+  }
+}

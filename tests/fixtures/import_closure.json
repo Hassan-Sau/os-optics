@@ -1,0 +1,24 @@
+{
+  "about": "What importing os_optics.local.json_api loads besides the standard library and os_optics itself. A headless JSON host imports this module at startup, so every package listed here is paid for before it can compute. Checked by tests/test_import_closure.py in a fresh interpreter. Names starting with an underscore are not listed: they are private implementation modules of the packages below and vary between their releases and builds (scipy 1.18 adds scipy._external; Cython registers versioned helper modules). To add an entry, give the reason the module must load at import time; a package or subpackage that only some methods need is imported inside those functions instead.",
+  "module": "os_optics.local.json_api",
+  "third_party_packages": {
+    "numpy": "array arithmetic used at module level throughout os_optics",
+    "pydantic": "request, response and model schemas are pydantic models defined at import time",
+    "pydantic_core": "pydantic's compiled core (loaded by pydantic)",
+    "annotated_types": "dependency of pydantic (loaded by pydantic)",
+    "typing_extensions": "dependency of pydantic (loaded by pydantic)",
+    "typing_inspection": "dependency of pydantic (loaded by pydantic)",
+    "scipy": "scipy.interpolate.PchipInterpolator for refractive-index tables (os_optics/optics/materials/index.py)"
+  },
+  "scipy_subpackages": {
+    "interpolate": "PchipInterpolator (os_optics/optics/materials/index.py)",
+    "constants": "loaded by scipy.interpolate",
+    "fft": "loaded by scipy.interpolate",
+    "linalg": "loaded by scipy.interpolate",
+    "optimize": "loaded by scipy.interpolate",
+    "sparse": "loaded by scipy.interpolate",
+    "spatial": "loaded by scipy.interpolate",
+    "special": "loaded by scipy.interpolate",
+    "version": "loaded by every scipy subpackage"
+  }
+}

@@ -1,0 +1,1056 @@
+{
+ "description": "Public material records the Engine tests evaluate, in the public material form a catalog release carries (PublicMaterialV1), from public sources. Each record's basis names its source: OHARA S-FPL53, L-BBH2 and S-APL1 from the refractiveindex.info database (CC0 1.0, page named in each record); CDGM HWS9, D-ZK79 and D-ZK79-25 from the CDGM optical glass catalogue (public download); Si and Ge from NASA CHARMS (Frey, Leviton and Madison, Proc. SPIE 6273, 62732J (2006), NASA NTRS 20070021411, a work of the United States Government).",
+ "records": [
+  {
+   "material_id": "OHARA_S-FPL53",
+   "public": {
+    "material_id": "OHARA_S-FPL53",
+    "display_name": "OHARA S-FPL53",
+    "dispersion": {
+     "kind": "SELLMEIER",
+     "b": [
+      "0.983532327",
+      "0.069568814",
+      "1.11409238"
+     ],
+     "c_um2": [
+      "0.00492234955",
+      "0.0193581091",
+      "264.275294"
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "280.08",
+     "max_nm": "2400.632",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Sellmeier law: the Sellmeier formula of OHARA S-FPL53 (OHARA glass catalogue 2017-11-30; refractiveindex.info database page specs/ohara/optical/S-FPL53.yml (CC0 1.0)); wavelength in air, index relative to air (25 C, 101325 Pa)",
+    "identity": {
+     "manufacturer": "OHARA",
+     "designation": "S-FPL53",
+     "aliases": [],
+     "catalogue_tags": [
+      "OHARA"
+     ],
+     "ordering_status": {
+      "code": "STANDARD",
+      "design_availability": "CURRENT",
+      "as_of": "Updated 18.10.19"
+     },
+     "source_edition": "OHARA glass catalogue 2017-11-30"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "25",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "280",
+      "2400"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 25 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "EXTINCTION_COEFFICIENT",
+     "wavelength_nm": [
+      "280",
+      "290",
+      "300",
+      "310",
+      "320",
+      "330",
+      "340",
+      "350",
+      "360",
+      "370",
+      "380",
+      "390",
+      "400",
+      "420",
+      "440",
+      "460",
+      "480",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "800",
+      "900",
+      "1000",
+      "1200",
+      "1400",
+      "1600",
+      "1800",
+      "2000",
+      "2200",
+      "2400"
+     ],
+     "k": [
+      "0.0000071722",
+      "0.000004893",
+      "0.000003039",
+      "0.0000016611",
+      "0.00000087214",
+      "0.00000042678",
+      "0.00000020217",
+      "0.000000093463",
+      "0.000000043297",
+      "0.00000002365",
+      "0.00000001212",
+      "0.0000000093246",
+      "0.000000012758",
+      "0.000000016753",
+      "0.000000017551",
+      "0.000000014672",
+      "0.000000011476",
+      "0.0000000079657",
+      "0.000000004379",
+      "0.0000000095589",
+      "0.000000015541",
+      "0.000000011152",
+      "0.000000012745",
+      "0.000000021518",
+      "0.000000023909",
+      "0.000000019118",
+      "0.000000022304",
+      "0.00000002549",
+      "0.000000028677",
+      "0.000000031863",
+      "0.0000000526",
+      "0.000000038235"
+     ],
+     "basis": "measured extinction coefficient k of OHARA S-FPL53 (refractiveindex.info page specs/ohara/optical/S-FPL53.yml, as tabulated; zero rows are not measured loss)"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "-0.0000222",
+     "d1": "-0.0000000106",
+     "d2": "-0.0000000000491",
+     "e0": "0.000000277",
+     "e1": "0.000000000392",
+     "lambda_tk_um": "0.206",
+     "reference_temperature_c": "25",
+     "basis": "Schott dn/dT coefficients of OHARA S-FPL53 (refractiveindex.info thermal_dispersion formula A), reference temperature 25 C (the page states 298 K)"
+    }
+   }
+  },
+  {
+   "material_id": "OHARA_L-BBH2",
+   "public": {
+    "material_id": "OHARA_L-BBH2",
+    "display_name": "OHARA L-BBH2",
+    "dispersion": {
+     "kind": "SELLMEIER",
+     "b": [
+      "2.53279005",
+      "0.583375125",
+      "1.5299288"
+     ],
+     "c_um2": [
+      "0.0186909889",
+      "0.0765409078",
+      "112.197368"
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "300.085",
+     "max_nm": "2400.632",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Sellmeier law: the Sellmeier formula of OHARA L-BBH2 (OHARA glass catalogue 2017-11-30; refractiveindex.info database page specs/ohara/optical/L-BBH2.yml (CC0 1.0)); wavelength in air, index relative to air (25 C, 101325 Pa); the manufacturer lists it as obsolete (as of Updated 18.10.19): kept for reproducing designs, not a statement of availability",
+    "identity": {
+     "manufacturer": "OHARA",
+     "designation": "L-BBH2",
+     "aliases": [],
+     "catalogue_tags": [
+      "OHARA"
+     ],
+     "ordering_status": {
+      "code": "OBSOLETE",
+      "design_availability": "LEGACY",
+      "as_of": "Updated 18.10.19"
+     },
+     "source_edition": "OHARA glass catalogue 2017-11-30"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "25",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "300",
+      "2400"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 25 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "EXTINCTION_COEFFICIENT",
+     "wavelength_nm": [
+      "420",
+      "440",
+      "460",
+      "480",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "800",
+      "900",
+      "1000",
+      "1200",
+      "1400",
+      "1600",
+      "1800",
+      "2000",
+      "2200",
+      "2400"
+     ],
+     "k": [
+      "0.0000037054",
+      "0.00000061048",
+      "0.00000019162",
+      "0.00000010063",
+      "0.000000068222",
+      "0.000000048411",
+      "0.000000067317",
+      "0.000000072927",
+      "0.000000067249",
+      "0.000000057555",
+      "0.000000021518",
+      "0.000000031895",
+      "0.000000038274",
+      "0.000000044653",
+      "0.00000011511",
+      "0.00000023104",
+      "0.00000051762",
+      "0.0000016319",
+      "0.0000040245"
+     ],
+     "basis": "measured extinction coefficient k of OHARA L-BBH2 (refractiveindex.info page specs/ohara/optical/L-BBH2.yml, as tabulated; zero rows are not measured loss)"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "0.0000161",
+     "d1": "0.0000000223",
+     "d2": "-0.0000000000518",
+     "e0": "0.00000336",
+     "e1": "0.0000000032",
+     "lambda_tk_um": "0.311",
+     "reference_temperature_c": "25",
+     "basis": "Schott dn/dT coefficients of OHARA L-BBH2 (refractiveindex.info thermal_dispersion formula A), reference temperature 25 C (the page states 298 K)"
+    }
+   }
+  },
+  {
+   "material_id": "SI_FREY2006",
+   "public": {
+    "material_id": "SI_FREY2006",
+    "display_name": "Silicon, Frey 2006 (NASA CHARMS, 20-300 K)",
+    "dispersion": {
+     "kind": "TEMPERATURE_SELLMEIER",
+     "s_coefficients": [
+      [
+       "10.4907",
+       "-0.00020802",
+       "0.00000421694",
+       "-0.00000000582298",
+       "0.00000000000344688"
+      ],
+      [
+       "-1346.61",
+       "29.1664",
+       "-0.278724",
+       "0.00105939",
+       "-0.00000135089"
+      ],
+      [
+       "44282700",
+       "-1762130",
+       "-76157.5",
+       "678.414",
+       "103.243"
+      ]
+     ],
+     "pole_coefficients_um": [
+      [
+       "0.299713",
+       "-0.0000114234",
+       "0.000000167134",
+       "-0.000000000251049",
+       "0.0000000000000232484"
+      ],
+      [
+       "-3517.1",
+       "42.3892",
+       "-0.357957",
+       "0.00117504",
+       "-0.00000113212"
+      ],
+      [
+       "1714000",
+       "-144984",
+       "-6907.44",
+       "-39.3699",
+       "23.577"
+      ]
+     ],
+     "temperature_k_range": [
+      "20",
+      "300"
+     ],
+     "reference_temperature_k": "295"
+    },
+    "valid_band_nm": {
+     "min_nm": "1100",
+     "max_nm": "5600",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Temperature-dependent Sellmeier law of Silicon (single crystal, optical grade) (NASA CHARMS: B. J. Frey, D. B. Leviton, T. J. Madison, Temperature-dependent refractive index of silicon and germanium, Proc. SPIE 6273, 62732J (2006); NASA NTRS 20070021411 (scanned paper), Table 5 (coefficients); temperature and wavelength ranges from the Table 5 heading): absolute index measured in vacuum, fitted over 20-300 K and 1.1-5.6 um (measurement uncertainty about 1e-4 (Table 1: 4.5e-5 to 1.35e-4); average absolute residual of the fit 1e-4 (Table 5 caption)); valid only inside both ranges: a mid-wave law measured from 20 K to room temperature, not a long-wave (8-12 um) law, refused above 300 K; evaluated at 295 K when no temperature is given; no stated bulk loss (the source states no bulk loss)",
+    "identity": {
+     "designation": "Si",
+     "aliases": [],
+     "catalogue_tags": [],
+     "source_edition": "B. J. Frey, D. B. Leviton, T. J. Madison, Temperature-dependent refractive index of silicon and germanium, Proc. SPIE 6273, 62732J (2006); NASA NTRS 20070021411 (scanned paper)"
+    },
+    "index_reference": {
+     "wavelength": "VACUUM",
+     "index": "ABSOLUTE",
+     "source_band_nm": [
+      "1100",
+      "5600"
+     ],
+     "stated_by": "SOURCE_TEXT",
+     "basis": "the source states: CHARMS measures 'in the absolute sense (in vacuum)'; the paper reports 'absolute refractive index' (section 1, Tables 2 and 7)"
+    }
+   }
+  },
+  {
+   "material_id": "GE_FREY2006",
+   "public": {
+    "material_id": "GE_FREY2006",
+    "display_name": "Germanium, Frey 2006 (NASA CHARMS, 20-300 K)",
+    "dispersion": {
+     "kind": "TEMPERATURE_SELLMEIER",
+     "s_coefficients": [
+      [
+       "13.9723",
+       "0.00252809",
+       "-0.00000502195",
+       "0.0000000222604",
+       "-0.00000000000486238"
+      ],
+      [
+       "0.452096",
+       "-0.00309197",
+       "0.0000216895",
+       "-0.000000060229",
+       "0.0000000000412038"
+      ],
+      [
+       "751.447",
+       "-14.2843",
+       "-0.238093",
+       "0.00296047",
+       "-0.00000773454"
+      ]
+     ],
+     "pole_coefficients_um": [
+      [
+       "0.386367",
+       "0.000201871",
+       "-0.000000593448",
+       "-0.000000000227923",
+       "0.00000000000537423"
+      ],
+      [
+       "1.08843",
+       "0.0011651",
+       "-0.00000497284",
+       "0.0000000112357",
+       "0.00000000000940201"
+      ],
+      [
+       "-2893.19",
+       "-0.967948",
+       "-0.527016",
+       "0.00649364",
+       "-0.0000195162"
+      ]
+     ],
+     "temperature_k_range": [
+      "20",
+      "300"
+     ],
+     "reference_temperature_k": "295"
+    },
+    "valid_band_nm": {
+     "min_nm": "1900",
+     "max_nm": "5500",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Temperature-dependent Sellmeier law of Germanium (single crystal) (NASA CHARMS: B. J. Frey, D. B. Leviton, T. J. Madison, Temperature-dependent refractive index of silicon and germanium, Proc. SPIE 6273, 62732J (2006); NASA NTRS 20070021411 (scanned paper), Table 10 (coefficients); temperature and wavelength ranges from the Table 10 heading): absolute index measured in vacuum, fitted over 20-300 K and 1.9-5.5 um (measurement uncertainty 6.4e-5 to 2.3e-4 (Table 6); average absolute residual of the fit 1e-4 (Table 10 caption)); valid only inside both ranges: a mid-wave law measured from 20 K to room temperature, not a long-wave (8-12 um) law, refused above 300 K; evaluated at 295 K when no temperature is given; no stated bulk loss (the source states no bulk loss)",
+    "identity": {
+     "designation": "Ge",
+     "aliases": [],
+     "catalogue_tags": [],
+     "source_edition": "B. J. Frey, D. B. Leviton, T. J. Madison, Temperature-dependent refractive index of silicon and germanium, Proc. SPIE 6273, 62732J (2006); NASA NTRS 20070021411 (scanned paper)"
+    },
+    "index_reference": {
+     "wavelength": "VACUUM",
+     "index": "ABSOLUTE",
+     "source_band_nm": [
+      "1900",
+      "5500"
+     ],
+     "stated_by": "SOURCE_TEXT",
+     "basis": "the source states: CHARMS measures 'in the absolute sense (in vacuum)'; the paper reports 'absolute refractive index' (section 1, Tables 2 and 7)"
+    }
+   }
+  },
+  {
+   "material_id": "OHARA_S-APL1",
+   "public": {
+    "material_id": "OHARA_S-APL1",
+    "display_name": "OHARA S-APL1",
+    "dispersion": {
+     "kind": "POWER_SERIES",
+     "coefficients": [
+      "2.2762403",
+      "-0.0096874647",
+      "0.0092330378",
+      "0.00038940853",
+      "-0.000038018733",
+      "0.0000020693225"
+     ],
+     "exponents": [
+      0,
+      2,
+      -2,
+      -4,
+      -6,
+      -8
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "300.085",
+     "max_nm": "2400.632",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "power series law: the power-series formula of OHARA S-APL1 (OHARA glass catalogue 2017-11-30; refractiveindex.info database page specs/ohara/optical/S-APL1.yml (CC0 1.0)); wavelength in air, index relative to air (25 C, 101325 Pa); the manufacturer lists it as obsolete (as of Updated 18.10.19): kept for reproducing designs, not a statement of availability",
+    "identity": {
+     "manufacturer": "OHARA",
+     "designation": "S-APL1",
+     "aliases": [],
+     "catalogue_tags": [
+      "OHARA"
+     ],
+     "ordering_status": {
+      "code": "OBSOLETE",
+      "design_availability": "LEGACY",
+      "as_of": "Updated 18.10.19"
+     },
+     "source_edition": "OHARA glass catalogue 2017-11-30"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "25",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "300",
+      "2400"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 25 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "EXTINCTION_COEFFICIENT",
+     "wavelength_nm": [
+      "320",
+      "330",
+      "340",
+      "350",
+      "360",
+      "370",
+      "380",
+      "390",
+      "400",
+      "420",
+      "440",
+      "460",
+      "480",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "800",
+      "900"
+     ],
+     "k": [
+      "0.0000058635",
+      "0.000002833",
+      "0.0000014276",
+      "0.00000080126",
+      "0.00000049949",
+      "0.00000030695",
+      "0.00000020647",
+      "0.00000014615",
+      "0.00000011671",
+      "0.00000010525",
+      "0.00000011026",
+      "0.0000001115",
+      "0.00000010063",
+      "0.000000076326",
+      "0.000000035155",
+      "0.000000019137",
+      "0.000000031129",
+      "0.000000022326",
+      "0.000000025516",
+      "0.00000005031"
+     ],
+     "basis": "measured extinction coefficient k of OHARA S-APL1 (refractiveindex.info page specs/ohara/optical/S-APL1.yml, as tabulated; zero rows are not measured loss)"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "-0.00000692",
+     "d1": "0.0000000128",
+     "d2": "-0.0000000000119",
+     "e0": "0.000000499",
+     "e1": "-0.000000000483",
+     "lambda_tk_um": "0.09",
+     "reference_temperature_c": "25",
+     "basis": "Schott dn/dT coefficients of OHARA S-APL1 (refractiveindex.info thermal_dispersion formula A), reference temperature 25 C (the page states 298 K)"
+    }
+   }
+  },
+  {
+   "material_id": "CDGM_HWS9",
+   "public": {
+    "material_id": "CDGM_HWS9",
+    "display_name": "CDGM HWS9",
+    "dispersion": {
+     "kind": "HERZBERGER",
+     "coefficients": [
+      "3.29870295",
+      "0.303047297",
+      "0.150428087",
+      "-0.0000778100205",
+      "0.0000000897438977",
+      "-0.000000000370210757"
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "2000.537",
+     "max_nm": "12003.215",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Herzberger law: the Herzberger formula of CDGM HWS9 (CDGM optical glass catalogue 2026-09, cdgmgd.com); wavelength in air, index relative to air (20 C, 101325 Pa)",
+    "identity": {
+     "manufacturer": "CDGM",
+     "designation": "HWS9",
+     "aliases": [],
+     "catalogue_tags": [
+      "CDGM"
+     ],
+     "ordering_status": {
+      "code": "STANDARD",
+      "design_availability": "CURRENT",
+      "as_of": "CDGM optical glass catalogue 2026-09 (Updated Sep. 2026)"
+     },
+     "source_edition": "CDGM optical glass catalogue 2026-09"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "20",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "2000",
+      "12000"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 20 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "INTERNAL_TRANSMITTANCE",
+     "wavelength_nm": [
+      "2500",
+      "3000",
+      "3500",
+      "4000",
+      "4500",
+      "5000",
+      "5500",
+      "6000",
+      "6500",
+      "7000",
+      "7500",
+      "8000",
+      "8500",
+      "9000",
+      "9500",
+      "10000",
+      "10500",
+      "11000",
+      "11500",
+      "12000",
+      "12500",
+      "13000",
+      "13500",
+      "14000",
+      "14500",
+      "15000",
+      "15500"
+     ],
+     "internal_transmittance": [
+      "0.965",
+      "0.95",
+      "0.973",
+      "0.979",
+      "0.984",
+      "0.985",
+      "0.986",
+      "0.987",
+      "0.986",
+      "0.992",
+      "0.996",
+      "0.97",
+      "0.986",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.994",
+      "0.984",
+      "0.955",
+      "0.709",
+      "0.167",
+      "0.03",
+      "0.06",
+      "0.399",
+      "0.772",
+      "0.844",
+      "0.843"
+     ],
+     "thickness_mm": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+     ],
+     "basis": "internal transmittance of CDGM HWS9 as its catalogue states it (IT lines: wavelength, internal transmittance, sample thickness; the thickest sample per wavelength), bulk only: no surface reflection"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "0.0001061",
+     "d1": "0.00000001824",
+     "d2": "-0.0000000006434",
+     "e0": "0.0002092",
+     "e1": "0.00000001418",
+     "lambda_tk_um": "0.1904",
+     "reference_temperature_c": "20",
+     "basis": "Schott dn/dT coefficients of CDGM HWS9 (the catalogue's TD line), reference temperature 20 C"
+    }
+   }
+  },
+  {
+   "material_id": "CDGM_D-ZK79",
+   "public": {
+    "material_id": "CDGM_D-ZK79",
+    "display_name": "CDGM D-ZK79",
+    "dispersion": {
+     "kind": "SELLMEIER",
+     "b": [
+      "0.756950911",
+      "0.788924494",
+      "1.10449853"
+     ],
+     "c_um2": [
+      "0.00314478995",
+      "0.0162552471",
+      "112.960367"
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "302.087",
+     "max_nm": "2325.623",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Sellmeier law: the Sellmeier formula of CDGM D-ZK79 (CDGM optical glass catalogue 2026-09, cdgmgd.com); annealed at 4 C/h; wavelength in air, index relative to air (20 C, 101325 Pa)",
+    "identity": {
+     "manufacturer": "CDGM",
+     "designation": "D-ZK79",
+     "aliases": [],
+     "catalogue_tags": [
+      "CDGM"
+     ],
+     "ordering_status": {
+      "code": "STANDARD",
+      "design_availability": "CURRENT",
+      "as_of": "CDGM optical glass catalogue 2026-09 (Updated Sep. 2026)"
+     },
+     "source_edition": "CDGM optical glass catalogue 2026-09"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "20",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "302",
+      "2325"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 20 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "INTERNAL_TRANSMITTANCE",
+     "wavelength_nm": [
+      "300",
+      "310",
+      "320",
+      "330",
+      "340",
+      "350",
+      "360",
+      "370",
+      "380",
+      "390",
+      "400",
+      "420",
+      "440",
+      "460",
+      "480",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "800",
+      "850",
+      "900",
+      "950",
+      "1000",
+      "1060",
+      "1200",
+      "1400",
+      "1600",
+      "1800",
+      "2000",
+      "2200",
+      "2400"
+     ],
+     "internal_transmittance": [
+      "0.06",
+      "0.18",
+      "0.377",
+      "0.587",
+      "0.755",
+      "0.866",
+      "0.927",
+      "0.963",
+      "0.979",
+      "0.986",
+      "0.991",
+      "0.992",
+      "0.992",
+      "0.993",
+      "0.995",
+      "0.997",
+      "0.998",
+      "0.996",
+      "0.996",
+      "0.997",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.988",
+      "0.974",
+      "0.929",
+      "0.839"
+     ],
+     "thickness_mm": [
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10"
+     ],
+     "basis": "internal transmittance of CDGM D-ZK79 as its catalogue states it (IT lines: wavelength, internal transmittance, sample thickness; the thickest sample per wavelength), bulk only: no surface reflection"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "0.00000067",
+     "d1": "0.0000000189",
+     "d2": "-0.000000000268",
+     "e0": "0.000000221",
+     "e1": "0.00000000109",
+     "lambda_tk_um": "0.312",
+     "reference_temperature_c": "20",
+     "basis": "Schott dn/dT coefficients of CDGM D-ZK79 (the catalogue's TD line), reference temperature 20 C"
+    }
+   }
+  },
+  {
+   "material_id": "CDGM_D-ZK79-25",
+   "public": {
+    "material_id": "CDGM_D-ZK79-25",
+    "display_name": "CDGM D-ZK79-25",
+    "dispersion": {
+     "kind": "SELLMEIER",
+     "b": [
+      "0.754687333",
+      "0.788729239",
+      "1.10213843"
+     ],
+     "c_um2": [
+      "0.00315353195",
+      "0.0162517857",
+      "112.78636"
+     ]
+    },
+    "valid_band_nm": {
+     "min_nm": "302.087",
+     "max_nm": "2325.623",
+     "status": "SPECIFIED"
+    },
+    "status": "SPECIFIED",
+    "basis": "Sellmeier law: the Sellmeier formula of CDGM D-ZK79-25 (CDGM optical glass catalogue 2026-09, cdgmgd.com); annealed at 25 C/h; wavelength in air, index relative to air (20 C, 101325 Pa)",
+    "identity": {
+     "manufacturer": "CDGM",
+     "designation": "D-ZK79-25",
+     "aliases": [],
+     "catalogue_tags": [
+      "CDGM"
+     ],
+     "variant_of": "CDGM_D-ZK79",
+     "variant": "anneal-rate variant: annealed at 25 C/h (base grade D-ZK79: 4 C/h)",
+     "ordering_status": {
+      "code": "STANDARD",
+      "design_availability": "CURRENT",
+      "as_of": "CDGM optical glass catalogue 2026-09 (Updated Sep. 2026)"
+     },
+     "source_edition": "CDGM optical glass catalogue 2026-09"
+    },
+    "index_reference": {
+     "wavelength": "AIR",
+     "index": "RELATIVE_TO_AIR",
+     "reference_air": {
+      "model": "EDLEN_1953_OPTICSTUDIO",
+      "temperature_c": "20",
+      "pressure_pa": "101325"
+     },
+     "source_band_nm": [
+      "302",
+      "2325"
+     ],
+     "stated_by": "CATALOGUE_FORMAT",
+     "basis": "glass catalogue convention: the formula takes wavelengths in air and gives the index relative to air at 20 C and 101325 Pa (the glass's reference temperature, 1 atm)"
+    },
+    "bulk_loss": {
+     "kind": "INTERNAL_TRANSMITTANCE",
+     "wavelength_nm": [
+      "300",
+      "310",
+      "320",
+      "330",
+      "340",
+      "350",
+      "360",
+      "370",
+      "380",
+      "390",
+      "400",
+      "420",
+      "440",
+      "460",
+      "480",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "800",
+      "850",
+      "900",
+      "950",
+      "1000",
+      "1060",
+      "1200",
+      "1400",
+      "1600",
+      "1800",
+      "2000",
+      "2200",
+      "2400"
+     ],
+     "internal_transmittance": [
+      "0.06",
+      "0.18",
+      "0.377",
+      "0.587",
+      "0.755",
+      "0.866",
+      "0.927",
+      "0.963",
+      "0.979",
+      "0.986",
+      "0.991",
+      "0.992",
+      "0.992",
+      "0.993",
+      "0.995",
+      "0.997",
+      "0.998",
+      "0.996",
+      "0.996",
+      "0.997",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.998",
+      "0.988",
+      "0.974",
+      "0.929",
+      "0.839"
+     ],
+     "thickness_mm": [
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10",
+      "10"
+     ],
+     "basis": "internal transmittance of CDGM D-ZK79-25 as its catalogue states it (IT lines: wavelength, internal transmittance, sample thickness; the thickest sample per wavelength), bulk only: no surface reflection"
+    },
+    "thermo_optic": {
+     "kind": "SCHOTT_DN_DT",
+     "d0": "0.00000067",
+     "d1": "0.0000000189",
+     "d2": "-0.000000000268",
+     "e0": "0.000000221",
+     "e1": "0.00000000109",
+     "lambda_tk_um": "0.312",
+     "reference_temperature_c": "20",
+     "basis": "Schott dn/dT coefficients of CDGM D-ZK79-25 (the catalogue's TD line), reference temperature 20 C"
+    }
+   }
+  }
+ ]
+}

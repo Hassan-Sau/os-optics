@@ -1,0 +1,184 @@
+{
+  "files": {
+    "shared_contracts/assembly_detail/__init__.py": {
+      "sha256": "9db4325c8872b6f2cf581f6c08e1defa44b7802d2d63e8aa3f72354645c07f99"
+    },
+    "shared_contracts/assembly_detail/detail.py": {
+      "sha256": "43b4fdadd739027a6d8e4fcfbeca527212dc564f22e657392f88760a81f6844d"
+    },
+    "shared_contracts/assembly_detail/drawing.py": {
+      "sha256": "4f545c727ed74a9655aa3932e1ca8cea067cf938226abe70d0f50693e133764e"
+    },
+    "shared_contracts/assembly_detail/verify.py": {
+      "sha256": "b2677520ecaa6b91bb98995c1ef13cbc39fb15574a4ced2b80c927ea1be28ef8"
+    },
+    "shared_contracts/assembly_preview/__init__.py": {
+      "sha256": "e399a7b316a13e8f06408c3b73441584d57c918b6489ed2bed6d1710038c22ad"
+    },
+    "shared_contracts/assembly_preview/manifest.py": {
+      "sha256": "f8463be37d1a31f8ce5258b9b91620dfdc88266452318fc0c28956c023e62c65"
+    },
+    "shared_contracts/assembly_preview/package.py": {
+      "sha256": "54ac77fb60e330999549dac8761edb014238fb068204712a455175294ac77867"
+    },
+    "shared_contracts/assembly_preview/scene.py": {
+      "sha256": "fddef5c34c7c52e4f729fe42a0e9ed7d19d4bbfba86b67cf430e1dabc7898289"
+    },
+    "shared_contracts/assembly_preview/validation.py": {
+      "sha256": "45bd58a26320dd9ac7c8f0dfa501eea5a21886148953770c54200014126c13ef"
+    },
+    "shared_contracts/base.py": {
+      "sha256": "2cffc8c1044d73b4523a00f87e680204cae8068134f38c71a4fe7a8265e8570a"
+    },
+    "shared_contracts/client_assembly_artifact/__init__.py": {
+      "sha256": "38a80f528f6cc1f259a6fbc35a0b16e3f883e3dc6625674563236d60fce3d877"
+    },
+    "shared_contracts/client_assembly_artifact/manifest.py": {
+      "sha256": "bcb0215fe60b6afe774d9a009354546bcfee4775317f7fd306131336f4d7c5df"
+    },
+    "shared_contracts/common/__init__.py": {
+      "sha256": "02ca15fbcbf3fbac4c832b55a5b7de8c8fc5afb0ac7bd8e63a3ef7422525b871"
+    },
+    "shared_contracts/common/_osc1_numbers.py": {
+      "sha256": "6f1d260101f53286fed7e22c0202fd37145284c487811acabc4229522db43ce1"
+    },
+    "shared_contracts/common/decimal_string.py": {
+      "sha256": "4765fa025584b0f9b6673bb07266a4849ace32aff0ef5cfacadc740d872ba825"
+    },
+    "shared_contracts/common/frozen_string_map.py": {
+      "sha256": "8c5deee99ef308793f619b49673f2dc7341bf54afa42bf5fc0f748f548d11aa0"
+    },
+    "shared_contracts/common/geometry.py": {
+      "sha256": "3689f5e8d1cbc4e9aea562cfc7275dc09ac5fb5e0fd7e257719a37a985f47340"
+    },
+    "shared_contracts/common/hashes.py": {
+      "sha256": "3113f9bea2ba9148f83fd9ceba5a0605d2c549c99113ded0fa502c14f3cf53bf"
+    },
+    "shared_contracts/common/identifiers.py": {
+      "sha256": "019d1a4c16116375dd6ce5fb18af91d1a0572ec6b68b12be89a48a049980bc9a"
+    },
+    "shared_contracts/common/meshes.py": {
+      "sha256": "083a6036135172b021eb452da61325f3082cdd106a234f2b69169ed80f5442d6"
+    },
+    "shared_contracts/common/ordering.py": {
+      "sha256": "65016689504d009e32fa420dae9ba8d5107b90bf04d639128469e7e224c45253"
+    },
+    "shared_contracts/common/osc1.py": {
+      "sha256": "ea62eb3b63edb8d9d5aa45f3da1de2a1b0492abe03406f15605e4d4f2e438b08"
+    },
+    "shared_contracts/common/polygons.py": {
+      "sha256": "7846327d38a5f9612e818e839d1f5d901d0b85ca22b980619287ce3527afd02c"
+    },
+    "shared_contracts/common/safe_int.py": {
+      "sha256": "daf26aec847b09265af7bc37ffaa8e859edfff584e794a5654e6261519f18392"
+    },
+    "shared_contracts/common/sag_shapes.py": {
+      "sha256": "3466b5109f96504ab02d58a9dfc8290333ca469b459a7cd00df396b3a9c932db"
+    },
+    "shared_contracts/common/text.py": {
+      "sha256": "3dba9b288b8f6a54ea90c790cc9130a76ccdc39dedd5de61b982e5c0cdf260bf"
+    },
+    "shared_contracts/common/timestamps.py": {
+      "sha256": "f33b597a04c7d44e247b8bc13712990d35c7168f6077d9d220f457bb03498db9"
+    },
+    "shared_contracts/common/unknown.py": {
+      "sha256": "a76d5622de9eba483702d1479de682dd9bece6ce3da783205a12a7a731fd1fb5"
+    },
+    "shared_contracts/common/versioning.py": {
+      "sha256": "561d194a3e08c9a6e967a02a290c31d1846309647d9e2901f664a870fce25a16"
+    },
+    "shared_contracts/design_catalog/__init__.py": {
+      "sha256": "363c2a81b8ec709415f9895c7a5c71d40843fe016f92c0b810081e7ba39f4364"
+    },
+    "shared_contracts/design_catalog/enums.py": {
+      "sha256": "01bc5f4ffc093d66611597c402beca42efc25a66cd6d2e957649663cd5b4909f"
+    },
+    "shared_contracts/design_catalog/manifest.py": {
+      "sha256": "30aaf7a965e5d9292fedde6a246eed6d24ac41f91dc3566a62a242a34915dfbe"
+    },
+    "shared_contracts/design_catalog/material_physics.py": {
+      "sha256": "c574fa7533affe98bb8e7570d32ca07eeff86256c182196573d96038cf849df5"
+    },
+    "shared_contracts/design_catalog/optical_catalog.py": {
+      "sha256": "f61627fcf29ac0b28a9db566fefc63ac20a3e0f0203be386d24fca64cc22f106"
+    },
+    "shared_contracts/optical_design/__init__.py": {
+      "sha256": "3655fe389a1983344ce38f2620117ab72806ba9fdcc3381100b2754b6cea794d"
+    },
+    "shared_contracts/optical_design/_ordering.py": {
+      "sha256": "0c9e65e49056379b3fc5d74f1a18e2db987fe8a3bb3368c747730c9c120ebc8e"
+    },
+    "shared_contracts/optical_design/component.py": {
+      "sha256": "f8d7002c2caa0692b9b074ac1d1c630cd1f46ed464155273ab44c4c9819338dc"
+    },
+    "shared_contracts/optical_design/compute_budget.py": {
+      "sha256": "9a2e5a544e722097de92da8e7476ac91da786de81eda652d049a723701ed55db"
+    },
+    "shared_contracts/optical_design/configuration.py": {
+      "sha256": "18516053fa65aede389ee4eab84b99f654fb1fafdbc3f03662438a9e59f06de3"
+    },
+    "shared_contracts/optical_design/design_content.py": {
+      "sha256": "f5b9dfa6581ba0c5c51212af0034b8527e1b7c7071335398b16642a468155daf"
+    },
+    "shared_contracts/optical_design/detection.py": {
+      "sha256": "37460f6af598150127a654ca35391d398083707a0bd33ab6f99bbac256ae253d"
+    },
+    "shared_contracts/optical_design/detector.py": {
+      "sha256": "14d416724a30962c371641dff87124404d544265e487fc71a26632be3905ac89"
+    },
+    "shared_contracts/optical_design/dof.py": {
+      "sha256": "d8dd3b3d39302a81686ed873329bda74befe17a74efd7dd531a8cee61263c617"
+    },
+    "shared_contracts/optical_design/local_validation.py": {
+      "sha256": "9cc384c0e6450bedb13e0f2ef63e13039d57835154d76db88e101fbeb363e206"
+    },
+    "shared_contracts/optical_design/numerical_settings.py": {
+      "sha256": "b45998db46a3184fb6e87292dc70b103d3a7cd053d2f5f292306cdcfe569283c"
+    },
+    "shared_contracts/optical_design/optical_model.py": {
+      "sha256": "c442e9363ef8a3af94346e57a80ceaeefc2b437720e1e5573c3c67a87f26e479"
+    },
+    "shared_contracts/optical_design/project.py": {
+      "sha256": "cef14660b1e6a632d37c139e1e262cc7176cabebe5e2031b82376207c0e3855e"
+    },
+    "shared_contracts/optical_design/pupil_field.py": {
+      "sha256": "0e37714055e11fbff9c68a926a67789af0ac78765f41cc3657df2dc502ef42c2"
+    },
+    "shared_contracts/optical_design/scientific_result.py": {
+      "sha256": "62dba7cd167ecfacf54e2e6713853dd50142b23cb0cf7e37ab69646f0d9d351f"
+    },
+    "shared_contracts/optical_design/source.py": {
+      "sha256": "3c84676a83c067b9b5ebbe8701fad029c4d4fdfdd789a79511d213b1d22f1506"
+    },
+    "shared_contracts/optical_design/workspace.py": {
+      "sha256": "82574cc722b59cf683108da4c40df407f1dfdfe26e1137c60cc20a68ce1dcdab"
+    },
+    "shared_contracts/optical_layout/__init__.py": {
+      "sha256": "185df9517389e6a5d2f19cd6d09af7f2c56029ce90bce89ab31920469a5cd0fb"
+    },
+    "shared_contracts/optical_layout/drawing.py": {
+      "sha256": "f58bee4416e3b81a69f2defa1126f658394dc56538a4b1ecc4e5ff878f45fc8e"
+    },
+    "shared_contracts/optical_layout/package.py": {
+      "sha256": "23c969fc10be518f7a581c574b9ab0e353f79d74360c60f495ebeee3de0e575e"
+    },
+    "shared_contracts/optical_view/__init__.py": {
+      "sha256": "33e9d737ea1f6545aab9469e52196b8f357d7c1d7ec56564c1f9b46de126844c"
+    },
+    "shared_contracts/optical_view/scene.py": {
+      "sha256": "30d37c2c36b5a2cc531f390db4a4614bd177165ce526b0d58436d2f73ca801e4"
+    },
+    "shared_contracts/protected_assembly_delivery/__init__.py": {
+      "sha256": "c51696f2936339942dce4cde33914626f91a88c6abe556203b01dac76bae6f98"
+    },
+    "shared_contracts/protected_assembly_delivery/_common.py": {
+      "sha256": "920c4f9c594d79cf5f5f28d8763c8559c9abecea1053f96218ddc8f77efc92f4"
+    },
+    "shared_contracts/protected_assembly_delivery/detail_envelope.py": {
+      "sha256": "8551e8581f32900fef4d88750732379244ee3a2657263d93b742bfed3860c8b9"
+    },
+    "shared_contracts/protected_assembly_delivery/envelope.py": {
+      "sha256": "30b0bc148248e7620122bb074493e239ed8fd4a965b2dcb950491bbd379183d0"
+    }
+  }
+}

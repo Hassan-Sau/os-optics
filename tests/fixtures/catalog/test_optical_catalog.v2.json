@@ -1,0 +1,1088 @@
+{
+ "catalog_version": "2026-01-01.1",
+ "categories_offered": [
+  "BEAMSPLITTER",
+  "FILTER",
+  "LENS",
+  "MIRROR",
+  "POLARIZER",
+  "WAVEPLATE",
+  "WINDOW"
+ ],
+ "coatings": [
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "reflectance": "0.005",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.995"
+    }
+   ],
+   "basis": "Synthetic development coating.",
+   "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+   "display_name": "AR 400-1100 nm",
+   "kind": "ANTI_REFLECTION",
+   "valid_aoi_deg": {
+    "max_deg": "10",
+    "min_deg": "0",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "reflectance": "0.01",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.99"
+    }
+   ],
+   "basis": "Synthetic development coating.",
+   "coating_id": "ANTI_REFLECTION.400-1100R0.01T0.99.AOI45-45",
+   "display_name": "AR 400-1100 nm at 45 deg",
+   "kind": "ANTI_REFLECTION",
+   "valid_aoi_deg": {
+    "max_deg": "45",
+    "min_deg": "45",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "reflectance": "0.5",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.5"
+    }
+   ],
+   "basis": "Synthetic development coating.",
+   "coating_id": "BEAMSPLITTER.400-1100R0.5T0.5.AOI45-45",
+   "display_name": "50:50 splitter coating",
+   "kind": "BEAMSPLITTER",
+   "valid_aoi_deg": {
+    "max_deg": "45",
+    "min_deg": "45",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "600",
+     "min_nm": "400",
+     "reflectance": "0.95",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.05"
+    },
+    {
+     "max_nm": "1100",
+     "min_nm": "650",
+     "reflectance": "0.1",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.9"
+    }
+   ],
+   "basis": "Synthetic development coating.",
+   "coating_id": "DICHROIC.400-600R0.95T0.05_650-1100R0.1T0.9.AOI45-45",
+   "display_name": "Short-wave-reflecting dichroic",
+   "kind": "DICHROIC",
+   "valid_aoi_deg": {
+    "max_deg": "45",
+    "min_deg": "45",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "reflectance": "0.99",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0"
+    }
+   ],
+   "basis": "Synthetic development coating.",
+   "coating_id": "DIELECTRIC_HIGH_REFLECTOR.400-1100R0.99T0.AOI0-45",
+   "display_name": "HR 400-1100 nm",
+   "kind": "DIELECTRIC_HIGH_REFLECTOR",
+   "valid_aoi_deg": {
+    "max_deg": "45",
+    "min_deg": "0",
+    "status": "SPECIFIED"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "basis": "Malitson 1965 Sellmeier.",
+   "dispersion": {
+    "b": [
+     "0.6961663",
+     "0.4079426",
+     "0.8974794"
+    ],
+    "c_um2": [
+     "0.0046791482",
+     "0.0135120631",
+     "97.9340025"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "Fused silica",
+   "material_id": "FUSED_SILICA",
+   "status": "SPECIFIED",
+   "valid_band_nm": {
+    "max_nm": "3710",
+    "min_nm": "210",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "basis": "Catalogue Sellmeier.",
+   "dispersion": {
+    "b": [
+     "1.03961212",
+     "0.231792344",
+     "1.01046945"
+    ],
+    "c_um2": [
+     "0.00600069867",
+     "0.0200179144",
+     "103.560653"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "N-BK7",
+   "material_id": "N-BK7",
+   "status": "SPECIFIED",
+   "valid_band_nm": {
+    "max_nm": "2500",
+    "min_nm": "300",
+    "status": "SPECIFIED"
+   }
+  }
+ ],
+ "mechanical_accessories": "CONFIGURED_PER_DESIGN",
+ "products": [
+  {
+   "category": "BEAMSPLITTER",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "0",
+    "z_min_mm": "-1"
+   },
+   "display_name": "Test plate beamsplitter 50:50",
+   "display_name_zh_cn": "测试平板分束镜 50:50",
+   "form": "PLATE_BEAMSPLITTER",
+   "frame": {
+    "nominal_propagation": "SPLIT_ABOUT_+Z",
+    "optical_axis": "+Z",
+    "origin": "REFLECTING_FACE_CENTER",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-BS-PLATE",
+   "simulation_models": [
+    {
+     "approximations": [
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SPECIFICATION_ENVELOPE",
+     "media": [
+      "N-BK7"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "NOMINAL",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.01T0.99.AOI45-45",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "-1"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "BEAMSPLITTER.400-1100R0.5T0.5.AOI45-45",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED_AND_REFLECTED",
+       "vertex_z_mm": "0"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "BEAMSPLITTER",
+    "design_aoi_deg": {
+     "status": "SPECIFIED",
+     "value": "45"
+    },
+    "materials": [
+     "N-BK7"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "reflectance": {
+     "status": "SPECIFIED",
+     "value": "0.5"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "1"
+    },
+    "transmittance": {
+     "status": "SPECIFIED",
+     "value": "0.5"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development optic."
+  },
+  {
+   "category": "FILTER",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "0",
+    "z_min_mm": "-1"
+   },
+   "display_name": "Test dichroic mirror, reflects 400-600 nm, transmits 650-1100 nm",
+   "display_name_zh_cn": "测试二向色镜，反射 400-600 nm，透射 650-1100 nm",
+   "form": "DICHROIC_MIRROR",
+   "frame": {
+    "nominal_propagation": "SPLIT_ABOUT_+Z",
+    "optical_axis": "+Z",
+    "origin": "REFLECTING_FACE_CENTER",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-FLT-DICHROIC-SP600",
+   "simulation_models": [
+    {
+     "approximations": [
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SPECIFICATION_ENVELOPE",
+     "media": [
+      "FUSED_SILICA"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "NOMINAL",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.01T0.99.AOI45-45",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "-1"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "DICHROIC.400-600R0.95T0.05_650-1100R0.1T0.9.AOI45-45",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED_AND_REFLECTED",
+       "vertex_z_mm": "0"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "DICHROIC",
+    "design_aoi_deg": {
+     "status": "SPECIFIED",
+     "value": "45"
+    },
+    "edge_wavelength_nm": {
+     "status": "SPECIFIED",
+     "value": "625"
+    },
+    "materials": [
+     "FUSED_SILICA"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "1"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development optic."
+  },
+  {
+   "category": "LENS",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "3.5",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test plano-concave lens f = -50 mm",
+   "display_name_zh_cn": "测试平凹透镜，焦距 -50 mm",
+   "form": "PLANO_CONCAVE_LENS",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-LENS-PCV-FN50",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CATALOG_MATERIAL_DISPERSION",
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "media": [
+      "N-BK7"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "SPECIFIED",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "radius_mm": "-25.7",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "0"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "3.5"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "DESIGN_BASIS",
+     "value": "22.86"
+    },
+    "coating": "ANTI_REFLECTION",
+    "design_wavelength_nm": {
+     "status": "SPECIFIED",
+     "value": "587.6"
+    },
+    "focal_length_mm": {
+     "status": "SPECIFIED",
+     "value": "-50"
+    },
+    "focal_length_tolerance_percent": {
+     "status": "SPECIFIED",
+     "value": "1"
+    },
+    "materials": [
+     "N-BK7"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "3.5"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development lens."
+  },
+  {
+   "category": "LENS",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "3.6",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test plano-convex lens f = 100 mm",
+   "display_name_zh_cn": "测试平凸透镜，焦距 100 mm",
+   "form": "PLANO_CONVEX_LENS",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-LENS-PCX-F100",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CATALOG_MATERIAL_DISPERSION",
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "media": [
+      "N-BK7"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "SPECIFIED",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "radius_mm": "51.5",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "0"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "3.6"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "DESIGN_BASIS",
+     "value": "22.86"
+    },
+    "coating": "ANTI_REFLECTION",
+    "design_wavelength_nm": {
+     "status": "SPECIFIED",
+     "value": "587.6"
+    },
+    "focal_length_mm": {
+     "status": "SPECIFIED",
+     "value": "100"
+    },
+    "focal_length_tolerance_percent": {
+     "status": "SPECIFIED",
+     "value": "1"
+    },
+    "materials": [
+     "N-BK7"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "3.6"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development lens."
+  },
+  {
+   "category": "LENS",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "5.3",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test plano-convex lens f = 50 mm",
+   "display_name_zh_cn": "测试平凸透镜，焦距 50 mm",
+   "form": "PLANO_CONVEX_LENS",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-LENS-PCX-F50",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CATALOG_MATERIAL_DISPERSION",
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "media": [
+      "N-BK7"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "SPECIFIED",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "radius_mm": "25.8",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "0"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "ANTI_REFLECTION.400-1100R0.005T0.995.AOI0-10",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "5.3"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "DESIGN_BASIS",
+     "value": "22.86"
+    },
+    "coating": "ANTI_REFLECTION",
+    "design_wavelength_nm": {
+     "status": "SPECIFIED",
+     "value": "587.6"
+    },
+    "focal_length_mm": {
+     "status": "SPECIFIED",
+     "value": "50"
+    },
+    "focal_length_tolerance_percent": {
+     "status": "SPECIFIED",
+     "value": "1"
+    },
+    "materials": [
+     "N-BK7"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "5.3"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development lens."
+  },
+  {
+   "category": "MIRROR",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "0",
+    "z_min_mm": "-6"
+   },
+   "display_name": "Test concave mirror R = 200 mm",
+   "display_name_zh_cn": "测试凹面反射镜 R = 200 mm",
+   "form": "CONCAVE_MIRROR",
+   "frame": {
+    "nominal_propagation": "REFLECTED_ABOUT_+Z",
+    "optical_axis": "+Z",
+    "origin": "REFLECTING_FACE_CENTER",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-MIR-CONCAVE-R200",
+   "simulation_models": [
+    {
+     "approximations": [
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SPECIFICATION_ENVELOPE",
+     "media": [],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "NOMINAL",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "DIELECTRIC_HIGH_REFLECTOR.400-1100R0.99T0.AOI0-45",
+       "radius_mm": "200",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "REFLECTED",
+       "vertex_z_mm": "0"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "DIELECTRIC_HIGH_REFLECTOR",
+    "materials": [],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "reflectance": {
+     "status": "DESIGN_BASIS",
+     "value": "0.99"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "6"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development optic."
+  },
+  {
+   "category": "MIRROR",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "0",
+    "z_min_mm": "-6"
+   },
+   "display_name": "Test flat mirror",
+   "display_name_zh_cn": "测试平面反射镜",
+   "form": "FLAT_MIRROR",
+   "frame": {
+    "nominal_propagation": "REFLECTED_ABOUT_+Z",
+    "optical_axis": "+Z",
+    "origin": "REFLECTING_FACE_CENTER",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-MIR-FLAT",
+   "simulation_models": [
+    {
+     "approximations": [
+      "COATING_AT_SPECIFIED_BOUND",
+      "EDGE_AS_OPAQUE_RIM"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SPECIFICATION_ENVELOPE",
+     "media": [],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "NOMINAL",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "coating_id": "DIELECTRIC_HIGH_REFLECTOR.400-1100R0.99T0.AOI0-45",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "REFLECTED",
+       "vertex_z_mm": "0"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "DIELECTRIC_HIGH_REFLECTOR",
+    "materials": [],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "reflectance": {
+     "status": "DESIGN_BASIS",
+     "value": "0.99"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "6"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic development optic."
+  },
+  {
+   "category": "POLARIZER",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "2",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test linear polarizer",
+   "display_name_zh_cn": "测试线偏振片",
+   "form": "LINEAR_POLARIZER",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-POL-LIN",
+   "simulation_models": [
+    {
+     "approximations": [
+      "THIN_ELEMENT"
+     ],
+     "axis": "+X",
+     "clear_radius_mm": "11.43",
+     "edge_radius_mm": "12.7",
+     "element": "LINEAR_POLARIZER",
+     "extinction_ratio": {
+      "status": "SPECIFIED",
+      "value": "1000"
+     },
+     "fidelity": "IDEAL_THIN_ELEMENT",
+     "model_kind": "POLARIZATION_ELEMENT",
+     "model_version": "1",
+     "plane_z_mm": "0",
+     "status": "NOMINAL",
+     "transmittance": {
+      "status": "DESIGN_BASIS",
+      "value": "0.8"
+     },
+     "valid_aoi_deg": {
+      "max_deg": "10",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "UNCOATED",
+    "extinction_ratio": {
+     "status": "SPECIFIED",
+     "value": "1000"
+    },
+    "materials": [],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "2"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic polarizer."
+  },
+  {
+   "category": "WINDOW",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "3",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test window",
+   "display_name_zh_cn": "测试窗口片",
+   "form": "PLANE_WINDOW",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-WIN-NBK7-T3",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CATALOG_MATERIAL_DISPERSION",
+      "EDGE_AS_OPAQUE_RIM",
+      "GHOST_REFLECTIONS_NOT_TRACED"
+     ],
+     "edge_radius_mm": "12.7",
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "media": [
+      "N-BK7"
+     ],
+     "model_kind": "SURFACE_SEQUENCE",
+     "model_version": "2",
+     "status": "SPECIFIED",
+     "surfaces": [
+      {
+       "clear_radius_mm": "11.43",
+       "status": "SPECIFIED",
+       "surface_id": "S1",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "0"
+      },
+      {
+       "clear_radius_mm": "11.43",
+       "status": "SPECIFIED",
+       "surface_id": "S2",
+       "traced": "TRANSMITTED",
+       "vertex_z_mm": "3"
+      }
+     ],
+     "valid_band_nm": {
+      "max_nm": "1100",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "UNCOATED",
+    "materials": [
+     "N-BK7"
+    ],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "3"
+    },
+    "working_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic window."
+  },
+  {
+   "category": "WAVEPLATE",
+   "commercial_readiness": "ORDERABLE",
+   "design_geometry": {
+    "diameter_mm": "25.4",
+    "kind": "CYLINDER",
+    "status": "NOMINAL",
+    "z_max_mm": "2",
+    "z_min_mm": "0"
+   },
+   "display_name": "Test zero-order half-wave plate 633 nm",
+   "display_name_zh_cn": "测试零级半波片 633 nm",
+   "form": "HALF_WAVE_PLATE",
+   "frame": {
+    "nominal_propagation": "+Z",
+    "optical_axis": "+Z",
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [],
+   "optical_sku": "OS-OPT-TEST-WP-HWP-633",
+   "simulation_models": [
+    {
+     "approximations": [
+      "RETARDANCE_INVERSE_WAVELENGTH",
+      "THIN_ELEMENT"
+     ],
+     "axis": "+X",
+     "clear_radius_mm": "11.43",
+     "design_wavelength_nm": "633",
+     "edge_radius_mm": "12.7",
+     "element": "RETARDER",
+     "fidelity": "IDEAL_THIN_ELEMENT",
+     "model_kind": "POLARIZATION_ELEMENT",
+     "model_version": "1",
+     "plane_z_mm": "0",
+     "retardance_dispersion": "INVERSE_WAVELENGTH",
+     "retardance_waves": "0.5",
+     "status": "NOMINAL",
+     "transmittance": {
+      "status": "DESIGN_BASIS",
+      "value": "0.99"
+     },
+     "valid_aoi_deg": {
+      "max_deg": "10",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "valid_band_nm": {
+      "max_nm": "700",
+      "min_nm": "600",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "22.86"
+    },
+    "coating": "ANTI_REFLECTION",
+    "design_wavelength_nm": {
+     "status": "SPECIFIED",
+     "value": "633"
+    },
+    "materials": [],
+    "outer_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "25.4"
+    },
+    "retardance_waves": {
+     "status": "SPECIFIED",
+     "value": "0.5"
+    },
+    "thickness_mm": {
+     "status": "SPECIFIED",
+     "value": "2"
+    },
+    "working_band_nm": {
+     "max_nm": "700",
+     "min_nm": "600",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Synthetic waveplate."
+  }
+ ],
+ "schema": "opensci.design_catalog.public_optical_catalog",
+ "schema_version": "3.0"
+}

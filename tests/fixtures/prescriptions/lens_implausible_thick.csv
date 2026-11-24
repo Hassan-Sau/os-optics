@@ -1,0 +1,17 @@
+#! format = csv-surface-table/1
+#! name = Implausible over-thick element
+#! units = mm
+# Deliberately not a manufacturable shape: edge thickness 12.2 mm on a 5.9 mm clear diameter, 207 % of it (a real edged
+# lens sits near 4 to 12 %). The import and the solid check report it.
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,front,10,13.09,N-BK7,2.95,,,,,,,yes
+2,STANDARD,rear,-10,6.9,,2.95,,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+N-BK7,SELLMEIER,1.03961212,0.231792344,1.01046945,0.00600069867,0.0200179144,103.560653,300,2500,N-BK7 (fixture Sellmeier)

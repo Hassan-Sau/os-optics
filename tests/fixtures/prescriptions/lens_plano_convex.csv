@@ -1,0 +1,16 @@
+#! format = csv-surface-table/1
+#! name = Plano-convex singlet
+#! units = mm
+# Flat face first, D 25.4 mm, f about 50 mm, edge about 2 mm.
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,flat front,inf,5.3,N-BK7,11.4,12.7,,,,,,yes
+2,STANDARD,convex rear,-25.8,49.92,,11.4,12.7,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+N-BK7,SELLMEIER,1.03961212,0.231792344,1.01046945,0.00600069867,0.0200179144,103.560653,300,2500,N-BK7 (fixture Sellmeier)

@@ -1,0 +1,21 @@
+#! format = csv-surface-table/1
+#! name = Cooke triplet (OpenSci test fixture)
+#! units = mm
+# A Cooke-triplet form (positive crown, negative flint, positive crown) with values chosen for this fixture; it is not a
+# published design. The crown XSK16 is defined below with the Sellmeier coefficients written in this file; F2 is the
+# published SCHOTT glass of the public optical catalog. The aperture stop is a plate in the air space before the last lens.
+[surfaces]
+surface,radius,thickness,material,semi_diameter,mech_semi_diameter,stop,comment
+OBJ,inf,inf,,,,,object at infinity
+1,22.01359,3.25896,XSK16,9,10,,front crown
+2,-435.7604,6.00756,,9,10,,
+3,-22.21328,0.99997,F2,6.5,7.5,,flint
+4,20.29192,2,,6.5,7.5,,
+STO,inf,2.75,,5,,yes,iris
+6,79.6836,2.95208,XSK16,7.5,8.2,,rear crown
+7,-18.39533,42.20778,,7.5,8.2,,
+IMA,,,,,,,image plane
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+XSK16,SELLMEIER,1.34317774,0.241144399,0.994317969,0.00704687339,0.0229005,92.7508526,310,2500,Crown XSK16 (fixture Sellmeier)

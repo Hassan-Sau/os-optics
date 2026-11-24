@@ -1,0 +1,18 @@
+#! format = csv-surface-table/1
+#! name = Cemented achromatic doublet
+#! units = mm
+# Crown then flint, one element, D 25.4 mm, f about 88 mm.
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,crown front,33,8.5,N-BK7,11.4,12.7,,,,,,yes
+2,STANDARD,cemented,-22.5,2.5,N-SF5,11.4,12.7,,,,,,
+3,STANDARD,flint rear,-290,78.6,,11.4,12.7,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+N-BK7,SELLMEIER,1.03961212,0.231792344,1.01046945,0.00600069867,0.0200179144,103.560653,300,2500,N-BK7 (fixture Sellmeier)
+N-SF5,SELLMEIER,1.52481889,0.187085527,1.42729015,0.011254756,0.0588995392,129.141675,370,2500,N-SF5 (fixture Sellmeier)

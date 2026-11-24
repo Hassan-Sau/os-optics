@@ -1,0 +1,231 @@
+{
+ "components": [
+  {
+   "custom_part": {
+    "custom_part_key": "user-laser",
+    "description": "User-supplied laser source."
+   },
+   "instance_id": "SRC",
+   "nominal_pose": {
+    "position_mm": [
+     -150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "retained_dofs": [],
+   "selected_parameters": [],
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "spectral_lines": [
+     {
+      "power_w": 0.001,
+      "wavelength_nm": 450.0
+     },
+     {
+      "power_w": 0.001,
+      "wavelength_nm": 532.0
+     },
+     {
+      "power_w": 0.001,
+      "wavelength_nm": 633.0
+     }
+    ],
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 1.0
+   }
+  },
+  {
+   "instance_id": "DMa",
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.27059805007309845,
+     0.27059805007309845,
+     -0.6532814824381883,
+     -0.6532814824381883
+    ]
+   },
+   "optical_role": "splitter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-FLT-DICHROIC-D12P7-E490-R380-475-T505-800-AOI45-T3P2-THIN-CA11P43-UVFS"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "DMb",
+   "nominal_pose": {
+    "position_mm": [
+     60.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.27059805007309845,
+     0.27059805007309845,
+     -0.6532814824381883,
+     -0.6532814824381883
+    ]
+   },
+   "optical_role": "splitter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-FLT-DICHROIC-D12P7-E550-R380-535-T565-800-AOI45-T3P2-THIN-CA11P43-UVFS"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  }
+ ],
+ "materials": [],
+ "observations": [
+  {
+   "absorbing": false,
+   "aperture": {
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0,
+    "radius_mm": 12.5,
+    "shape": "circle"
+   },
+   "medium": "air",
+   "observation_id": "B",
+   "pose": {
+    "position_mm": [
+     0.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.7071067811865476,
+     0.7071067811865476
+    ]
+   }
+  },
+  {
+   "absorbing": false,
+   "aperture": {
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0,
+    "radius_mm": 12.5,
+    "shape": "circle"
+   },
+   "medium": "air",
+   "observation_id": "G",
+   "pose": {
+    "position_mm": [
+     60.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.7071067811865476,
+     0.7071067811865476
+    ]
+   }
+  },
+  {
+   "absorbing": false,
+   "aperture": {
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0,
+    "radius_mm": 12.5,
+    "shape": "circle"
+   },
+   "medium": "air",
+   "observation_id": "R",
+   "pose": {
+    "position_mm": [
+     150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  }
+ ],
+ "project_schema_version": "2.0",
+ "schema": "opensci.project",
+ "targets": [
+  {
+   "metric": "power_W",
+   "minimum": 0.0005,
+   "observation_id": "B",
+   "parameters": [],
+   "target_id": "b",
+   "unit": "W"
+  },
+  {
+   "metric": "power_W",
+   "minimum": 0.0005,
+   "observation_id": "G",
+   "parameters": [],
+   "target_id": "g",
+   "unit": "W"
+  },
+  {
+   "metric": "power_W",
+   "minimum": 0.0005,
+   "observation_id": "R",
+   "parameters": [],
+   "target_id": "r",
+   "unit": "W"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+#! format = csv-surface-table/1
+#! name = Fast F/1.2 singlet objective (OpenSci test fixture)
+#! units = mm
+# A front-stop objective of air-spaced singlets with values chosen for this fixture (paraxial focal length 42.374 mm, stop radius 17.6557 mm: F/1.2); it is not a published design.
+# The crown XSK16 and the flint XF2 are defined below with the Sellmeier coefficients written in this file.
+[surfaces]
+surface,radius,thickness,material,semi_diameter,mech_semi_diameter,stop,comment
+OBJ,inf,inf,,,,,object at infinity
+STO,inf,4.0,,17.6557,,yes,iris
+1,90,9,XSK16,27,29,,L1
+2,-400,0.5000,,27,29,,
+3,55,9,XSK16,25,27,,L2
+4,220,0.5000,,25,27,,
+5,38,8,XSK16,22,24,,L3
+6,90,5.0000,,22,24,,
+7,-150,3,XF2,18,20,,L4
+8,30,6.0000,,18,20,,
+9,80,7,XSK16,18,20,,L5
+10,-60,0.5000,,18,20,,
+11,40,6,XSK16,16,18,,L6
+12,200,3.0000,,16,18,,
+13,-60,2.5,XF2,11.5,13.5,,L7
+14,60,2.0000,,11.5,13.5,,
+15,30,7.5,XSK16,12,14,,L8
+16,-200,0.3139,,12,14,,
+IMA,,,,,,,image plane
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+XSK16,SELLMEIER,1.34317774,0.241144399,0.994317969,0.00704687339,0.0229005,92.7508526,310,2500,Crown XSK16 (fixture Sellmeier)
+XF2,SELLMEIER,1.34533359,0.209073176,0.937357162,0.00997743871,0.0470450767,111.886764,320,2500,Flint XF2 (fixture Sellmeier)

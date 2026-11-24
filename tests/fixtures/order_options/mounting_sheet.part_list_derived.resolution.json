@@ -1,0 +1,611 @@
+{
+  "schema": "opensci.commercial.mounting_sheet",
+  "schema_version": "1",
+  "resolution_id": "01a13add-a60e-74a1-a205-8ae18455273c",
+  "order_id": null,
+  "order_number": null,
+  "basis": "PART_LIST",
+  "public_catalog_version": "2026-10-06.3",
+  "title": "Mounting sheet",
+  "title_zh_cn": "安装说明",
+  "units": [
+    {
+      "unit_id": "L1",
+      "line_id": "L1",
+      "quantity": 2,
+      "optic": {
+        "opensci_sku": "OS-OPT-LENS-PCX-D25P4-F100-T3P6-R51P5-NBK7-AR400-1100-W587P6",
+        "line_key": "B01",
+        "display_name": "Plano-convex lens, D25.4 mm, f = 100 mm, N-BK7, AR 400-1100 nm",
+        "display_name_zh_cn": "平凸透镜，直径 25.4 mm，焦距 100 mm，N-BK7，增透膜 400-1100 nm"
+      },
+      "beam_height_mm": 125.0,
+      "incidence_deg": 0.0,
+      "incidence_basis": "DEFAULT_FOR_CATEGORY",
+      "chain": [
+        {
+          "role": "MOUNT",
+          "opensci_sku": "OS-MECH-LENS-MOUNT-FIXED-D25",
+          "line_key": "B02",
+          "quantity": 2,
+          "display_name": "Fixed lens mount for 25.4 mm optics",
+          "display_name_zh_cn": "固定式透镜安装架，适用于 25.4 毫米光学元件"
+        },
+        {
+          "role": "POST",
+          "opensci_sku": "OS-MECH-POST-D12P7-L75",
+          "line_key": "B03",
+          "quantity": 2,
+          "display_name": "Optical post, 12.7 mm diameter, 75 mm",
+          "display_name_zh_cn": "光学支杆，直径 12.7 毫米，长 75 毫米"
+        },
+        {
+          "role": "POST_HOLDER",
+          "opensci_sku": "OS-MECH-POST-HOLDER-FORK-L75",
+          "line_key": "B04",
+          "quantity": 2,
+          "display_name": "Post holder with integrated fork base, 75 mm",
+          "display_name_zh_cn": "带一体式叉块底座的支杆座，高 75 毫米"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "code": "OPTIC_INTO_MOUNT",
+          "interface_designation": "OD25.4-SEAT",
+          "text": "Seat the optic OS-OPT-LENS-PCX-D25P4-F100-T3P6-R51P5-NBK7-AR400-1100-W587P6 in the mount OS-MECH-LENS-MOUNT-FIXED-D25 (OD25.4-SEAT).",
+          "text_zh_cn": "将光学元件 OS-OPT-LENS-PCX-D25P4-F100-T3P6-R51P5-NBK7-AR400-1100-W587P6 装入镜架 OS-MECH-LENS-MOUNT-FIXED-D25（OD25.4-SEAT）。"
+        },
+        {
+          "step": 2,
+          "code": "MOUNT_ONTO_POST",
+          "interface_designation": "M4x0.7",
+          "text": "Screw the mount OS-MECH-LENS-MOUNT-FIXED-D25 onto the post OS-MECH-POST-D12P7-L75 with the post's top stud (M4x0.7).",
+          "text_zh_cn": "用支杆顶端的螺柱（M4x0.7）把镜架 OS-MECH-LENS-MOUNT-FIXED-D25 拧到支杆 OS-MECH-POST-D12P7-L75 上。"
+        },
+        {
+          "step": 3,
+          "code": "POST_INTO_HOLDER",
+          "interface_designation": "OD12.7-POST",
+          "insertion_depth_mm": 47.0,
+          "text": "Insert the post into the post holder OS-MECH-POST-HOLDER-FORK-L75 (OD12.7-POST) to 47 mm and lock it.",
+          "text_zh_cn": "将支杆插入支杆座 OS-MECH-POST-HOLDER-FORK-L75（OD12.7-POST），插入深度 47 mm，锁紧。"
+        },
+        {
+          "step": 4,
+          "code": "HOLDER_ONTO_SURFACE",
+          "interface_designation": "M6x1.0",
+          "text": "Fix the post holder on a hole of the surface with one M6x1.0 screw through its base slot; with the slot along the beam it slides along the beam.",
+          "text_zh_cn": "用一颗 M6x1.0 螺钉穿过支杆座底座的槽，把支杆座固定在台面的螺孔上；槽沿光束方向时可沿光束微调位置。"
+        }
+      ],
+      "height_arithmetic": {
+        "holder_height_mm": 75.0,
+        "post_length_mm": 75.0,
+        "mount_axis_height_mm": 22.0,
+        "insertion_depth_mm": 47.0,
+        "terms": [
+          {
+            "code": "HOLDER_HEIGHT",
+            "label": "Post holder height",
+            "label_zh_cn": "支杆座高度",
+            "mm": 75.0
+          },
+          {
+            "code": "POST_LENGTH",
+            "label": "Post length",
+            "label_zh_cn": "支杆长度",
+            "mm": 75.0
+          },
+          {
+            "code": "MOUNT_AXIS_HEIGHT",
+            "label": "Mount axis height",
+            "label_zh_cn": "镜架光轴高度",
+            "mm": 22.0
+          },
+          {
+            "code": "INSERTION_DEPTH",
+            "label": "Insertion depth",
+            "label_zh_cn": "插入深度",
+            "mm": -47.0
+          }
+        ],
+        "total_mm": 125.0,
+        "text": "Holder 75 mm + post 75 mm + mount axis height 22 mm − insertion 47 mm = beam height 125 mm.",
+        "text_zh_cn": "支杆座高 75 mm + 支杆长 75 mm + 镜架光轴高 22 mm − 插入深度 47 mm = 光轴高度 125 mm。"
+      },
+      "height_travel_mm": {
+        "down": -28.0,
+        "up": 22.0
+      },
+      "insertion_interval_mm": [
+        25.0,
+        75.0
+      ],
+      "reachable_axis_height_mm": [
+        47.0,
+        322.0
+      ],
+      "adjustment_axes": [],
+      "adjustment_axes_zh_cn": [],
+      "adjustments": [],
+      "checks": [
+        {
+          "code": "MOUNT_HOLDS_OPTIC",
+          "status": "PASS",
+          "text": "The mount holds the optic (shape, size, thickness, clear aperture) and does not clip the beam at the default angle for this kind of optic.",
+          "text_zh_cn": "镜架能夹持该元件（形状、尺寸、厚度、通光孔径），且在该类元件的默认入射角下不遮挡光束。"
+        },
+        {
+          "code": "HEIGHT_CLOSURE",
+          "status": "PASS",
+          "text": "Holder height, post length, mount axis height and insertion depth give the stated beam height.",
+          "text_zh_cn": "支杆座高度、支杆长度、镜架光轴高度和插入深度合起来正好是所述光轴高度。"
+        },
+        {
+          "code": "INTERFACE_FIT",
+          "status": "PASS",
+          "text": "The post diameter fits the holder clamp; the post thread fits the mount's interface.",
+          "text_zh_cn": "支杆直径与支杆座夹持孔一致；支杆螺纹与镜架接口一致。"
+        },
+        {
+          "code": "INTRA_CHAIN_ENVELOPE",
+          "status": "PASS",
+          "text": "The parts of the set do not intersect outside their contacts.",
+          "text_zh_cn": "这组零件之间除接触面外没有干涉。"
+        },
+        {
+          "code": "ENGAGEMENT_RANGE",
+          "status": "NOT_RUN",
+          "text": "The post holder's insertion range is an assumed value, so the insertion depth is not checked against a measured range.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值，因此插入深度未按实测范围检查。"
+        },
+        {
+          "code": "ACCEPTED_ENVELOPES",
+          "status": "PASS",
+          "text": "The part outlines rest on accepted facts.",
+          "text_zh_cn": "零件外形依据已确认的数据。"
+        },
+        {
+          "code": "LAYOUT",
+          "status": "NOT_RUN",
+          "text": "No layout: spacing to other optics and hardware, the beam beyond this optic and fixing hole positions are not checked.",
+          "text_zh_cn": "没有布局：未检查与其他元件和光机的间距、元件之后的光路以及固定孔的位置。"
+        }
+      ],
+      "assumptions": [
+        {
+          "code": "holder.insertion_interval",
+          "text": "The post holder's insertion range is an assumed value.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值。"
+        }
+      ],
+      "conditions": [],
+      "text": "OS-OPT-LENS-PCX-D25P4-F100-T3P6-R51P5-NBK7-AR400-1100-W587P6, 2 unit(s), beam height 125 mm, angle of incidence 0°.",
+      "text_zh_cn": "OS-OPT-LENS-PCX-D25P4-F100-T3P6-R51P5-NBK7-AR400-1100-W587P6，2 件，光轴高度 125 mm，入射角 0°。"
+    },
+    {
+      "unit_id": "M1",
+      "line_id": "M1",
+      "quantity": 1,
+      "optic": {
+        "opensci_sku": "OS-OPT-MIR-FLAT-D25P4-AG-450-20000-R96-AOI0T10-T6-CA22P86-UVFS",
+        "line_key": "B05",
+        "display_name": "Flat mirror, D25.4 mm, silver, 450-20000 nm, R 96 percent min",
+        "display_name_zh_cn": "平面反射镜，直径 25.4 mm，银膜，波段 450-20000 nm，反射率不低于 96%"
+      },
+      "beam_height_mm": 125.0,
+      "incidence_deg": 45.0,
+      "incidence_basis": "DEFAULT_FOR_CATEGORY",
+      "chain": [
+        {
+          "role": "MOUNT",
+          "opensci_sku": "OS-MECH-MIRROR-MOUNT-KINEMATIC-D25-H25P4",
+          "line_key": "B06",
+          "quantity": 1,
+          "display_name": "Mirror mount for 25.4 mm round optics, kinematic tip/tilt +/-4 deg, axis 25.4 mm",
+          "display_name_zh_cn": "反射镜架，适用于 25.4 毫米圆形光学元件，运动学俯仰/偏摆调节 ±4 度，光轴高度 25.4 毫米"
+        },
+        {
+          "role": "POST",
+          "opensci_sku": "OS-MECH-POST-D12P7-L75",
+          "line_key": "B07",
+          "quantity": 1,
+          "display_name": "Optical post, 12.7 mm diameter, 75 mm",
+          "display_name_zh_cn": "光学支杆，直径 12.7 毫米，长 75 毫米"
+        },
+        {
+          "role": "POST_HOLDER",
+          "opensci_sku": "OS-MECH-POST-HOLDER-FORK-L75",
+          "line_key": "B08",
+          "quantity": 1,
+          "display_name": "Post holder with integrated fork base, 75 mm",
+          "display_name_zh_cn": "带一体式叉块底座的支杆座，高 75 毫米"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "code": "OPTIC_INTO_MOUNT",
+          "interface_designation": "OD25.4-SEAT",
+          "text": "Seat the optic OS-OPT-MIR-FLAT-D25P4-AG-450-20000-R96-AOI0T10-T6-CA22P86-UVFS in the mount OS-MECH-MIRROR-MOUNT-KINEMATIC-D25-H25P4 (OD25.4-SEAT).",
+          "text_zh_cn": "将光学元件 OS-OPT-MIR-FLAT-D25P4-AG-450-20000-R96-AOI0T10-T6-CA22P86-UVFS 装入镜架 OS-MECH-MIRROR-MOUNT-KINEMATIC-D25-H25P4（OD25.4-SEAT）。"
+        },
+        {
+          "step": 2,
+          "code": "MOUNT_ONTO_POST",
+          "interface_designation": "M4x0.7",
+          "text": "Screw the mount OS-MECH-MIRROR-MOUNT-KINEMATIC-D25-H25P4 onto the post OS-MECH-POST-D12P7-L75 with the post's top stud (M4x0.7).",
+          "text_zh_cn": "用支杆顶端的螺柱（M4x0.7）把镜架 OS-MECH-MIRROR-MOUNT-KINEMATIC-D25-H25P4 拧到支杆 OS-MECH-POST-D12P7-L75 上。"
+        },
+        {
+          "step": 3,
+          "code": "POST_INTO_HOLDER",
+          "interface_designation": "OD12.7-POST",
+          "insertion_depth_mm": 50.4,
+          "text": "Insert the post into the post holder OS-MECH-POST-HOLDER-FORK-L75 (OD12.7-POST) to 50.4 mm and lock it.",
+          "text_zh_cn": "将支杆插入支杆座 OS-MECH-POST-HOLDER-FORK-L75（OD12.7-POST），插入深度 50.4 mm，锁紧。"
+        },
+        {
+          "step": 4,
+          "code": "HOLDER_ONTO_SURFACE",
+          "interface_designation": "M6x1.0",
+          "text": "Fix the post holder on a hole of the surface with one M6x1.0 screw through its base slot; with the slot along the beam it slides along the beam.",
+          "text_zh_cn": "用一颗 M6x1.0 螺钉穿过支杆座底座的槽，把支杆座固定在台面的螺孔上；槽沿光束方向时可沿光束微调位置。"
+        }
+      ],
+      "height_arithmetic": {
+        "holder_height_mm": 75.0,
+        "post_length_mm": 75.0,
+        "mount_axis_height_mm": 25.4,
+        "insertion_depth_mm": 50.4,
+        "terms": [
+          {
+            "code": "HOLDER_HEIGHT",
+            "label": "Post holder height",
+            "label_zh_cn": "支杆座高度",
+            "mm": 75.0
+          },
+          {
+            "code": "POST_LENGTH",
+            "label": "Post length",
+            "label_zh_cn": "支杆长度",
+            "mm": 75.0
+          },
+          {
+            "code": "MOUNT_AXIS_HEIGHT",
+            "label": "Mount axis height",
+            "label_zh_cn": "镜架光轴高度",
+            "mm": 25.4
+          },
+          {
+            "code": "INSERTION_DEPTH",
+            "label": "Insertion depth",
+            "label_zh_cn": "插入深度",
+            "mm": -50.4
+          }
+        ],
+        "total_mm": 125.0,
+        "text": "Holder 75 mm + post 75 mm + mount axis height 25.4 mm − insertion 50.4 mm = beam height 125 mm.",
+        "text_zh_cn": "支杆座高 75 mm + 支杆长 75 mm + 镜架光轴高 25.4 mm − 插入深度 50.4 mm = 光轴高度 125 mm。"
+      },
+      "height_travel_mm": {
+        "down": -24.6,
+        "up": 25.4
+      },
+      "insertion_interval_mm": [
+        25.0,
+        75.0
+      ],
+      "reachable_axis_height_mm": [
+        50.4,
+        325.4
+      ],
+      "adjustment_axes": [
+        "Rx (TIP_TILT_MOUNT, -4 / +4 deg)",
+        "Ry (TIP_TILT_MOUNT, -4 / +4 deg)"
+      ],
+      "adjustment_axes_zh_cn": [
+        "Rx (TIP_TILT_MOUNT, -4° / +4°)",
+        "Ry (TIP_TILT_MOUNT, -4° / +4°)"
+      ],
+      "adjustments": [
+        {
+          "axis": "Rx",
+          "requested_control": "MANUAL",
+          "status": "AS_REQUESTED",
+          "mechanism_code": "TIP_TILT_MOUNT",
+          "travel": {
+            "minus": -4.0,
+            "plus": 4.0,
+            "unit": "deg"
+          },
+          "condition": null,
+          "text": "Rx: the mount's adjusters, -4 / +4 deg.",
+          "text_zh_cn": "Rx：镜架调节旋钮，-4° / +4°。"
+        },
+        {
+          "axis": "Ry",
+          "requested_control": "MANUAL",
+          "status": "AS_REQUESTED",
+          "mechanism_code": "TIP_TILT_MOUNT",
+          "travel": {
+            "minus": -4.0,
+            "plus": 4.0,
+            "unit": "deg"
+          },
+          "condition": null,
+          "text": "Ry: the mount's adjusters, -4 / +4 deg.",
+          "text_zh_cn": "Ry：镜架调节旋钮，-4° / +4°。"
+        }
+      ],
+      "checks": [
+        {
+          "code": "MOUNT_HOLDS_OPTIC",
+          "status": "PASS",
+          "text": "The mount holds the optic (shape, size, thickness, clear aperture) and does not clip the beam at the default angle for this kind of optic.",
+          "text_zh_cn": "镜架能夹持该元件（形状、尺寸、厚度、通光孔径），且在该类元件的默认入射角下不遮挡光束。"
+        },
+        {
+          "code": "HEIGHT_CLOSURE",
+          "status": "PASS",
+          "text": "Holder height, post length, mount axis height and insertion depth give the stated beam height.",
+          "text_zh_cn": "支杆座高度、支杆长度、镜架光轴高度和插入深度合起来正好是所述光轴高度。"
+        },
+        {
+          "code": "INTERFACE_FIT",
+          "status": "PASS",
+          "text": "The post diameter fits the holder clamp; the post thread fits the mount's interface.",
+          "text_zh_cn": "支杆直径与支杆座夹持孔一致；支杆螺纹与镜架接口一致。"
+        },
+        {
+          "code": "INTRA_CHAIN_ENVELOPE",
+          "status": "PASS",
+          "text": "The parts of the set do not intersect outside their contacts.",
+          "text_zh_cn": "这组零件之间除接触面外没有干涉。"
+        },
+        {
+          "code": "ENGAGEMENT_RANGE",
+          "status": "NOT_RUN",
+          "text": "The post holder's insertion range is an assumed value, so the insertion depth is not checked against a measured range.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值，因此插入深度未按实测范围检查。"
+        },
+        {
+          "code": "ACCEPTED_ENVELOPES",
+          "status": "NOT_RUN",
+          "text": "Some part outlines are assumed values, so the clearance between the parts is checked against assumed outlines.",
+          "text_zh_cn": "部分零件外形是假定值，因此零件之间的间隙依据假定的外形检查。"
+        },
+        {
+          "code": "LAYOUT",
+          "status": "NOT_RUN",
+          "text": "No layout: spacing to other optics and hardware, the beam beyond this optic and fixing hole positions are not checked.",
+          "text_zh_cn": "没有布局：未检查与其他元件和光机的间距、元件之后的光路以及固定孔的位置。"
+        }
+      ],
+      "assumptions": [
+        {
+          "code": "holder.insertion_interval",
+          "text": "The post holder's insertion range is an assumed value.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值。"
+        },
+        {
+          "code": "mount.geometry",
+          "text": "The mount's outline or axis height is an assumed value.",
+          "text_zh_cn": "镜架外形或光轴高度是假定值。"
+        }
+      ],
+      "conditions": [],
+      "text": "OS-OPT-MIR-FLAT-D25P4-AG-450-20000-R96-AOI0T10-T6-CA22P86-UVFS, 1 unit(s), beam height 125 mm, angle of incidence 45°.",
+      "text_zh_cn": "OS-OPT-MIR-FLAT-D25P4-AG-450-20000-R96-AOI0T10-T6-CA22P86-UVFS，1 件，光轴高度 125 mm，入射角 45°。"
+    },
+    {
+      "unit_id": "S1",
+      "line_id": "S1",
+      "quantity": 1,
+      "optic": {
+        "opensci_sku": "OS-OPT-BS-PLATE-D25P4-R10T90-400-700-W0P5-AOI45-T5-UVFS-CA22P86",
+        "line_key": "B09",
+        "display_name": "Wedged plate beamsplitter, D25.4 mm, R/T 10/90, 400-700 nm, wedge 0.5 deg",
+        "display_name_zh_cn": "楔形平板分束镜，直径 25.4 mm，分光比 R/T 10/90，波段 400-700 nm，楔角 0.5 度"
+      },
+      "beam_height_mm": 125.0,
+      "incidence_deg": 45.0,
+      "incidence_basis": "DEFAULT_FOR_CATEGORY",
+      "chain": [
+        {
+          "role": "MOUNT",
+          "opensci_sku": "OS-MECH-LENS-MOUNT-FIXED-D25",
+          "line_key": "B10",
+          "quantity": 1,
+          "display_name": "Fixed lens mount for 25.4 mm optics",
+          "display_name_zh_cn": "固定式透镜安装架，适用于 25.4 毫米光学元件"
+        },
+        {
+          "role": "POST",
+          "opensci_sku": "OS-MECH-POST-D12P7-L75",
+          "line_key": "B11",
+          "quantity": 1,
+          "display_name": "Optical post, 12.7 mm diameter, 75 mm",
+          "display_name_zh_cn": "光学支杆，直径 12.7 毫米，长 75 毫米"
+        },
+        {
+          "role": "POST_HOLDER",
+          "opensci_sku": "OS-MECH-POST-HOLDER-FORK-L75",
+          "line_key": "B12",
+          "quantity": 1,
+          "display_name": "Post holder with integrated fork base, 75 mm",
+          "display_name_zh_cn": "带一体式叉块底座的支杆座，高 75 毫米"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "code": "OPTIC_INTO_MOUNT",
+          "interface_designation": "OD25.4-SEAT",
+          "text": "Seat the optic OS-OPT-BS-PLATE-D25P4-R10T90-400-700-W0P5-AOI45-T5-UVFS-CA22P86 in the mount OS-MECH-LENS-MOUNT-FIXED-D25 (OD25.4-SEAT).",
+          "text_zh_cn": "将光学元件 OS-OPT-BS-PLATE-D25P4-R10T90-400-700-W0P5-AOI45-T5-UVFS-CA22P86 装入镜架 OS-MECH-LENS-MOUNT-FIXED-D25（OD25.4-SEAT）。"
+        },
+        {
+          "step": 2,
+          "code": "MOUNT_ONTO_POST",
+          "interface_designation": "M4x0.7",
+          "text": "Screw the mount OS-MECH-LENS-MOUNT-FIXED-D25 onto the post OS-MECH-POST-D12P7-L75 with the post's top stud (M4x0.7).",
+          "text_zh_cn": "用支杆顶端的螺柱（M4x0.7）把镜架 OS-MECH-LENS-MOUNT-FIXED-D25 拧到支杆 OS-MECH-POST-D12P7-L75 上。"
+        },
+        {
+          "step": 3,
+          "code": "POST_INTO_HOLDER",
+          "interface_designation": "OD12.7-POST",
+          "insertion_depth_mm": 47.0,
+          "text": "Insert the post into the post holder OS-MECH-POST-HOLDER-FORK-L75 (OD12.7-POST) to 47 mm and lock it.",
+          "text_zh_cn": "将支杆插入支杆座 OS-MECH-POST-HOLDER-FORK-L75（OD12.7-POST），插入深度 47 mm，锁紧。"
+        },
+        {
+          "step": 4,
+          "code": "HOLDER_ONTO_SURFACE",
+          "interface_designation": "M6x1.0",
+          "text": "Fix the post holder on a hole of the surface with one M6x1.0 screw through its base slot; with the slot along the beam it slides along the beam.",
+          "text_zh_cn": "用一颗 M6x1.0 螺钉穿过支杆座底座的槽，把支杆座固定在台面的螺孔上；槽沿光束方向时可沿光束微调位置。"
+        }
+      ],
+      "height_arithmetic": {
+        "holder_height_mm": 75.0,
+        "post_length_mm": 75.0,
+        "mount_axis_height_mm": 22.0,
+        "insertion_depth_mm": 47.0,
+        "terms": [
+          {
+            "code": "HOLDER_HEIGHT",
+            "label": "Post holder height",
+            "label_zh_cn": "支杆座高度",
+            "mm": 75.0
+          },
+          {
+            "code": "POST_LENGTH",
+            "label": "Post length",
+            "label_zh_cn": "支杆长度",
+            "mm": 75.0
+          },
+          {
+            "code": "MOUNT_AXIS_HEIGHT",
+            "label": "Mount axis height",
+            "label_zh_cn": "镜架光轴高度",
+            "mm": 22.0
+          },
+          {
+            "code": "INSERTION_DEPTH",
+            "label": "Insertion depth",
+            "label_zh_cn": "插入深度",
+            "mm": -47.0
+          }
+        ],
+        "total_mm": 125.0,
+        "text": "Holder 75 mm + post 75 mm + mount axis height 22 mm − insertion 47 mm = beam height 125 mm.",
+        "text_zh_cn": "支杆座高 75 mm + 支杆长 75 mm + 镜架光轴高 22 mm − 插入深度 47 mm = 光轴高度 125 mm。"
+      },
+      "height_travel_mm": {
+        "down": -28.0,
+        "up": 22.0
+      },
+      "insertion_interval_mm": [
+        25.0,
+        75.0
+      ],
+      "reachable_axis_height_mm": [
+        47.0,
+        322.0
+      ],
+      "adjustment_axes": [],
+      "adjustment_axes_zh_cn": [],
+      "adjustments": [],
+      "checks": [
+        {
+          "code": "MOUNT_HOLDS_OPTIC",
+          "status": "PASS",
+          "text": "The mount holds the optic (shape, size, thickness, clear aperture) and does not clip the beam at the default angle for this kind of optic.",
+          "text_zh_cn": "镜架能夹持该元件（形状、尺寸、厚度、通光孔径），且在该类元件的默认入射角下不遮挡光束。"
+        },
+        {
+          "code": "HEIGHT_CLOSURE",
+          "status": "PASS",
+          "text": "Holder height, post length, mount axis height and insertion depth give the stated beam height.",
+          "text_zh_cn": "支杆座高度、支杆长度、镜架光轴高度和插入深度合起来正好是所述光轴高度。"
+        },
+        {
+          "code": "INTERFACE_FIT",
+          "status": "PASS",
+          "text": "The post diameter fits the holder clamp; the post thread fits the mount's interface.",
+          "text_zh_cn": "支杆直径与支杆座夹持孔一致；支杆螺纹与镜架接口一致。"
+        },
+        {
+          "code": "INTRA_CHAIN_ENVELOPE",
+          "status": "PASS",
+          "text": "The parts of the set do not intersect outside their contacts.",
+          "text_zh_cn": "这组零件之间除接触面外没有干涉。"
+        },
+        {
+          "code": "ENGAGEMENT_RANGE",
+          "status": "NOT_RUN",
+          "text": "The post holder's insertion range is an assumed value, so the insertion depth is not checked against a measured range.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值，因此插入深度未按实测范围检查。"
+        },
+        {
+          "code": "ACCEPTED_ENVELOPES",
+          "status": "PASS",
+          "text": "The part outlines rest on accepted facts.",
+          "text_zh_cn": "零件外形依据已确认的数据。"
+        },
+        {
+          "code": "LAYOUT",
+          "status": "NOT_RUN",
+          "text": "No layout: spacing to other optics and hardware, the beam beyond this optic and fixing hole positions are not checked.",
+          "text_zh_cn": "没有布局：未检查与其他元件和光机的间距、元件之后的光路以及固定孔的位置。"
+        }
+      ],
+      "assumptions": [
+        {
+          "code": "holder.insertion_interval",
+          "text": "The post holder's insertion range is an assumed value.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值。"
+        }
+      ],
+      "conditions": [],
+      "text": "OS-OPT-BS-PLATE-D25P4-R10T90-400-700-W0P5-AOI45-T5-UVFS-CA22P86, 1 unit(s), beam height 125 mm, angle of incidence 45°.",
+      "text_zh_cn": "OS-OPT-BS-PLATE-D25P4-R10T90-400-700-W0P5-AOI45-T5-UVFS-CA22P86，1 件，光轴高度 125 mm，入射角 45°。"
+    }
+  ],
+  "notes": [
+    {
+      "code": "SURFACE",
+      "text": "Every height is measured from the surface the post holders stand on (the top of a breadboard or table).",
+      "text_zh_cn": "所有高度都从支杆座所立的平面（面包板或台面的上表面）量起。"
+    },
+    {
+      "code": "NOT_CHECKED_RELATIVE_POSITIONS",
+      "text": "The positions of the optics relative to each other are not checked.",
+      "text_zh_cn": "未检查各光学元件之间的相对位置。"
+    },
+    {
+      "code": "NOT_CHECKED_COLLISIONS_BETWEEN_CHAINS",
+      "text": "Collisions between the hardware of different optics are not checked.",
+      "text_zh_cn": "未检查不同元件的光机之间是否碰撞。"
+    },
+    {
+      "code": "NOT_CHECKED_BEAM_PATH_CLEARANCE",
+      "text": "Whether other hardware blocks the beam is not checked.",
+      "text_zh_cn": "未检查光路是否被其他光机遮挡。"
+    },
+    {
+      "code": "NOT_CHECKED_FIXING_HOLES",
+      "text": "The fixing hole positions on your surface are not checked.",
+      "text_zh_cn": "未检查台面上固定孔的位置。"
+    },
+    {
+      "code": "NOT_CHECKED_OPTICAL_FUNCTION",
+      "text": "The optical function of the optics together is not checked.",
+      "text_zh_cn": "未检查这些元件组合起来的光学功能。"
+    }
+  ],
+  "content_hash": "02dc5996e68a167489184e7964a0cdd0683a24d5272290036c7bbeddacda727a"
+}

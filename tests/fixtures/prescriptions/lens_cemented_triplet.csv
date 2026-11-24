@@ -1,0 +1,19 @@
+#! format = csv-surface-table/1
+#! name = Cemented triplet
+#! units = mm
+# Flint, crown, flint (Hastings form), one element, D 20 mm.
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,flint front,30,1.5,F2,9,10,,,,,,yes
+2,STANDARD,cemented,18,7.5,N-BK7,9,10,,,,,,
+3,STANDARD,cemented,-18,1.5,F2,9,10,,,,,,
+4,STANDARD,flint rear,-30,31.6,,9,10,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+F2,SELLMEIER,1.34533359,0.209073176,0.937357162,0.00997743871,0.0470450767,111.886764,320,2500,F2 (fixture Sellmeier)
+N-BK7,SELLMEIER,1.03961212,0.231792344,1.01046945,0.00600069867,0.0200179144,103.560653,300,2500,N-BK7 (fixture Sellmeier)

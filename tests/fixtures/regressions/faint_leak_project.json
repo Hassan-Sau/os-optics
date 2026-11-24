@@ -1,0 +1,149 @@
+{
+  "schema": "opensci.project",
+  "project_schema_version": "2.0",
+  "components": [
+    {
+      "instance_id": "SRC",
+      "optical_role": "source",
+      "custom_part": {
+        "custom_part_key": "laser",
+        "description": "Regression laser"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          -100,
+          0,
+          0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "source_model": {
+        "model_kind": "GAUSSIAN_BEAM",
+        "wavelength_nm": 532,
+        "power_w": 1,
+        "waist_radius_mm": 0.5,
+        "waist_position_mm": 0,
+        "m2": 1,
+        "polarization": {
+          "kind": "LINEAR",
+          "angle_deg": 0
+        }
+      }
+    },
+    {
+      "instance_id": "M",
+      "optical_role": "mirror",
+      "custom_part": {
+        "custom_part_key": "leaky-mirror",
+        "description": "Regression mirror with weak transmission"
+      },
+      "optical_model_id": "MIRROR",
+      "nominal_pose": {
+        "position_mm": [
+          0,
+          0,
+          0
+        ],
+        "quaternion_wxyz": [
+          -0.27059805007309856,
+          -0.27059805007309856,
+          0.6532814824381883,
+          0.6532814824381884
+        ]
+      }
+    }
+  ],
+  "optical_models": [
+    {
+      "model_id": "MIRROR",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "20",
+            "coating_id": "LEAK",
+            "traced": "REFLECTED",
+            "status": "DECLARED"
+          }
+        ],
+        "edge_radius_mm": "20",
+        "valid_band_nm": {
+          "min_nm": "500",
+          "max_nm": "600",
+          "status": "DECLARED"
+        },
+        "approximations": [
+          "SUBSTRATE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM"
+        ],
+        "status": "DECLARED"
+      }
+    }
+  ],
+  "model_coatings": [
+    {
+      "coating_id": "LEAK",
+      "kind": "DIELECTRIC_HIGH_REFLECTOR",
+      "display_name": "Weak leak fixture",
+      "bands": [
+        {
+          "min_nm": "500",
+          "max_nm": "600",
+          "reflectance": "0.999999999999",
+          "transmittance": "0.000000000001",
+          "reflectance_s": "0.999999999999",
+          "reflectance_p": "0.999999999999",
+          "transmittance_s": "0.000000000001",
+          "transmittance_p": "0.000000000001",
+          "status": "DECLARED"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DECLARED"
+      },
+      "basis": "Synthetic regression coating"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "det",
+      "pose": {
+        "position_mm": [
+          100,
+          0,
+          0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "aperture": {
+        "shape": "circle",
+        "radius_mm": 20
+      },
+      "absorbing": true
+    }
+  ],
+  "targets": [
+    {
+      "target_id": "power",
+      "observation_id": "det",
+      "metric": "power_W",
+      "maximum": 1e-15,
+      "unit": "W"
+    }
+  ]
+}

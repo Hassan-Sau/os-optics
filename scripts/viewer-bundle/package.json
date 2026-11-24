@@ -1,0 +1,14 @@
+{
+  "name": "os-optics-viewer-bundle",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Pinned build inputs for the Engine's self-contained local viewer",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "rolldown": "1.2.12",
+    "three": "0.186.1"
+  }
+}

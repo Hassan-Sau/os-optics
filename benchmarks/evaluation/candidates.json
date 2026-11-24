@@ -1,0 +1,40 @@
+{
+ "pose": {
+  "base": "double_gauss",
+  "component": "LENS",
+  "axis": 0,
+  "offsets_mm": [
+   -0.5,
+   -0.4,
+   -0.3,
+   -0.2,
+   -0.1,
+   0.0,
+   0.1,
+   0.2,
+   0.3,
+   0.4,
+   0.5
+  ],
+  "what": "the double Gauss objective with its lens moved along the axis in 0.1 mm steps: 11 designs"
+ },
+ "prescription": {
+  "base": "double_gauss",
+  "model": "lens-L1",
+  "surface": "S1",
+  "radii_mm": [
+   "26.58",
+   "26.68",
+   "26.78",
+   "26.88",
+   "26.98",
+   "27.08",
+   "27.18",
+   "27.28",
+   "27.38",
+   "27.48",
+   "27.58"
+  ],
+  "what": "the double Gauss objective with the first radius of its first element varied in 0.1 mm steps: 11 designs"
+ }
+}

@@ -1,0 +1,27 @@
+#! format = csv-surface-table/1
+#! name = Double-Gauss objective, six glass elements in four groups
+#! units = mm
+# The classical form, f about 52 mm: singlet, cemented meniscus, stop, cemented meniscus, singlet. The inner concave faces
+# are steeper than the elements' outlines allow, so they are edged smaller and carry flat flanges (the real construction).
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,L1 front,27.08,4.37,N-SK16,13,13.8,,,,,,
+2,STANDARD,L1 rear,76.26,0.25,,12.2,13.8,,,,,,
+3,STANDARD,L2 front,17.98,7,N-SK16,11.2,11.8,,,,,,
+4,STANDARD,L2-L3 cemented,inf,1.89,F2,10.6,11.8,,,,,,
+5,STANDARD,L3 rear,11.14,7.13,,8,9,,,,,,
+STO,STANDARD,iris,inf,6.21,,5.1,,,,,,,yes
+7,STANDARD,L4 front,-12.84,1.89,F2,7.6,9.5,,,,,,
+8,STANDARD,L4-L5 cemented,inf,5.42,N-SK16,9.4,12,,,,,,
+9,STANDARD,L5 rear,-18.49,0.25,,10.6,12,,,,,,
+10,STANDARD,L6 front,98.21,4.4,N-SK16,11.6,12.6,,,,,,
+11,STANDARD,L6 rear,-33.57,30.6,,12,12.6,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+F2,SELLMEIER,1.34533359,0.209073176,0.937357162,0.00997743871,0.0470450767,111.886764,320,2500,F2 (fixture Sellmeier)
+N-SK16,SELLMEIER,1.34317774,0.241144399,0.994317969,0.00704687339,0.0229005,92.7508526,310,2500,N-SK16 (fixture Sellmeier)
