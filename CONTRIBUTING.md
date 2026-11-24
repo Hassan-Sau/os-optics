@@ -7,8 +7,7 @@ documentation pull requests are welcome.
 ## Language
 
 Write issue titles, issue bodies, pull request titles and pull request descriptions in
-English. If English is difficult for you, you may add your original wording below the
-English text.
+Chinese or English.
 
 ## Report a bug
 
