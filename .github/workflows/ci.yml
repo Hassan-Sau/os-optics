@@ -1,0 +1,270 @@
+name: CI
+
+# The Engine's checks on GitHub-hosted runners: the native suite on the oldest supported Python at the declared
+# dependency floors and on the newest with uv.lock (sharded), the Pyodide runtime, the viewer in a real browser, the
+# repository tooling, and the candidate distributions built from this commit, checked, installed into a clean
+# environment and run through the documented quickstart.
+#
+# Every job runs on ubuntu-latest. Pull-request code never receives a write token or secrets: no privileged pull-request trigger,
+# read-only contents permission, actions pinned by full commit SHA.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  UV_VERSION: "0.12.17"
+  # The pinned public catalog release the real-catalog tests read (tests/catalog_store_helpers.py downloads it from the
+  # public catalog service once and checks its SHA-256); cached between runs under this key.
+  PUBLIC_CATALOG_KEY: public-catalog-2026-10-28.1-7d7f5f0a6fa1db7ce32503a6a1d86c5bdcd167035782b47b73c2ac00fc1acf30
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  engine:
+    # The supported Python range is >=3.11 (requires-python): the suite runs on the oldest supported version and on
+    # 3.14 (the Pyodide line). "3.11-lowest" installs exactly the declared dependency floors (numpy 2.3 / scipy 1.16 /
+    # pydantic 2.11.5 / shapely 2.1) so the lower bounds in pyproject.toml stay truthful; 3.14 uses uv.lock.
+    # Each leg runs as shards: .github/scripts/ci_pytest_shard.py splits the selected tests by file, balanced by
+    # .github/ci-shard-weights/engine.json (seconds per test file), so the shards of a leg run every selected test
+    # exactly once. Keep `shard` = 1..`total`.
+    name: engine (Python ${{ matrix.python }}, shard ${{ matrix.shard }}/${{ matrix.total }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11-lowest", "3.14"]
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        total: [10]
+    env:
+      UV_PYTHON: ${{ startsWith(matrix.python, '3.11') && '3.11' || matrix.python }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ startsWith(matrix.python, '3.11') && '3.11' || matrix.python }}
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: |
+            uv.lock
+            pyproject.toml
+            scripts/build-requirements.txt
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/public-catalog
+          key: ${{ env.PUBLIC_CATALOG_KEY }}
+      - name: Install (test extra; the declared floors on 3.11-lowest; pinned build tools for the wheel fixtures)
+        # The install tests build the wheel with `python -m build --no-isolation`, so the pinned build tools must be
+        # importable in the environment.
+        env:
+          LOWEST: ${{ endsWith(matrix.python, '-lowest') && '1' || '' }}
+        run: |
+          uv sync --locked --extra test
+          if [ -n "$LOWEST" ]; then
+            # --upgrade: without it uv keeps the locked versions uv sync installed, which already satisfy the ranges
+            uv pip install --resolution lowest-direct --upgrade "numpy>=2.3,<3" "scipy>=1.16,<2" "pydantic>=2.11.5,<3" "shapely>=2.1,<3"
+          fi
+          uv pip install --require-hashes -r scripts/build-requirements.txt
+          uv run --no-sync python -c "import sys, numpy, scipy, pydantic, shapely; print(sys.version, numpy.__version__, scipy.__version__, pydantic.VERSION, shapely.__version__)"
+          if [ -n "$LOWEST" ]; then
+            uv run --no-sync python -c "import numpy, scipy, pydantic, shapely; got = (numpy.__version__, scipy.__version__, pydantic.VERSION, shapely.__version__); assert got == ('2.3.0', '1.16.0', '2.11.5', '2.1.0'), got"
+          fi
+      - name: The pinned public catalog release
+        run: uv run --no-sync python tests/catalog_store_helpers.py
+      - name: Test this shard (unit, golden, determinism, install, hygiene, local workflow + optical view; no pyodide)
+        # --durations lists the shard's slowest tests, so growth shows before it reaches the timeout.
+        timeout-minutes: 30
+        run: >-
+          uv run --no-sync python .github/scripts/ci_pytest_shard.py
+          --shard="${{ matrix.shard }}/${{ matrix.total }}" --weights=.github/ci-shard-weights/engine.json
+          -- -m "not pyodide" --durations=15
+
+  engine-pyodide:
+    # The browser runtime: a real Pyodide (the pinned npm package; its Python packages come from the Pyodide CDN on a
+    # cold cache) installs the wheel built from this commit and must give the native results. Required.
+    name: engine (pyodide, shard ${{ matrix.shard }}/${{ matrix.total }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+        total: [3]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14"
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: |
+            uv.lock
+            pyproject.toml
+            scripts/build-requirements.txt
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          # an exact Node LTS release, so the runtime of the Pyodide harness does not change between runs
+          node-version: "24.22.3"
+          cache: npm
+          cache-dependency-path: tests/pyodide/package-lock.json
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/public-catalog
+          key: ${{ env.PUBLIC_CATALOG_KEY }}
+      - name: Install
+        env:
+          UV_PYTHON: "3.14"
+        run: |
+          uv sync --locked --extra test
+          uv pip install --require-hashes -r scripts/build-requirements.txt
+          uv run --no-sync python tests/catalog_store_helpers.py
+      - name: The pinned Pyodide package (npm ci, from package-lock.json)
+        working-directory: tests/pyodide
+        run: npm ci --no-audit --no-fund
+      - name: Test this shard (real Pyodide install + native/Pyodide parity)
+        timeout-minutes: 30
+        run: >-
+          uv run --no-sync python .github/scripts/ci_pytest_shard.py
+          --shard="${{ matrix.shard }}/${{ matrix.total }}" --weights=.github/ci-shard-weights/engine-pyodide.json
+          -- -m pyodide --durations=15
+
+  engine-browser:
+    # The real-browser tests (scripts/run_browser_tests.py BROWSER_TESTS: the Optical Simulation View page in Chromium).
+    # playwright is not an Engine dependency: this job installs a pinned playwright into its own environment and runs
+    # them with --require, so a missing playwright or Chromium, or a skipped test, fails the job.
+    name: engine (viewer in a real browser)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14"
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/public-catalog
+          key: ${{ env.PUBLIC_CATALOG_KEY }}
+      - name: Install (Engine environment, pinned playwright and its Chromium)
+        env:
+          UV_PYTHON: "3.14"
+        run: |
+          uv sync --locked --extra test
+          uv pip install "playwright==1.63.0"
+          uv run --no-sync python -m playwright install --with-deps chromium
+          uv run --no-sync python tests/catalog_store_helpers.py
+      - name: Real-browser tests (executed, never skipped)
+        timeout-minutes: 10
+        run: uv run --no-sync python scripts/run_browser_tests.py --require
+
+  repository:
+    # The repository tooling: the shard script, the release guards (a tag that does not name this version and a commit
+    # off main are refused) and the build-identity helpers.
+    name: repository tooling
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14"
+      - name: Install the test runner
+        run: python -m pip install "pytest==9.1.1"
+      - name: Tooling tests
+        run: python -m pytest -p no:cacheprovider .github/scripts/tests scripts/tests
+      - name: A mismatched release tag is refused
+        run: |
+          if python scripts/release_guard.py --tag v0.0.0; then
+            echo "::error::release_guard.py accepted a tag that does not name this version"
+            exit 1
+          fi
+
+  candidate:
+    # The distributions of this commit, as the release workflow builds them (scripts/build_dist.py: pinned build tools,
+    # SOURCE_DATE_EPOCH = commit time), rebuilt once to show the build reproduces, checked (twine --strict and
+    # scripts/check_dist.py: MIT metadata and licence files, project URLs, contents), installed into a clean virtual
+    # environment and run through the documented quickstart. The artifact carries the wheel, the sdist and
+    # identity.json (commit, tree, version, Engine build id, SHA-256 and size of each file).
+    name: candidate (build, check, clean install, quickstart)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14"
+      - name: Install the pinned build and check tools
+        run: python -m pip install --require-hashes -r scripts/build-requirements.txt -r scripts/check-requirements.txt
+      - name: Build
+        run: python scripts/build_dist.py --outdir dist
+      - name: The build reproduces
+        run: |
+          python scripts/build_dist.py --outdir rebuild > /dev/null
+          python - <<'PY'
+          import json
+          first = json.load(open("dist/identity.json"))["files"]
+          second = json.load(open("rebuild/identity.json"))["files"]
+          assert first == second, (first, second)
+          print("reproduced:", json.dumps(first))
+          PY
+      - name: Check metadata and contents
+        run: |
+          python -m twine check --strict dist/*.whl dist/*.tar.gz
+          python scripts/check_dist.py dist
+      - name: Clean install of the wheel and the documented quickstart
+        run: python scripts/check_quickstart.py --engine-wheel "$(ls dist/os_optics-*.whl)" --work "$RUNNER_TEMP/quickstart"
+      - name: The installed Engine is the candidate
+        run: |
+          cd "$RUNNER_TEMP"
+          quickstart/.venv/bin/python -I - "$GITHUB_WORKSPACE/dist/identity.json" <<'PY'
+          import json, sys
+          import os_optics
+          from os_optics.manifest.build import engine_build_id
+          identity = json.load(open(sys.argv[1]))
+          assert os_optics.__version__ == identity["version"], (os_optics.__version__, identity["version"])
+          assert engine_build_id() == identity["engine_build_id"], (engine_build_id(), identity["engine_build_id"])
+          assert "site-packages" in os_optics.__file__, os_optics.__file__
+          print(json.dumps({"version": os_optics.__version__, "engine_build_id": engine_build_id(), "file": os_optics.__file__}))
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: candidate-dist
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/identity.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve quickstart logs
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: candidate-quickstart-logs
+          path: ${{ runner.temp }}/quickstart/logs/
+          if-no-files-found: ignore
+          retention-days: 14

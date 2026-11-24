@@ -135,6 +135,11 @@ to import a catalog release offline, or without `--catalog` to synchronize it fr
 `--protected` when the `[protected]` extra is installed). It prints one JSON evidence summary and exits non-zero on any
 failure.
 
+`scripts/build_dist.py` builds the wheel and the sdist of a commit reproducibly (pinned build tools,
+`SOURCE_DATE_EPOCH` from the commit: the same bytes on the same operating system and interpreter build) and writes their
+identity (`dist/identity.json`: commit, tree, version, Engine build id, build platform, interpreter and zlib, SHA-256 and
+size of each file); CI and the release workflow use it.
+
 `scripts/release_parity.py` checks three recorded scenarios (retained-DOF travel, limits, drift and their targets;
 the 0.852612768013 mW plate and a thin complex-transmission sample; the 32-line source, a continuous
 spectrum and the static approximation) on an installed `os-optics`, against closed-form references, and

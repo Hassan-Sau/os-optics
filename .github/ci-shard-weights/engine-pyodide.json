@@ -1,0 +1,9 @@
+{
+ "tests/test_packaging_and_pyodide.py": 300.8,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part1of6]": 207.6,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part2of6]": 85.2,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part3of6]": 56.3,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part4of6]": 57.0,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part5of6]": 160.8,
+ "tests/test_packaging_and_pyodide.py::test_the_browser_json_api_is_semantically_identical_to_native[part6of6]": 159.6
+}
