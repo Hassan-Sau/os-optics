@@ -157,4 +157,6 @@ from explicit files (`tests/conftest.py`, `tests/catalog_store_helpers.py`): the
 default, and one pinned release of the public optical catalog only where a test needs the real catalog
 (`real_catalog_store` or `REAL_CATALOG`). That release is not part of the repository: the suite downloads it once from the
 public catalog service into `.cache/public-catalog/` and checks its SHA-256 (`python tests/catalog_store_helpers.py`
-fetches it ahead; `OS_OPTICS_TEST_PUBLIC_CATALOG` names a copy you already have).
+fetches it ahead; `OS_OPTICS_TEST_PUBLIC_CATALOG` names a copy you already have). In CI only the `public-catalog` job
+fetches it (from the actions cache, else downloaded with `--attempts`, each attempt time-limited); the test jobs take it
+from that run's artifact.

@@ -22,12 +22,49 @@ concurrency:
 
 env:
   UV_VERSION: "0.12.17"
-  # The pinned public catalog release the real-catalog tests read (tests/catalog_store_helpers.py downloads it from the
-  # public catalog service once and checks its SHA-256); cached between runs under this key.
+  # The pinned public catalog release the real-catalog tests read (tests/catalog_store_helpers.py). Only the
+  # public-catalog job fetches it (from the actions cache under this key, else from the public catalog service); the
+  # jobs that need it take this run's artifact.
   PUBLIC_CATALOG_KEY: public-catalog-2026-10-28.1-7d7f5f0a6fa1db7ce32503a6a1d86c5bdcd167035782b47b73c2ac00fc1acf30
   PYTHONUNBUFFERED: "1"
 
 jobs:
+  public-catalog:
+    # The pinned public catalog release, fetched once per run. Restored from the actions cache; on a miss downloaded from
+    # the public catalog service with retries, each attempt time-limited, its SHA-256 and size checked, and saved to the
+    # cache. Uploaded as this run's artifact: the engine, Pyodide and browser jobs download it from there and point
+    # OS_OPTICS_TEST_PUBLIC_CATALOG at it, so no other job contacts the catalog service for it.
+    name: public catalog release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.14"
+      - id: cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/public-catalog
+          key: ${{ env.PUBLIC_CATALOG_KEY }}
+      - name: The pinned release (verified if restored; else downloaded, 4 attempts of at most 5 min each)
+        # tests/catalog_store_helpers.py uses only the standard library; on failure it prints the same message the
+        # test suite reports.
+        run: python tests/catalog_store_helpers.py --attempts 4 --attempt-timeout 300 --pause 20
+      - if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/public-catalog
+          key: ${{ env.PUBLIC_CATALOG_KEY }}
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: public-catalog
+          path: .cache/public-catalog/public_optical_catalog.2026-10-28.1.json
+          if-no-files-found: error
+          retention-days: 1
+
   engine:
     # The supported Python range is >=3.11 (requires-python): the suite runs on the oldest supported version and on
     # 3.14 (the Pyodide line). "3.11-lowest" installs exactly the declared dependency floors (numpy 2.3 / scipy 1.16 /
@@ -36,6 +73,7 @@ jobs:
     # .github/ci-shard-weights/engine.json (seconds per test file), so the shards of a leg run every selected test
     # exactly once. Keep `shard` = 1..`total`.
     name: engine (Python ${{ matrix.python }}, shard ${{ matrix.shard }}/${{ matrix.total }})
+    needs: public-catalog
     runs-on: ubuntu-latest
     timeout-minutes: 40
     strategy:
@@ -46,6 +84,7 @@ jobs:
         total: [10]
     env:
       UV_PYTHON: ${{ startsWith(matrix.python, '3.11') && '3.11' || matrix.python }}
+      OS_OPTICS_TEST_PUBLIC_CATALOG: ${{ github.workspace }}/.cache/public-catalog/public_optical_catalog.2026-10-28.1.json
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -61,10 +100,11 @@ jobs:
             uv.lock
             pyproject.toml
             scripts/build-requirements.txt
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: The pinned public catalog release (this run's artifact)
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
+          name: public-catalog
           path: .cache/public-catalog
-          key: ${{ env.PUBLIC_CATALOG_KEY }}
       - name: Install (test extra; the declared floors on 3.11-lowest; pinned build tools for the wheel fixtures)
         # The install tests build the wheel with `python -m build --no-isolation`, so the pinned build tools must be
         # importable in the environment.
@@ -81,7 +121,7 @@ jobs:
           if [ -n "$LOWEST" ]; then
             uv run --no-sync python -c "import numpy, scipy, pydantic, shapely; got = (numpy.__version__, scipy.__version__, pydantic.VERSION, shapely.__version__); assert got == ('2.3.0', '1.16.0', '2.11.5', '2.1.0'), got"
           fi
-      - name: The pinned public catalog release
+      - name: The pinned public catalog release is the one pinned (SHA-256 and size; no download)
         run: uv run --no-sync python tests/catalog_store_helpers.py
       - name: Test this shard (unit, golden, determinism, install, hygiene, local workflow + optical view; no pyodide)
         # --durations lists the shard's slowest tests, so growth shows before it reaches the timeout.
@@ -95,6 +135,7 @@ jobs:
     # The browser runtime: a real Pyodide (the pinned npm package; its Python packages come from the Pyodide CDN on a
     # cold cache) installs the wheel built from this commit and must give the native results. Required.
     name: engine (pyodide, shard ${{ matrix.shard }}/${{ matrix.total }})
+    needs: public-catalog
     runs-on: ubuntu-latest
     timeout-minutes: 40
     strategy:
@@ -102,6 +143,8 @@ jobs:
       matrix:
         shard: [1, 2, 3]
         total: [3]
+    env:
+      OS_OPTICS_TEST_PUBLIC_CATALOG: ${{ github.workspace }}/.cache/public-catalog/public_optical_catalog.2026-10-28.1.json
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -123,10 +166,11 @@ jobs:
           node-version: "24.22.3"
           cache: npm
           cache-dependency-path: tests/pyodide/package-lock.json
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: The pinned public catalog release (this run's artifact)
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
+          name: public-catalog
           path: .cache/public-catalog
-          key: ${{ env.PUBLIC_CATALOG_KEY }}
       - name: Install
         env:
           UV_PYTHON: "3.14"
@@ -149,8 +193,11 @@ jobs:
     # playwright is not an Engine dependency: this job installs a pinned playwright into its own environment and runs
     # them with --require, so a missing playwright or Chromium, or a skipped test, fails the job.
     name: engine (viewer in a real browser)
+    needs: public-catalog
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      OS_OPTICS_TEST_PUBLIC_CATALOG: ${{ github.workspace }}/.cache/public-catalog/public_optical_catalog.2026-10-28.1.json
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -162,10 +209,11 @@ jobs:
         with:
           version: ${{ env.UV_VERSION }}
           enable-cache: true
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: The pinned public catalog release (this run's artifact)
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
+          name: public-catalog
           path: .cache/public-catalog
-          key: ${{ env.PUBLIC_CATALOG_KEY }}
       - name: Install (Engine environment, pinned playwright and its Chromium)
         env:
           UV_PYTHON: "3.14"

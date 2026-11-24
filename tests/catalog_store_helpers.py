@@ -28,6 +28,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -51,10 +52,39 @@ def _verified(data: bytes) -> bool:
     return len(data) == PUBLIC_CATALOG_SIZE and hashlib.sha256(data).hexdigest() == PUBLIC_CATALOG_SHA256
 
 
-def ensure_public_catalog(timeout: float = 300.0) -> Path:
+def _download(timeout: float) -> bytes:
+    """The release file from ``PUBLIC_CATALOG_URL``, read within ``timeout`` seconds in all; raises ``RuntimeError``."""
+    request = urllib.request.Request(PUBLIC_CATALOG_URL, headers={"User-Agent": "os-optics-test-suite"})
+    deadline = time.monotonic() + timeout
+    chunks: list[bytes] = []
+    received = 0
+    try:
+        # a stalled connection fails within a minute; the deadline bounds the whole attempt
+        with urllib.request.urlopen(request, timeout=min(timeout, 60.0)) as response:  # noqa: S310 (fixed https URL)
+            while received <= PUBLIC_CATALOG_SIZE:
+                if time.monotonic() > deadline:
+                    raise TimeoutError(f"not complete after {timeout:g} s ({received} of {PUBLIC_CATALOG_SIZE} bytes)")
+                chunk = response.read(min(1 << 20, PUBLIC_CATALOG_SIZE + 1 - received))
+                if not chunk:
+                    break
+                chunks.append(chunk)
+                received += len(chunk)
+    except OSError as exc:
+        raise RuntimeError(f"cannot download public catalog release {PUBLIC_CATALOG_VERSION} from {PUBLIC_CATALOG_URL} "
+                           f"({exc}); download it there yourself and set {ENV_PUBLIC_CATALOG} to the file") from exc
+    data = b"".join(chunks)
+    if not _verified(data):
+        raise RuntimeError(f"{PUBLIC_CATALOG_URL} did not return release {PUBLIC_CATALOG_VERSION} "
+                           f"(sha256 {PUBLIC_CATALOG_SHA256}, {PUBLIC_CATALOG_SIZE} bytes)")
+    return data
+
+
+def ensure_public_catalog(timeout: float = 300.0, attempts: int = 1, pause: float = 15.0) -> Path:
     """``REAL_CATALOG``, downloaded from ``PUBLIC_CATALOG_URL`` first if it is missing; its SHA-256 and size are checked.
 
-    Raises ``RuntimeError`` (with what to do) when the file is wrong or cannot be fetched."""
+    A download is tried up to ``attempts`` times, each limited to ``timeout`` seconds in all, ``pause`` seconds apart.
+    Raises ``RuntimeError`` (with what to do) when the file is wrong or cannot be fetched: after the last attempt, the
+    message of that attempt."""
     if REAL_CATALOG.is_file():
         if not _verified(REAL_CATALOG.read_bytes()):
             raise RuntimeError(f"{REAL_CATALOG} is not public catalog release {PUBLIC_CATALOG_VERSION} "
@@ -62,16 +92,15 @@ def ensure_public_catalog(timeout: float = 300.0) -> Path:
         return REAL_CATALOG
     if os.environ.get(ENV_PUBLIC_CATALOG):
         raise RuntimeError(f"{ENV_PUBLIC_CATALOG} names {REAL_CATALOG}, which does not exist")
-    request = urllib.request.Request(PUBLIC_CATALOG_URL, headers={"User-Agent": "os-optics-test-suite"})
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:  # noqa: S310 (fixed https URL)
-            data = response.read(PUBLIC_CATALOG_SIZE + 1)
-    except OSError as exc:
-        raise RuntimeError(f"cannot download public catalog release {PUBLIC_CATALOG_VERSION} from {PUBLIC_CATALOG_URL} "
-                           f"({exc}); download it there yourself and set {ENV_PUBLIC_CATALOG} to the file") from exc
-    if not _verified(data):
-        raise RuntimeError(f"{PUBLIC_CATALOG_URL} did not return release {PUBLIC_CATALOG_VERSION} "
-                           f"(sha256 {PUBLIC_CATALOG_SHA256}, {PUBLIC_CATALOG_SIZE} bytes)")
+    for attempt in range(1, attempts + 1):
+        try:
+            data = _download(timeout)
+            break
+        except RuntimeError as exc:
+            if attempt == attempts:
+                raise
+            print(f"attempt {attempt} of {attempts}: {exc}; retrying in {pause:g} s", file=sys.stderr, flush=True)
+            time.sleep(pause)
     REAL_CATALOG.parent.mkdir(parents=True, exist_ok=True)
     partial = REAL_CATALOG.with_name(f"{REAL_CATALOG.name}.{os.getpid()}.part")
     partial.write_bytes(data)
@@ -119,8 +148,16 @@ def store_environment(root: Path) -> dict[str, str]:
 
 
 if __name__ == "__main__":  # python tests/catalog_store_helpers.py: fetch (or verify) the pinned public catalog release
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Fetch (or verify) the pinned public catalog release.")
+    parser.add_argument("--attempts", type=int, default=1, help="download attempts (default 1)")
+    parser.add_argument("--attempt-timeout", type=float, default=300.0,
+                        help="seconds per download attempt (default 300)")
+    parser.add_argument("--pause", type=float, default=15.0, help="seconds between attempts (default 15)")
+    args = parser.parse_args()
     try:
-        print(ensure_public_catalog())
+        print(ensure_public_catalog(timeout=args.attempt_timeout, attempts=max(1, args.attempts), pause=args.pause))
     except RuntimeError as exc:
         print(exc, file=sys.stderr)
         sys.exit(1)
