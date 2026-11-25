@@ -27,7 +27,7 @@ INDEX_LINKS = (
     r"https://github\.com/JunLin615/os-optics(?![\w-])",
     r"https://github\.com/JunLin615/os-optics-kit(?![\w-])",
 )
-INSTALL_COMMAND = 'python -m pip install "os-optics[protected]"'
+INSTALL_COMMAND = "python -m pip install os-optics"
 STALE = (
     (r"JunLin615/opensci-" + "engine", "earlier repository name"),
     (r"(?<![\w./-])examples/", "path moved to os-optics-kit"),
