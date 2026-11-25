@@ -1,0 +1,3550 @@
+{
+  "schema": "opensci.project",
+  "project_schema_version": "2.0",
+  "components": [
+    {
+      "instance_id": "moving-array-boundary",
+      "optical_role": "source",
+      "custom_part": {
+        "custom_part_key": "moving-array-boundary",
+        "description": "moving-array-boundary"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          300.1,
+          0.0,
+          260.0
+        ],
+        "quaternion_wxyz": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "source_model": {
+        "model_kind": "GAUSSIAN_BEAM",
+        "wavelength_nm": 850,
+        "power_w": 0.003,
+        "waist_radius_mm": 10,
+        "waist_position_mm": 0,
+        "m2": 1,
+        "polarization": {
+          "kind": "LINEAR",
+          "angle_deg": 0
+        }
+      }
+    },
+    {
+      "instance_id": "shared-dichroic",
+      "optical_role": "splitter",
+      "custom_part": {
+        "custom_part_key": "test-18553fe456b1c588",
+        "description": "Plate beamsplitter R = 0.99 (native component splitter.plate)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          300.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.27059805007309845,
+          0.6532814824381882,
+          0.6532814824381882,
+          0.27059805007309845
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-18553fe456b1c588"
+    },
+    {
+      "instance_id": "shared-high-na-objective",
+      "optical_role": "lens",
+      "custom_part": {
+        "custom_part_key": "test-519775b8107c278b",
+        "description": "Ideal thin lens f = 20 mm (native component lens.ideal_thin)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          300.0,
+          0.0,
+          200.0
+        ],
+        "quaternion_wxyz": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-519775b8107c278b"
+    },
+    {
+      "instance_id": "fluorescence-pupil-boundary",
+      "optical_role": "source",
+      "custom_part": {
+        "custom_part_key": "fluorescence-pupil-boundary",
+        "description": "fluorescence-pupil-boundary"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          300.0,
+          0.0,
+          230.0
+        ],
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "source_model": {
+        "model_kind": "GAUSSIAN_BEAM",
+        "wavelength_nm": 780.241,
+        "power_w": 1e-09,
+        "waist_radius_mm": 4,
+        "waist_position_mm": 0,
+        "m2": 1,
+        "polarization": {
+          "kind": "LINEAR",
+          "angle_deg": 0
+        }
+      }
+    },
+    {
+      "instance_id": "imaging-0",
+      "optical_role": "aperture",
+      "custom_part": {
+        "custom_part_key": "test-17b13cb5ad263eb2",
+        "description": "Circular aperture 20 mm (native component aperture.circular)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          330.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-17b13cb5ad263eb2"
+    },
+    {
+      "instance_id": "imaging-1",
+      "optical_role": "polarizer",
+      "custom_part": {
+        "custom_part_key": "test-d0e2bb05d0603d31",
+        "description": "Linear polarizer ER = 1000 (native component polarizer.linear)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          360.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-d0e2bb05d0603d31"
+    },
+    {
+      "instance_id": "imaging-2",
+      "optical_role": "window",
+      "custom_part": {
+        "custom_part_key": "test-5b44774b57710e88",
+        "description": "Window declared t = 2 mm (native component plate.window)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          390.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-5b44774b57710e88"
+    },
+    {
+      "instance_id": "imaging-3",
+      "optical_role": "filter",
+      "custom_part": {
+        "custom_part_key": "test-cf850384ec6f1704",
+        "description": "Variable ND wheel OD 0.05-0.05 (native component filter.variable_nd)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          420.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-cf850384ec6f1704"
+    },
+    {
+      "instance_id": "imaging-tube-lens",
+      "optical_role": "lens",
+      "custom_part": {
+        "custom_part_key": "test-88e96d9ce76faa69",
+        "description": "Ideal thin lens f = 200 mm (native component lens.ideal_thin)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          480.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "test-88e96d9ce76faa69"
+    },
+    {
+      "instance_id": "array-0000",
+      "optical_role": "source",
+      "custom_part": {
+        "custom_part_key": "array-0000",
+        "description": "array-0000"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          300.0,
+          0.0,
+          260.0
+        ],
+        "quaternion_wxyz": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "source_model": {
+        "model_kind": "GAUSSIAN_BEAM",
+        "wavelength_nm": 852,
+        "power_w": 0.003,
+        "waist_radius_mm": 10,
+        "waist_position_mm": 0,
+        "m2": 1,
+        "polarization": {
+          "kind": "LINEAR",
+          "angle_deg": 0
+        }
+      }
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "array-atom-plane",
+      "pose": {
+        "position_mm": [
+          300.0,
+          0.0,
+          180.0
+        ],
+        "quaternion_wxyz": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "aperture": {
+        "shape": "circle",
+        "radius_mm": 0.2
+      },
+      "absorbing": false
+    },
+    {
+      "observation_id": "camera",
+      "pose": {
+        "position_mm": [
+          680.0,
+          0.0,
+          250.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "aperture": {
+        "shape": "circle",
+        "radius_mm": 6.5
+      },
+      "absorbing": true
+    }
+  ],
+  "optical_models": [
+    {
+      "model_id": "test-efcd5540b0108c4c",
+      "display_name": "Circular aperture 10 mm",
+      "model": {
+        "model_kind": "APERTURE_STOP",
+        "model_version": "1",
+        "opening_radius_mm": "5",
+        "edge_radius_mm": "12.7",
+        "plane_z_mm": "0",
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-8555e9d8b4a473ce",
+      "display_name": "Linear polarizer ER = 10000",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "LINEAR_POLARIZER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "transmittance": {
+          "value": "0.98",
+          "status": "DESIGN_BASIS"
+        },
+        "extinction_ratio": {
+          "value": "10000",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-a5ae43e22beaa30c",
+      "display_name": "Retarder 0.5 waves at 780.241 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "780.241",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-4006162459836e44",
+      "display_name": "Plate beamsplitter R = 0.01",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SPECIFICATION_ENVELOPE",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-BS_400-1100R0.01T0.985_AOI0-90",
+            "traced": "TRANSMITTED_AND_REFLECTED",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "media": [],
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "IDEAL_SURFACE_FIGURE",
+          "POLARIZATION_INDEPENDENT_COATING",
+          "SUBSTRATE_NOT_MODELLED"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "REFLECTING_FACE_CENTER",
+        "optical_axis": "+Z",
+        "nominal_propagation": "SPLIT_ABOUT_+Z",
+        "reference_axis": "FACE_NORMAL",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "-1",
+        "z_max_mm": "0",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-66c00df9b92bff89",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.241",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-ac66b9a4e0fc00c5",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.241",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-f815c812a35789f5",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.241",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-9995a45fab6a1116",
+      "display_name": "Circular aperture 30 mm",
+      "model": {
+        "model_kind": "APERTURE_STOP",
+        "model_version": "1",
+        "opening_radius_mm": "15",
+        "edge_radius_mm": "19.05",
+        "plane_z_mm": "0",
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-734d523acd59fa39",
+      "display_name": "Variable ND wheel OD 0.03-0.03",
+      "model": {
+        "model_kind": "NEUTRAL_DENSITY",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "law": {
+          "kind": "LINEAR_ROTARY",
+          "od_start": "0.03",
+          "od_end": "0.03",
+          "arc_start_deg": "0",
+          "arc_end_deg": "360"
+        },
+        "plane_z_mm": "0",
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "position_parameter": "nd_rotation_deg",
+        "approximations": [
+          "CONSTANT_OPTICAL_DENSITY",
+          "EDGE_AS_OPAQUE_RIM",
+          "SUBSTRATE_NOT_MODELLED",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-ad311c5b6b220cd3",
+      "display_name": "Retarder 0.25 waves at 780.241 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "780.241",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-812a80c6ae9e3bf8",
+      "display_name": "Flat mirror",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SPECIFICATION_ENVELOPE",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "22.86",
+            "coating_id": "NATIVE-METAL_400-1100R0.995T0_AOI0-89",
+            "traced": "REFLECTED",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "media": [],
+        "edge_radius_mm": "25.4",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "IDEAL_SURFACE_FIGURE",
+          "POLARIZATION_INDEPENDENT_COATING",
+          "TRANSMITTED_LIGHT_NOT_TRACED"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "REFLECTING_FACE_CENTER",
+        "optical_axis": "+Z",
+        "nominal_propagation": "REFLECTED_ABOUT_+Z",
+        "reference_axis": "FACE_NORMAL",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "50.8",
+        "z_min_mm": "-3",
+        "z_max_mm": "0",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-677554c6dc497aa5",
+      "display_name": "Window declared t = 3 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "17.145",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DESIGN_BASIS"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3",
+            "clear_radius_mm": "17.145",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "3",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-c0abf31bd7242147",
+      "display_name": "Retarder 0.5 waves at 420 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "420",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-7aeed7159b5b520c",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "420",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-30419e179a31c604",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "420",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-5ee01b445c808f67",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "420",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-5d05b6078914f54c",
+      "display_name": "Retarder 0.25 waves at 420 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "420",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-ceacd5547e5a8217",
+      "display_name": "Ideal thin lens f = 140 mm",
+      "model": {
+        "model_kind": "IDEAL_THIN_LENS",
+        "model_version": "1",
+        "focal_length_mm": "140",
+        "clear_radius_mm": "15",
+        "edge_radius_mm": "15",
+        "transmittance": "1",
+        "plane_z_mm": "0",
+        "valid_band_nm": {
+          "min_nm": "200",
+          "max_nm": "20000",
+          "status": "DESIGN_BASIS"
+        },
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "30",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-a0acb23e4c5f78fc",
+      "display_name": "Retarder 0.5 waves at 1013 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "1013",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-2213a0c486b76f1b",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "1013",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-47d4e68016cf4d2c",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "1013",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-9e917ec3fda19a36",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "1013",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-b145c0ce51fc9ffd",
+      "display_name": "Retarder 0.25 waves at 1013 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "1013",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-b34ece76bb34dd71",
+      "display_name": "Retarder 0.5 waves at 795 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "795",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-d51bc05b663e2056",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "795",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-b37dda4d2509f3e3",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "795",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-b57f3bc8eec4edf5",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "795",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-f9569ad0d7521c49",
+      "display_name": "Retarder 0.25 waves at 795 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "795",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-8dedfcc9d05ceb83",
+      "display_name": "Retarder 0.5 waves at 852 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "852",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-6ed900f9ef88bf07",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "852",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-5952aa4e2c31039a",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "852",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-a64ee1fa783be4cf",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "852",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-990c4400e71ca09e",
+      "display_name": "Retarder 0.25 waves at 852 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "852",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-90bd0ae66127278b",
+      "display_name": "Singlet INDEX-1.46 f = 50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.911",
+            "radius_mm": "-45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "12.7",
+        "paraxial": {
+          "wavelength_nm": "852",
+          "effective_focal_length_mm": "50",
+          "back_focal_length_mm": "48.288871",
+          "front_focal_length_mm": "48.288871",
+          "front_principal_plane_z_mm": "1.711129",
+          "rear_principal_plane_z_mm": "3.199871",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "4.911",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-7f14c54d046a7483",
+      "display_name": "Circular aperture 1 mm",
+      "model": {
+        "model_kind": "APERTURE_STOP",
+        "model_version": "1",
+        "opening_radius_mm": "0.5",
+        "edge_radius_mm": "12.7",
+        "plane_z_mm": "0",
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-91e44402fdc575cb",
+      "display_name": "Retarder 0.5 waves at 850 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "850",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-fc9e1a47f02447ce",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "850",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-4ed5485c2fd2e8ff",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "850",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-c593a09858169f18",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "850",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-b068692c49c979c4",
+      "display_name": "Retarder 0.25 waves at 850 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "850",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-33277137b480c285",
+      "display_name": "Singlet INDEX-1.46 f = 50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.911",
+            "radius_mm": "-45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "12.7",
+        "paraxial": {
+          "wavelength_nm": "850",
+          "effective_focal_length_mm": "50",
+          "back_focal_length_mm": "48.288871",
+          "front_focal_length_mm": "48.288871",
+          "front_principal_plane_z_mm": "1.711129",
+          "rear_principal_plane_z_mm": "3.199871",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "4.911",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-12c27da3ebb0e0ba",
+      "display_name": "Singlet INDEX-1.46 f = 50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.911",
+            "radius_mm": "-45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "12.7",
+        "paraxial": {
+          "wavelength_nm": "780.241",
+          "effective_focal_length_mm": "50",
+          "back_focal_length_mm": "48.288871",
+          "front_focal_length_mm": "48.288871",
+          "front_principal_plane_z_mm": "1.711129",
+          "rear_principal_plane_z_mm": "3.199871",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "4.911",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-aa69d1757413f816",
+      "display_name": "Retarder 0.5 waves at 780.235 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.5",
+        "design_wavelength_nm": "780.235",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-01db7004ff8037ec",
+      "display_name": "Singlet INDEX-1.46 f = -50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "-46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "3.048",
+            "radius_mm": "46.475254",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.235",
+          "effective_focal_length_mm": "-50",
+          "back_focal_length_mm": "-51.033161",
+          "front_focal_length_mm": "-51.033161",
+          "front_principal_plane_z_mm": "1.033161",
+          "rear_principal_plane_z_mm": "2.014839",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "-4.083666",
+        "z_max_mm": "7.131666",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-90921a8e3068f422",
+      "display_name": "Singlet INDEX-1.46 f = 150 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.562",
+            "radius_mm": "-137.277547",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.235",
+          "effective_focal_length_mm": "150",
+          "back_focal_length_mm": "148.42945",
+          "front_focal_length_mm": "148.42945",
+          "front_principal_plane_z_mm": "1.570551",
+          "rear_principal_plane_z_mm": "2.991449",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "4.562",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-bbdcc143c3e69945",
+      "display_name": "Singlet INDEX-1.46 f = 100 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "5.936",
+            "radius_mm": "-91.055173",
+            "clear_radius_mm": "17",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "19.05",
+        "paraxial": {
+          "wavelength_nm": "780.235",
+          "effective_focal_length_mm": "99.999999",
+          "back_focal_length_mm": "97.946029",
+          "front_focal_length_mm": "97.946029",
+          "front_principal_plane_z_mm": "2.053971",
+          "rear_principal_plane_z_mm": "3.882029",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "5.936",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-70672d08c62bdcae",
+      "display_name": "Retarder 0.25 waves at 780.235 nm",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "RETARDER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "retardance_waves": "0.25",
+        "design_wavelength_nm": "780.235",
+        "retardance_dispersion": "INVERSE_WAVELENGTH",
+        "transmittance": {
+          "value": "0.995",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "17.145",
+        "edge_radius_mm": "19.05",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "RETARDANCE_INVERSE_WAVELENGTH",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "38.1",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-57a03ea5e5641ccc",
+      "display_name": "Singlet INDEX-1.46 f = 50 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "4.911",
+            "radius_mm": "-45.212881",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "12.7",
+        "paraxial": {
+          "wavelength_nm": "780.235",
+          "effective_focal_length_mm": "50",
+          "back_focal_length_mm": "48.288871",
+          "front_focal_length_mm": "48.288871",
+          "front_principal_plane_z_mm": "1.711129",
+          "rear_principal_plane_z_mm": "3.199871",
+          "axis": "ROTATIONAL",
+          "status": "DERIVED"
+        },
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DERIVED"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "4.911",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-18553fe456b1c588",
+      "display_name": "Plate beamsplitter R = 0.99",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SPECIFICATION_ENVELOPE",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "22.86",
+            "coating_id": "TEST-DICHROIC-780-852",
+            "traced": "TRANSMITTED_AND_REFLECTED",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "media": [],
+        "edge_radius_mm": "25.4",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "IDEAL_SURFACE_FIGURE",
+          "POLARIZATION_INDEPENDENT_COATING",
+          "SUBSTRATE_NOT_MODELLED"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "REFLECTING_FACE_CENTER",
+        "optical_axis": "+Z",
+        "nominal_propagation": "SPLIT_ABOUT_+Z",
+        "reference_axis": "FACE_NORMAL",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "50.8",
+        "z_min_mm": "-1",
+        "z_max_mm": "0",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-519775b8107c278b",
+      "display_name": "Ideal thin lens f = 20 mm",
+      "model": {
+        "model_kind": "IDEAL_THIN_LENS",
+        "model_version": "1",
+        "focal_length_mm": "20",
+        "clear_radius_mm": "10",
+        "edge_radius_mm": "10",
+        "transmittance": "1",
+        "plane_z_mm": "0",
+        "valid_band_nm": {
+          "min_nm": "200",
+          "max_nm": "20000",
+          "status": "DESIGN_BASIS"
+        },
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "20",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-17b13cb5ad263eb2",
+      "display_name": "Circular aperture 20 mm",
+      "model": {
+        "model_kind": "APERTURE_STOP",
+        "model_version": "1",
+        "opening_radius_mm": "10",
+        "edge_radius_mm": "12.7",
+        "plane_z_mm": "0",
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-d0e2bb05d0603d31",
+      "display_name": "Linear polarizer ER = 1000",
+      "model": {
+        "model_kind": "POLARIZATION_ELEMENT",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "element": "LINEAR_POLARIZER",
+        "plane_z_mm": "0",
+        "axis": "+X",
+        "transmittance": {
+          "value": "0.95",
+          "status": "DESIGN_BASIS"
+        },
+        "extinction_ratio": {
+          "value": "1000",
+          "status": "DESIGN_BASIS"
+        },
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "750",
+          "max_nm": "810",
+          "status": "DESIGN_BASIS"
+        },
+        "valid_aoi_deg": {
+          "min_deg": "0",
+          "max_deg": "90",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-5b44774b57710e88",
+      "display_name": "Window declared t = 2 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DESIGN_BASIS"
+          },
+          {
+            "surface_id": "S2",
+            "vertex_z_mm": "2",
+            "clear_radius_mm": "11.43",
+            "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+            "traced": "TRANSMITTED",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "media": [
+          "INDEX-1.46"
+        ],
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "GHOST_REFLECTIONS_NOT_TRACED",
+          "IDEAL_SURFACE_FIGURE",
+          "LOSSLESS_COATING",
+          "NOMINAL_PRESCRIPTION",
+          "POLARIZATION_INDEPENDENT_COATING"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "2",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-cf850384ec6f1704",
+      "display_name": "Variable ND wheel OD 0.05-0.05",
+      "model": {
+        "model_kind": "NEUTRAL_DENSITY",
+        "model_version": "1",
+        "fidelity": "IDEAL_THIN_ELEMENT",
+        "law": {
+          "kind": "LINEAR_ROTARY",
+          "od_start": "0.05",
+          "od_end": "0.05",
+          "arc_start_deg": "0",
+          "arc_end_deg": "360"
+        },
+        "plane_z_mm": "0",
+        "clear_radius_mm": "11.43",
+        "edge_radius_mm": "12.7",
+        "valid_band_nm": {
+          "min_nm": "750",
+          "max_nm": "810",
+          "status": "DESIGN_BASIS"
+        },
+        "position_parameter": "nd_rotation_deg",
+        "approximations": [
+          "CONSTANT_OPTICAL_DENSITY",
+          "EDGE_AS_OPAQUE_RIM",
+          "SUBSTRATE_NOT_MODELLED",
+          "THIN_ELEMENT"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "FIRST_SURFACE_VERTEX",
+        "optical_axis": "+Z",
+        "nominal_propagation": "+Z",
+        "symmetry": "NONE"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    },
+    {
+      "model_id": "test-88e96d9ce76faa69",
+      "display_name": "Ideal thin lens f = 200 mm",
+      "model": {
+        "model_kind": "IDEAL_THIN_LENS",
+        "model_version": "1",
+        "focal_length_mm": "200",
+        "clear_radius_mm": "12.7",
+        "edge_radius_mm": "12.7",
+        "transmittance": "1",
+        "plane_z_mm": "0",
+        "valid_band_nm": {
+          "min_nm": "200",
+          "max_nm": "20000",
+          "status": "DESIGN_BASIS"
+        },
+        "status": "DESIGN_BASIS"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "25.4",
+        "z_min_mm": "0",
+        "z_max_mm": "1",
+        "status": "NOMINAL"
+      }
+    }
+  ],
+  "model_materials": [
+    {
+      "material_id": "INDEX-1.46",
+      "display_name": "Constant index 1.46",
+      "dispersion": {
+        "kind": "CONSTANT_INDEX",
+        "refractive_index": "1.46"
+      },
+      "valid_band_nm": {
+        "min_nm": "400",
+        "max_nm": "1100",
+        "status": "DESIGN_BASIS"
+      },
+      "basis": "Declared constant refractive index"
+    }
+  ],
+  "model_coatings": [
+    {
+      "coating_id": "NATIVE-BS_400-1100R0.01T0.985_AOI0-90",
+      "kind": "BEAMSPLITTER",
+      "display_name": "Declared beamsplitter R=0.01",
+      "bands": [
+        {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "reflectance": "0.01",
+          "transmittance": "0.985",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared beamsplitter coating"
+    },
+    {
+      "coating_id": "NATIVE-AR_400-1100R0.002T0.998_AOI0-90",
+      "kind": "ANTI_REFLECTION",
+      "display_name": "Declared anti reflection R=0.002",
+      "bands": [
+        {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "reflectance": "0.002",
+          "transmittance": "0.998",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared anti-reflection coating (lossless: T = 1 - R)"
+    },
+    {
+      "coating_id": "NATIVE-METAL_400-1100R0.995T0_AOI0-89",
+      "kind": "METALLIC_REFLECTOR",
+      "display_name": "Declared metallic reflector R=0.995",
+      "bands": [
+        {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "reflectance": "0.995",
+          "transmittance": "0",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "89",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared mirror coating"
+    },
+    {
+      "coating_id": "NATIVE-BS_400-1100R0.99T0.005_AOI0-90",
+      "kind": "BEAMSPLITTER",
+      "display_name": "Declared beamsplitter R=0.99",
+      "bands": [
+        {
+          "min_nm": "400",
+          "max_nm": "1100",
+          "reflectance": "0.99",
+          "transmittance": "0.005",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared beamsplitter coating"
+    },
+    {
+      "coating_id": "TEST-DICHROIC-780-852",
+      "kind": "DICHROIC",
+      "display_name": "Declared beamsplitter R=0.99",
+      "bands": [
+        {
+          "min_nm": "400",
+          "max_nm": "814.999",
+          "reflectance": "0.99",
+          "transmittance": "0.005",
+          "status": "DESIGN_BASIS"
+        },
+        {
+          "min_nm": "815",
+          "max_nm": "1100",
+          "reflectance": "0.005",
+          "transmittance": "0.99",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared beamsplitter coating"
+    }
+  ],
+  "compute_budget": {
+    "max_interactions_per_path": 128,
+    "max_paths": 2048,
+    "max_trace_steps": 16384,
+    "max_interference_pairs": 1024
+  }
+}

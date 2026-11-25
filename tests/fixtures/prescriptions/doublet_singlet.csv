@@ -1,0 +1,16 @@
+#! format = csv-surface-table/1
+#! name = Doublet and singlet objective (OpenSci test fixture)
+#! wavelength_min_nm = 450
+#! wavelength_max_nm = 850
+# A front aperture stop, a cemented N-BK7 / N-SF5 doublet, a 12.7 mm air space and an N-BK7 plano-convex singlet with an
+# anti-reflection coating. Values chosen for this fixture (every length is a whole number of thousandths of an inch, so
+# doublet_singlet_inch.csv states the same system in inches). Glasses and the coating are those of the public optical catalog.
+surface,radius,thickness,material,semi_diameter,mech_semi_diameter,stop,coating
+OBJ,inf,inf,,,,,
+STO,,5.08,,6.35,12.7,yes,
+1,60.96,6.35,N-BK7,10.16,12.7,,
+2,-43.18,2.54,N-SF5,10.16,12.7,,
+3,-127,12.7,,10.16,12.7,,
+4,76.2,3.81,N-BK7,10.16,12.7,,AR_400-1100R0.01T0.99_AOI0-10
+5,inf,50.8,,10.16,12.7,,AR_400-1100R0.01T0.99_AOI0-10
+IMA,,,,,,,

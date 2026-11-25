@@ -1,0 +1,921 @@
+{
+  "schema": "opensci.optical_workspace",
+  "schema_version": "1.0",
+  "project": {
+    "schema": "opensci.project",
+    "project_schema_version": "2.0",
+    "components": [
+      {
+        "instance_id": "SRC",
+        "optical_role": "source",
+        "custom_part": {
+          "custom_part_key": "test-laser",
+          "description": "TEST FIXTURE: stands in for the expanded 633 nm beam."
+        },
+        "nominal_pose": {
+          "position_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        "selected_parameters": [],
+        "retained_dofs": [],
+        "source_model": {
+          "model_kind": "GAUSSIAN_BEAM",
+          "wavelength_nm": 633.0,
+          "power_w": 0.001,
+          "waist_radius_mm": 1.6,
+          "waist_position_mm": 0.0,
+          "m2": 1.0,
+          "polarization": {
+            "kind": "LINEAR",
+            "angle_deg": 90.0
+          },
+          "coherence_length_mm": 200.0
+        }
+      },
+      {
+        "instance_id": "BS1",
+        "optical_role": "splitter",
+        "custom_part": {
+          "custom_part_key": "mzi-bs-50-50",
+          "description": "Non-polarizing 50:50 plate splitter, 25.4 mm (native component splitter.plate)"
+        },
+        "nominal_pose": {
+          "position_mm": [
+            50.0,
+            0.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.27059805007309845,
+            0.27059805007309845,
+            -0.6532814824381883,
+            -0.6532814824381883
+          ]
+        },
+        "selected_parameters": [],
+        "retained_dofs": [],
+        "optical_model_id": "mzi-bs-50-50"
+      },
+      {
+        "instance_id": "M1",
+        "optical_role": "mirror",
+        "custom_part": {
+          "custom_part_key": "mzi-mirror-hr",
+          "description": "Flat HR mirror R 0.995, 25.4 mm (native component mirror.flat)"
+        },
+        "nominal_pose": {
+          "position_mm": [
+            150.0,
+            0.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.27059805007309845,
+            0.27059805007309845,
+            -0.6532814824381883,
+            -0.6532814824381883
+          ]
+        },
+        "selected_parameters": [],
+        "retained_dofs": [],
+        "optical_model_id": "mzi-mirror-hr"
+      },
+      {
+        "instance_id": "M2",
+        "optical_role": "mirror",
+        "custom_part": {
+          "custom_part_key": "mzi-mirror-hr",
+          "description": "Flat HR mirror R 0.995, 25.4 mm (native component mirror.flat)"
+        },
+        "nominal_pose": {
+          "position_mm": [
+            50.0,
+            100.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.6532814824381883,
+            0.6532814824381883,
+            0.27059805007309845,
+            0.27059805007309845
+          ]
+        },
+        "selected_parameters": [],
+        "retained_dofs": [],
+        "optical_model_id": "mzi-mirror-hr"
+      },
+      {
+        "instance_id": "BS2",
+        "optical_role": "splitter",
+        "custom_part": {
+          "custom_part_key": "mzi-bs-50-50",
+          "description": "Non-polarizing 50:50 plate splitter, 25.4 mm (native component splitter.plate)"
+        },
+        "nominal_pose": {
+          "position_mm": [
+            150.0,
+            100.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.27059805007309845,
+            0.27059805007309845,
+            -0.6532814824381883,
+            -0.6532814824381883
+          ]
+        },
+        "selected_parameters": [],
+        "retained_dofs": [],
+        "optical_model_id": "mzi-bs-50-50"
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "SCREEN_X",
+        "pose": {
+          "position_mm": [
+            190.0,
+            100.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        "aperture": {
+          "shape": "circle",
+          "radius_mm": 10.0,
+          "center_offset_mm": [
+            0.0,
+            0.0
+          ],
+          "obstruction_radius_mm": 0.0
+        },
+        "absorbing": false,
+        "medium": "air"
+      },
+      {
+        "observation_id": "SCREEN_Y",
+        "pose": {
+          "position_mm": [
+            150.0,
+            140.0,
+            0.0
+          ],
+          "quaternion_wxyz": [
+            0.0,
+            0.0,
+            0.7071067811865476,
+            0.7071067811865476
+          ]
+        },
+        "aperture": {
+          "shape": "circle",
+          "radius_mm": 10.0,
+          "center_offset_mm": [
+            0.0,
+            0.0
+          ],
+          "obstruction_radius_mm": 0.0
+        },
+        "absorbing": false,
+        "medium": "air"
+      }
+    ],
+    "targets": [
+      {
+        "target_id": "T_OUTX_COHERENT_POWER",
+        "metric": "coherent_power_W",
+        "observation_id": "SCREEN_X",
+        "target_value": 0.000995,
+        "tolerance_rel": 0.005,
+        "unit": "W",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTY_COHERENT_POWER",
+        "metric": "coherent_power_W",
+        "observation_id": "SCREEN_Y",
+        "maximum": 1e-06,
+        "unit": "W",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_INCOHERENT_POWER",
+        "metric": "power_W",
+        "observation_id": "SCREEN_X",
+        "target_value": 0.0004975,
+        "tolerance_rel": 0.005,
+        "unit": "W",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTY_INCOHERENT_POWER",
+        "metric": "power_W",
+        "observation_id": "SCREEN_Y",
+        "target_value": 0.0004975,
+        "tolerance_rel": 0.005,
+        "unit": "W",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_OPD",
+        "metric": "optical_path_difference_abs_mm",
+        "observation_id": "SCREEN_X",
+        "maximum": 0.001,
+        "unit": "mm",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTY_OPD",
+        "metric": "optical_path_difference_abs_mm",
+        "observation_id": "SCREEN_Y",
+        "maximum": 0.001,
+        "unit": "mm",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_COHERENCE",
+        "metric": "coherence_factor",
+        "observation_id": "SCREEN_X",
+        "minimum": 0.999,
+        "unit": "1",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_VISIBILITY",
+        "metric": "fringe_visibility",
+        "observation_id": "SCREEN_X",
+        "minimum": 0.99,
+        "unit": "1",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_OVERLAP",
+        "metric": "spatial_overlap_ratio",
+        "observation_id": "SCREEN_X",
+        "minimum": 0.999,
+        "unit": "1",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTY_OVERLAP",
+        "metric": "spatial_overlap_ratio",
+        "observation_id": "SCREEN_Y",
+        "minimum": 0.999,
+        "unit": "1",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_BALANCE",
+        "metric": "intensity_balance",
+        "observation_id": "SCREEN_X",
+        "minimum": 0.99,
+        "unit": "1",
+        "parameters": []
+      },
+      {
+        "target_id": "T_OUTX_AOI",
+        "metric": "aoi_deg",
+        "observation_id": "SCREEN_X",
+        "maximum": 0.01,
+        "unit": "deg",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0.0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTY_AOI",
+        "metric": "aoi_deg",
+        "observation_id": "SCREEN_Y",
+        "maximum": 0.01,
+        "unit": "deg",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTX_CENTER_U",
+        "metric": "position_u_mm",
+        "observation_id": "SCREEN_X",
+        "target_value": 0.0,
+        "tolerance_abs": 0.01,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0.0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTX_CENTER_V",
+        "metric": "position_v_mm",
+        "observation_id": "SCREEN_X",
+        "target_value": 0.0,
+        "tolerance_abs": 0.01,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0.0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTY_CENTER_U",
+        "metric": "position_u_mm",
+        "observation_id": "SCREEN_Y",
+        "target_value": 0.0,
+        "tolerance_abs": 0.01,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTY_CENTER_V",
+        "metric": "position_v_mm",
+        "observation_id": "SCREEN_Y",
+        "target_value": 0.0,
+        "tolerance_abs": 0.01,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTX_BEAM_RADIUS",
+        "metric": "beam_radius_mm",
+        "observation_id": "SCREEN_X",
+        "target_value": 1.6,
+        "tolerance_abs": 0.05,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0.0"
+          }
+        ]
+      },
+      {
+        "target_id": "T_OUTY_BEAM_RADIUS",
+        "metric": "beam_radius_mm",
+        "observation_id": "SCREEN_Y",
+        "target_value": 1.6,
+        "tolerance_abs": 0.05,
+        "unit": "mm",
+        "parameters": [
+          {
+            "key": "path_id",
+            "value": "SRC#0"
+          }
+        ]
+      }
+    ],
+    "materials": [],
+    "design_intent": "OPTICAL_SYSTEM",
+    "optical_models": [
+      {
+        "model_id": "mzi-bs-50-50",
+        "display_name": "Non-polarizing 50:50 plate splitter, 25.4 mm",
+        "model": {
+          "model_kind": "SURFACE_SEQUENCE",
+          "model_version": "2",
+          "fidelity": "SPECIFICATION_ENVELOPE",
+          "surfaces": [
+            {
+              "surface_id": "S1",
+              "vertex_z_mm": "0",
+              "clear_radius_mm": "11.43",
+              "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI40-50",
+              "traced": "TRANSMITTED_AND_REFLECTED",
+              "status": "DESIGN_BASIS"
+            }
+          ],
+          "media": [],
+          "edge_radius_mm": "12.7",
+          "valid_band_nm": {
+            "min_nm": "600",
+            "max_nm": "700",
+            "status": "DESIGN_BASIS"
+          },
+          "approximations": [
+            "COATING_AT_SPECIFIED_BOUND",
+            "COATING_PHASE_NOT_MODELLED",
+            "EDGE_AS_OPAQUE_RIM",
+            "IDEAL_SURFACE_FIGURE",
+            "LOSSLESS_COATING",
+            "POLARIZATION_INDEPENDENT_COATING",
+            "SUBSTRATE_NOT_MODELLED"
+          ],
+          "status": "DESIGN_BASIS"
+        },
+        "frame": {
+          "origin": "REFLECTING_FACE_CENTER",
+          "optical_axis": "+Z",
+          "nominal_propagation": "SPLIT_ABOUT_+Z",
+          "reference_axis": "FACE_NORMAL",
+          "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+        },
+        "design_geometry": {
+          "kind": "CYLINDER",
+          "diameter_mm": "25.4",
+          "z_min_mm": "-1",
+          "z_max_mm": "0",
+          "status": "NOMINAL"
+        }
+      },
+      {
+        "model_id": "mzi-mirror-hr",
+        "display_name": "Flat HR mirror R 0.995, 25.4 mm",
+        "model": {
+          "model_kind": "SURFACE_SEQUENCE",
+          "model_version": "2",
+          "fidelity": "SPECIFICATION_ENVELOPE",
+          "surfaces": [
+            {
+              "surface_id": "S1",
+              "vertex_z_mm": "0",
+              "clear_radius_mm": "11.43",
+              "coating_id": "NATIVE-HR_600-700R0.995T0_AOI40-50",
+              "traced": "REFLECTED",
+              "status": "DESIGN_BASIS"
+            }
+          ],
+          "media": [],
+          "edge_radius_mm": "12.7",
+          "valid_band_nm": {
+            "min_nm": "600",
+            "max_nm": "700",
+            "status": "DESIGN_BASIS"
+          },
+          "approximations": [
+            "COATING_AT_SPECIFIED_BOUND",
+            "COATING_PHASE_NOT_MODELLED",
+            "EDGE_AS_OPAQUE_RIM",
+            "IDEAL_SURFACE_FIGURE",
+            "POLARIZATION_INDEPENDENT_COATING",
+            "TRANSMITTED_LIGHT_NOT_TRACED"
+          ],
+          "status": "DESIGN_BASIS"
+        },
+        "frame": {
+          "origin": "REFLECTING_FACE_CENTER",
+          "optical_axis": "+Z",
+          "nominal_propagation": "REFLECTED_ABOUT_+Z",
+          "reference_axis": "FACE_NORMAL",
+          "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+        },
+        "design_geometry": {
+          "kind": "CYLINDER",
+          "diameter_mm": "25.4",
+          "z_min_mm": "-6.4",
+          "z_max_mm": "0",
+          "status": "NOMINAL"
+        }
+      }
+    ],
+    "model_coatings": [
+      {
+        "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI40-50",
+        "kind": "BEAMSPLITTER",
+        "display_name": "Declared beamsplitter R=0.5",
+        "bands": [
+          {
+            "min_nm": "600",
+            "max_nm": "700",
+            "reflectance": "0.5",
+            "transmittance": "0.5",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "valid_aoi_deg": {
+          "min_deg": "40",
+          "max_deg": "50",
+          "status": "DESIGN_BASIS"
+        },
+        "aoi_reference": "AIR_EQUIVALENT",
+        "basis": "Declared beamsplitter coating"
+      },
+      {
+        "coating_id": "NATIVE-HR_600-700R0.995T0_AOI40-50",
+        "kind": "DIELECTRIC_HIGH_REFLECTOR",
+        "display_name": "Declared dielectric high reflector R=0.995",
+        "bands": [
+          {
+            "min_nm": "600",
+            "max_nm": "700",
+            "reflectance": "0.995",
+            "transmittance": "0",
+            "status": "DESIGN_BASIS"
+          }
+        ],
+        "valid_aoi_deg": {
+          "min_deg": "40",
+          "max_deg": "50",
+          "status": "DESIGN_BASIS"
+        },
+        "aoi_reference": "AIR_EQUIVALENT",
+        "basis": "Declared mirror coating"
+      }
+    ]
+  },
+  "module": {
+    "module_id": "mzi-633-b",
+    "title": "Module B - Mach-Zehnder interferometer, 633 nm, 100 mm square arms",
+    "revision": "r1",
+    "description": "Input collimated 633 nm beam along +X at the module origin. BS1 (50:50) at (50,0,0); M1 at (150,0,0); M2 at (50,100,0); BS2 (50:50) at (150,100,0). Equal arms (200 mm each BS1->BS2). Outputs leave BS2 along +X (P_OUT_X, bright with equal arms) and +Y (P_OUT_Y, dark with equal arms).",
+    "fixtures": [
+      {
+        "object_kind": "COMPONENT",
+        "object_id": "SRC",
+        "role": "TEST_SOURCE",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "OBSERVATION",
+        "object_id": "SCREEN_X",
+        "role": "TEST_OBSERVATION",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "OBSERVATION",
+        "object_id": "SCREEN_Y",
+        "role": "TEST_OBSERVATION",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_COHERENT_POWER",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_COHERENT_POWER",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_INCOHERENT_POWER",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_INCOHERENT_POWER",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_OPD",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_OPD",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_COHERENCE",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_VISIBILITY",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_OVERLAP",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_OVERLAP",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_BALANCE",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_AOI",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_AOI",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_CENTER_U",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_CENTER_V",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_CENTER_U",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_CENTER_V",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTX_BEAM_RADIUS",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      },
+      {
+        "object_kind": "TARGET",
+        "object_id": "T_OUTY_BEAM_RADIUS",
+        "role": "TEST_TARGET",
+        "default_action": "REMOVE"
+      }
+    ],
+    "interfaces": [
+      {
+        "port_id": "P_IN",
+        "role": "INPUT",
+        "point_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "wavelength_band_nm": [
+          600.0,
+          700.0
+        ],
+        "beam_reference": "SRC",
+        "aperture_radius_mm": 10.0
+      },
+      {
+        "port_id": "P_OUT_X",
+        "role": "OUTPUT",
+        "point_mm": [
+          190.0,
+          100.0,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "wavelength_band_nm": [
+          600.0,
+          700.0
+        ],
+        "beam_reference": "SRC",
+        "aperture_radius_mm": 10.0
+      },
+      {
+        "port_id": "P_OUT_Y",
+        "role": "OUTPUT",
+        "point_mm": [
+          150.0,
+          140.0,
+          0.0
+        ],
+        "direction": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "wavelength_band_nm": [
+          600.0,
+          700.0
+        ],
+        "beam_reference": "SRC",
+        "aperture_radius_mm": 10.0
+      }
+    ],
+    "requirements": [
+      {
+        "target_id": "T_OUTX_COHERENT_POWER",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_COHERENT_POWER",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_INCOHERENT_POWER",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_INCOHERENT_POWER",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_OPD",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_OPD",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_COHERENCE",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_VISIBILITY",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_OVERLAP",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_OVERLAP",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_BALANCE",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_AOI",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_AOI",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_CENTER_U",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_CENTER_V",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_CENTER_U",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_CENTER_V",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTX_BEAM_RADIUS",
+        "scope": "MODULE_ONLY"
+      },
+      {
+        "target_id": "T_OUTY_BEAM_RADIUS",
+        "scope": "MODULE_ONLY"
+      }
+    ]
+  },
+  "instances": [],
+  "groups": [],
+  "operations": [],
+  "validations": [
+    {
+      "scope": "SYSTEM",
+      "project_hash": "d04de3a7863127f4b65ed858b4a4c640745933b2fdf01cfe1ad439b1db4f518d",
+      "engine_input_hash": "1dd929b4649d4c3ef1482aedfd9a9819310c74bee3e3929b64c691bf31bd3fe9",
+      "design_projection_hash": "c1de762ca4e5c20e901dfe1b6ca0e70c0607fdc2e29b34fb235cdbe6955ecbd8",
+      "targets_digest": "eb589444c1f6e3794fb8cf2922fbf3f8b68a31474f972d085bfd9c1f1c7cca32",
+      "engine_build_id": "0.8.0+4a358fe7b4b1e74b",
+      "validation_status": "PASS",
+      "target_outcomes": [
+        {
+          "target_id": "T_OUTX_AOI",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_BALANCE",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_BEAM_RADIUS",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_CENTER_U",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_CENTER_V",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_COHERENCE",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_COHERENT_POWER",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_INCOHERENT_POWER",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_OPD",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_OVERLAP",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTX_VISIBILITY",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_AOI",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_BEAM_RADIUS",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_CENTER_U",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_CENTER_V",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_COHERENT_POWER",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_INCOHERENT_POWER",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_OPD",
+          "status": "PASS"
+        },
+        {
+          "target_id": "T_OUTY_OVERLAP",
+          "status": "PASS"
+        }
+      ],
+      "runtime_kind": "PYTHON_LOCAL"
+    }
+  ]
+}

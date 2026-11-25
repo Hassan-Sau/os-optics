@@ -1,0 +1,1200 @@
+{
+ "control": null,
+ "exposures": {
+  "elements": [
+   {
+    "element_id": "BS",
+    "max_utilization": null,
+    "rating_count": 0,
+    "rating_status": "RATING_MISSING",
+    "worst_surface_id": null
+   },
+   {
+    "element_id": "MA",
+    "max_utilization": null,
+    "rating_count": 0,
+    "rating_status": "RATING_MISSING",
+    "worst_surface_id": null
+   },
+   {
+    "element_id": "MB",
+    "max_utilization": null,
+    "rating_count": 0,
+    "rating_status": "RATING_MISSING",
+    "worst_surface_id": null
+   }
+  ],
+  "model": "chief-ray packet power and paraxial Gaussian beam at each surface hit: peak irradiance 2P/(pi w_x w_y) in the transverse plane (x cos(AOI) on the surface; P the average power, so for a pulsed source the spatial peak of the average irradiance), P/d, peak fluence 2E/(pi w_x w_y) with E = P / repetition rate (one pulse's); light of different lines or coherence groups adds, in a peak fluence the lines of one source along one path (one pulse), while pulses of different sources or paths need not arrive together and the lower bound is the strongest pulse's; mutually coherent beams (one coherence group and line, from either side: a standing wave) add their fields with open phases: between max(0, sqrt(v_k) - sum sqrt(v_j))^2 and sum v + 2 sum gamma sqrt(v_i v_j) (gamma the largest degree of coherence over the surface from the declared coherence length, else 1; a pulse train coherent again at multiples of its period length); upper bounds at the beams' peaks, lower bounds at the traced beams' centres and a traced beam's mean over a window on its area, which light of unknown place lowers only by what its power can take away there (in P/d, as Gaussian beams crossing the surface from one side, by the strip each covers); incident power a flux (no cross term between the two sides); a J/cm2 or W/cm2 rated value is a threshold for the peak exposure as its stated definition gives it (a peak value: the value; the total over the 1/e^2 area of a Gaussian test beam: twice it) and no threshold when the rating does not state it, a typical value no threshold; with power ratings, light the trace does not follow is followed to the surfaces and bounds the exposure, and light left out as negligible or of unknown fate of known power adds a field of at most the amplitude of its diffraction limit 2 pi n^2 P / lambda^2 (P = (sum of the square roots of its pieces' powers)^2: they are mutually coherent) times the most its open paths' crossings bring onto a surface or across a plane, sqrt(2) m sum_{j=0}^{N} a_j, at least 2 (m the meetings after each number of reflections, from either side: 1 on a lens or a refracting surface between different media, on any other surface as often per straight leg between two reflections as a straight line meets it -- once a plane, twice a sphere or a conic, an asphere by the degree of its sag; a_j the most field of its pieces after j reflections, from different sequences of the N surfaces that may reflect it, added in phase: the smaller of the sum over those sequences of the products of m_s sqrt(R_s) and the square root of their number times the power they share), and times the factor of the returns between two surfaces facing each other, which leave them toward every surface (followed deeper where that decides a comparison; light at the interaction limit, and a pair whose gain bound is 1, bound nothing: a pair's surface and every other then has no upper bound and the run names each with EXPOSURE_BOUND_WITHHELD, which changes no bound, target or status; a coating whose record states an air-equivalent angle range is read, from a medium denser than air, at the air-equivalent angles asin(n sin(theta)) of the left-out light's own bounded extent on its way to its next reflection, and the surface and a pair that refusal leaves at a gain bound of 1 have no exposure upper bound where that extent leaves the record's range or has no real air-equivalent angle, a plane's power bound keeping the record's stated value); closed returns through three or more surfaces of separate elements (a ring, a folded or coupled cavity, a periscope's windows through its folds) and stacks of parallel planes are screened: a stack keeps an all-orders series of its returns where one converges, and a possible return without one leaves every surface it may reach without an upper bound (EXPOSURE_BOUND_WITHHELD); the internal folds of a plane-faced solid (a cube's diagonal and faces, a penta prism's mirrors, total internal reflection there) counted: its certified closed walks add to the open paths' count, and a solid without a certified sum of them is a closed return; not counted: light that total internal reflection holds in a curved lens body: none at the reference designs' feeds (internal angle at most 0.9 deg against a critical angle of 41.4 deg), 2.6 % of the power at a 75 deg entry cone and 13-16.9 % near grazing, with no bound on its consecutive total internal reflections; light that refraction turns back onto a refracting surface it already passed before its next reflection: no such path in a search of 14 fixture runs and 540 two-singlet configurations, which did not cover plane-faced prisms and retroreflectors, ball and hemispherical refractors, trains of three or more elements and catalog products; coherence from the group delay; no thermal or damage model",
+  "surfaces": [
+   {
+    "complete": true,
+    "element_id": "BS",
+    "hits": [
+     {
+      "aoi_deg": 45.0,
+      "beam_radius_x_mm": 1.0000207737931583,
+      "beam_radius_y_mm": 1.0000207737931583,
+      "footprint_semi_axes_mm": [
+       1.4142429409531214,
+       1.0000207737931581
+      ],
+      "incident_power_W": 0.001,
+      "linear_power_density_W_per_cm": 0.004999896133191916,
+      "pass_index": 0,
+      "path_id": "L#0",
+      "peak_fluence_J_per_cm2": null,
+      "peak_irradiance_W_per_cm2": 0.06365933231768159,
+      "peak_irradiance_surface_W_per_cm2": 0.04501394556764059,
+      "pulse_energy_J": null,
+      "reason": null,
+      "source_id": "L",
+      "spectral_index": 0,
+      "status": "PASS",
+      "wavelength_nm": 405.0
+     }
+    ],
+    "incident_power_W": 0.001,
+    "linear_power_density_W_per_cm": 0.004999896133191916,
+    "peak_fluence_J_per_cm2": null,
+    "peak_irradiance_W_per_cm2": 0.06365933231768159,
+    "peak_irradiance_surface_W_per_cm2": 0.04501394556764059,
+    "rating_status": "RATING_MISSING",
+    "ratings": [],
+    "reason_codes": [],
+    "surface_id": "BS/coating"
+   },
+   {
+    "complete": true,
+    "element_id": "MA",
+    "hits": [
+     {
+      "aoi_deg": 55.55443642959555,
+      "beam_radius_x_mm": 1.0001869486055124,
+      "beam_radius_y_mm": 1.0001869486055124,
+      "footprint_semi_axes_mm": [
+       1.768292622750049,
+       1.0001869486055122
+      ],
+      "incident_power_W": 0.0005000000000000001,
+      "linear_power_density_W_per_cm": 0.002499532715844341,
+      "pass_index": 0,
+      "path_id": "L#0",
+      "peak_fluence_J_per_cm2": null,
+      "peak_irradiance_W_per_cm2": 0.031819090437137036,
+      "peak_irradiance_surface_W_per_cm2": 0.017997608858554545,
+      "pulse_energy_J": null,
+      "reason": null,
+      "source_id": "L",
+      "spectral_index": 0,
+      "status": "PASS",
+      "wavelength_nm": 405.0
+     }
+    ],
+    "incident_power_W": 0.0005000000000000001,
+    "linear_power_density_W_per_cm": 0.002499532715844341,
+    "peak_fluence_J_per_cm2": null,
+    "peak_irradiance_W_per_cm2": 0.031819090437137036,
+    "peak_irradiance_surface_W_per_cm2": 0.017997608858554545,
+    "rating_status": "RATING_MISSING",
+    "ratings": [],
+    "reason_codes": [],
+    "surface_id": "MA/face"
+   },
+   {
+    "complete": true,
+    "element_id": "MB",
+    "hits": [
+     {
+      "aoi_deg": 55.55443642959555,
+      "beam_radius_x_mm": 1.0001869486055124,
+      "beam_radius_y_mm": 1.0001869486055124,
+      "footprint_semi_axes_mm": [
+       1.7682926227500493,
+       1.0001869486055124
+      ],
+      "incident_power_W": 0.0004999999999999999,
+      "linear_power_density_W_per_cm": 0.00249953271584434,
+      "pass_index": 0,
+      "path_id": "L#0.0",
+      "peak_fluence_J_per_cm2": null,
+      "peak_irradiance_W_per_cm2": 0.03181909043713703,
+      "peak_irradiance_surface_W_per_cm2": 0.01799760885855454,
+      "pulse_energy_J": null,
+      "reason": null,
+      "source_id": "L",
+      "spectral_index": 0,
+      "status": "PASS",
+      "wavelength_nm": 405.0
+     }
+    ],
+    "incident_power_W": 0.0004999999999999999,
+    "linear_power_density_W_per_cm": 0.00249953271584434,
+    "peak_fluence_J_per_cm2": null,
+    "peak_irradiance_W_per_cm2": 0.03181909043713703,
+    "peak_irradiance_surface_W_per_cm2": 0.01799760885855454,
+    "rating_status": "RATING_MISSING",
+    "ratings": [],
+    "reason_codes": [],
+    "surface_id": "MB/face"
+   }
+  ],
+  "tolerances": {
+   "beam_diameter_rel": 0.05,
+   "polarization_fraction": 0.01,
+   "pulse_duration_rel": 0.1,
+   "repetition_rate_rel": 0.1,
+   "unlocated_light_share": 0.01,
+   "wavelength_rel": 0.02
+  },
+  "trace_complete": true,
+  "unknown_fate_power_W": 0.0,
+  "untraced_light_included": false
+ },
+ "interference": [
+  {
+   "beam_crossing_angle_deg": 47.782254281617774,
+   "coherence_factor": 1.0,
+   "coherence_length_mm": 500.0,
+   "coherence_margin": 1.0,
+   "combined_power_collinear_W": null,
+   "crossing_index_a": 0,
+   "crossing_index_b": 0,
+   "fringe_direction": [
+    -0.7071067811865475,
+    0.7071067811865475,
+    -7.75696642166489e-17
+   ],
+   "fringe_period_nm": 499.99999999999994,
+   "fringe_spacing_3d_nm": 499.9999999999999,
+   "fringe_visibility": 1.0,
+   "fringe_visibility_peak": 1.0000000000000002,
+   "group_path_difference_mm": 0.0,
+   "half_angle_deg": 23.891127140808887,
+   "incoherent_power_sum_W": 0.0009999999999999992,
+   "intensity_balance": 0.9999999999999998,
+   "issue_codes": [],
+   "mean_irradiance_W_per_mm2": 0.0006355069846612094,
+   "observation_id": "sub",
+   "optical_path_difference_mm": 0.0,
+   "optical_path_length_mm_a": 324.59426695964135,
+   "optical_path_length_mm_b": 324.59426695964135,
+   "overlap_effective_area_mm2": 3.442017091970594,
+   "path_id_a": "L#0",
+   "path_id_b": "L#0.0",
+   "peak_irradiance_W_per_mm2": 0.0012710139693224189,
+   "peak_position_uv_mm": [
+    2.0097183471152316e-14,
+    2.131628207280301e-14
+   ],
+   "phase_difference_rad": -1.570796,
+   "polarization_overlap": 1.0,
+   "source_id_a": "L",
+   "source_id_b": "L",
+   "spatial_overlap_ratio": 1.0,
+   "status": "PASS",
+   "wavelength_nm": 405.0
+  }
+ ],
+ "issues": [],
+ "layout": null,
+ "manifest": {
+  "design_projection_hash": "1e9f766555ad5634ab9fccf5c647a913bfc39cb2606ea7bfce76eb9fbc54422b",
+  "input_hash_identity_masked": "62eae9c274de723a7d9d4fca7973f87a2e6896df9d728c8de702d97fd578e6f0",
+  "manifest_version": "1.0.0",
+  "model_scope": [
+   "geometric_optics_3d: plane, sphere and sag surfaces (conic, even asphere, cylinder, off-axis sections), reflection, Snell refraction, TIR, ideal thin lens, apertures, grating order directions (vector grating equation)",
+   "gaussian_beam: paraxial x/y-independent q-parameter (ABCD, Coddington tilted surfaces at the local principal curvatures), untwisted astigmatism",
+   "polarization: Jones calculus with 3D transverse basis transport, Fresnel s/p, stated Faraday rotation; a partially polarized or unpolarized source traced as two mutually incoherent orthogonal Jones components whose Stokes parameters add",
+   "birefringence: uniaxial crystals with plane faces (ordinary and extraordinary beams, walk-off of the extraordinary ray, each beam's index along its ray)",
+   "second_harmonic_generation: a uniaxial crystal slab with a stated chi(2) coefficient or d tensor, birefringent (type I / II) or quasi-phase matching, angle and temperature tuning; undepleted-pump conversion of a TEM00 Gaussian beam (near field, or Boyd-Kleinman focusing) with walk-off; the harmonic traced as a new spectral line, the fundamental's power reduced by it",
+   "interference: analytic two-beam (plane-wave phase, Gaussian envelope) on a plane; no wave propagation",
+   "spectrum: discrete mutually incoherent spectral lines; a continuous spectral density traced as midpoint-quadrature lines",
+   "scatter: single diffuse surface scatter (Lambertian, cosine-power) traced as incoherent unpolarized rays from the beam's chief-ray hit point; bulk scattering attenuates the beams and is booked, not followed",
+   "complex_transmission: thin sample of stated amplitude and phase in an aperture stop; rays take its optical path and phase gradient (geometric), the beam its Gaussian-weighted transmittance",
+   "materials: constant / Sellmeier / tabulated index with validity bands; constant and tabulated coatings",
+   "sample_emission: fluorescence (absorbed share, quantum yield, emission lines) and spontaneous Stokes Raman scattering (shifts, cross-sections, number density, path length) of a thin sample, derived from the excitation the Project's other sources deliver to it and traced as an incoherent emitter (photon numbers, each photon at its own wavelength)",
+   "detection: photodetector photocurrent from the quantum efficiency, white shot / dark / thermal noise in a stated bandwidth and its SNR; square-wave or sinusoidal modulation read by a lock-in (fundamental, RC output filter of 1 to 4 sections)",
+   "layout: 2.5D rotated footprints, keepout, beam envelope, plate boundary, moving envelope",
+   "control: finite-difference Jacobian, Levenberg-Marquardt, capture scan, deterministic Monte Carlo",
+   "unsupported:angular_spectrum_propagation",
+   "unsupported:birefringent_double_refraction",
+   "unsupported:complex_amplitude_field",
+   "unsupported:doe_response",
+   "unsupported:far_field_pattern",
+   "unsupported:fdtd",
+   "unsupported:field_amplitude_map",
+   "unsupported:fraunhofer_propagation",
+   "unsupported:fresnel_propagation",
+   "unsupported:high_na_vector_diffraction",
+   "unsupported:metasurface_response",
+   "unsupported:mtf",
+   "unsupported:partial_polarization",
+   "unsupported:phase_retrieval",
+   "unsupported:pinhole_far_field",
+   "unsupported:psf",
+   "unsupported:rcwa",
+   "unsupported:rough_surface_scattering",
+   "unsupported:speckle_contrast",
+   "unsupported:spectral_resolution_nm",
+   "unsupported:stray_light"
+  ],
+  "model_versions": {
+   "birefringence_uniaxial": "1.0",
+   "bulk_scatter": "1.0",
+   "complex_transmission": "1.0",
+   "continuous_spectrum": "1.0",
+   "control_lm": "1.0",
+   "first_order_transfer": "1.0",
+   "fresnel": "1.0",
+   "gaussian_q": "1.1",
+   "interference_two_beam": "1.0",
+   "layout_2p5d": "1.0",
+   "materials": "1.1",
+   "polarization_jones": "1.2",
+   "power_ledger": "1.2",
+   "ray_geometry": "1.2",
+   "surface_scatter": "1.0"
+  },
+  "numerical_config_version": "1.7.0",
+  "numerical_tolerances": {
+   "antiparallel_tol": 1e-12,
+   "aperture_edge_tol_mm": 1e-09,
+   "aperture_quad_angular": 256.0,
+   "aperture_quad_extent_sigmas": 6.0,
+   "aperture_quad_sector_nodes": 48.0,
+   "basis_orthonormality_tol": 1e-09,
+   "beam_envelope_k": 2.0,
+   "birefringent_gaussian_rel_tol": 0.01,
+   "birefringent_interface_warn_aoi_deg": 2.0,
+   "capture_min_power_fraction": 0.001,
+   "capture_scan_max_points": 4096.0,
+   "cross_runtime_abs_tol": 1e-12,
+   "cross_runtime_rel_tol": 1e-09,
+   "design_point_angle_anti_reflection_deg": 3.0,
+   "design_point_angle_beamsplitter_deg": 2.0,
+   "design_point_angle_dielectric_high_reflector_deg": 3.0,
+   "design_point_angle_metallic_reflector_deg": 5.0,
+   "design_point_interference_angle_max_deg": 3.0,
+   "design_point_interference_shift_fraction": 0.25,
+   "design_point_retarder_wavelength_rel": 0.0005,
+   "design_point_wavelength_rel": 0.005,
+   "energy_conservation_tol": 1e-09,
+   "fd_step_rotation_rad": 1e-05,
+   "fd_step_translation_mm": 0.001,
+   "first_order_angle_step_rad": 0.0001,
+   "first_order_b_resolution_mm": 0.0001,
+   "first_order_c_resolution_per_mm": 1e-08,
+   "first_order_position_step_mm": 0.01,
+   "first_order_unitless_resolution": 1e-06,
+   "gaussian_astig_align_tol": 1e-09,
+   "gaussian_clip_scope_fraction": 0.1,
+   "gaussian_clip_warn_fraction": 0.001,
+   "gaussian_max_aoi_deg": 60.0,
+   "gaussian_max_ray_spread_ratio": 2.0,
+   "gaussian_max_w_over_radius": 0.2,
+   "gaussian_plane_axial_spread_fraction": 0.1,
+   "gaussian_round_tol": 1e-09,
+   "gaussian_scope_divergence_rad": 0.3,
+   "gaussian_umbilic_rel_tol": 1e-09,
+   "gaussian_warn_divergence_rad": 0.1,
+   "grazing_fail_aoi_deg": 89.9,
+   "grazing_warn_aoi_deg": 85.0,
+   "hash_float_abs_floor": 1e-12,
+   "hash_float_sig_digits": 9.0,
+   "interference_collinear_period_ratio": 10.0,
+   "interference_det_tol": 1e-30,
+   "interference_min_crossing_deg": 1e-06,
+   "interference_min_overlap": 0.001,
+   "interference_wavelength_tol_nm": 1e-09,
+   "jacobian_condition_warn": 1000000.0,
+   "jacobian_rcond": 1e-10,
+   "laboratory_reach_mm": 1000.0,
+   "layout_arc_resolution": 32.0,
+   "layout_geometry_tol_mm": 1e-06,
+   "layout_height_tol_mm": 1e-06,
+   "lm_cost_tol": 1e-18,
+   "lm_damping_down": 0.1,
+   "lm_damping_up": 10.0,
+   "lm_gain_accept": 0.0,
+   "lm_initial_damping": 0.001,
+   "lm_max_damping": 1000000000000.0,
+   "lm_max_iterations": 100.0,
+   "lm_residual_tol": 1e-06,
+   "lm_scaling_floor": 1e-12,
+   "lm_step_tol": 1e-12,
+   "max_interactions_per_path": 64.0,
+   "max_interference_pairs": 256.0,
+   "max_mesh_patches": 1024.0,
+   "max_paths": 512.0,
+   "max_return_analysis_work": 4000000.0,
+   "max_scatter_origins": 64.0,
+   "max_trace_steps": 2048.0,
+   "moving_envelope_rotation_samples": 9.0,
+   "negligible_power_fraction": 1e-09,
+   "nonlinear_beam_quality_tol": 0.05,
+   "nonlinear_depletion_rel_tol": 0.02,
+   "nonlinear_focusing_rel_tol": 0.02,
+   "nonlinear_harmonic_gaussian_rel_tol": 0.02,
+   "nonlinear_linewidth_rel_tol": 0.02,
+   "nonlinear_quadrature_rel_tol": 1e-07,
+   "observability_participation_min": 0.25,
+   "parallel_dot_tol": 1e-12,
+   "power_epsilon_W": 1e-15,
+   "power_ledger_fraction_resolution": 1e-12,
+   "pupil_points_per_ring": 12.0,
+   "pupil_ring_count": 8.0,
+   "quaternion_norm_tol": 1e-06,
+   "rating_beam_diameter_tol_rel": 0.05,
+   "rating_polarization_fraction_tol": 0.01,
+   "rating_pulse_duration_tol_rel": 0.1,
+   "rating_repetition_rate_tol_rel": 0.1,
+   "rating_unlocated_light_share": 0.01,
+   "rating_wavelength_tol_rel": 0.02,
+   "ray_min_advance_mm": 1e-07,
+   "retarder_warn_aoi_deg": 20.0,
+   "sag_bracket_samples": 65.0,
+   "sag_intersection_tol_mm": 1e-12,
+   "sag_max_iterations": 64.0,
+   "sellmeier_pole_rel_tol": 1e-09,
+   "tabulated_aoi_tol_deg": 1e-09,
+   "tabulated_range_tol_nm": 1e-09,
+   "tir_warn_margin": 0.001,
+   "unit_vector_tol": 1e-09,
+   "zero_vector_tol": 1e-12
+  },
+  "prng_id": null,
+  "project_hash_identity_masked": "e363f2909c455493ff107e9765a32feb6e65ab15646a445ffded30ea9b694db0",
+  "random_seed": null,
+  "result_hash": "2cb949b55ea7c0db007ee4064ece7b1b36b9b74b35c9eab28ba084eec228811d",
+  "trace_hash": "97a4cc523b23a1d2c1f4079c63960f7e6c224d94239767c2208f340bc93782dc",
+  "warnings": []
+ },
+ "observations": [
+  {
+   "arrivals": [
+    {
+     "acceptance_margin_deg": null,
+     "active_area_power_fraction": 1.0,
+     "aoi_deg": 23.891127140808887,
+     "beam": {
+      "basis": {
+       "direction": [
+        0.3601412815534467,
+        0.93289777431455,
+        0.0
+       ],
+       "e1": [
+        0.0,
+        -0.0,
+        1.0
+       ],
+       "e2": [
+        0.93289777431455,
+        -0.3601412815534467,
+        -0.0
+       ]
+      },
+      "direction": [
+       0.3601412815534467,
+       0.93289777431455,
+       0.0
+      ],
+      "gaussian": {
+       "beam_radius_x_mm": 1.0008751288576405,
+       "beam_radius_y_mm": 1.0008751288576405,
+       "curvature_radius_x_mm": 185698.6082435282,
+       "curvature_radius_y_mm": 185698.6082435282,
+       "e1": [
+        0.93289777431455,
+        -0.3601412815534467,
+        -0.0
+       ],
+       "e2": [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       "far_field_half_angle_x_rad": 0.00012891550390443522,
+       "far_field_half_angle_y_rad": 0.00012891550390443522,
+       "local_divergence_x_rad": 5.389782607013815e-06,
+       "local_divergence_y_rad": 5.389782607013815e-06,
+       "m2_x": 1.0,
+       "m2_y": 1.0,
+       "medium_index": 1.0,
+       "q_x_mm": [
+        324.59426695964135,
+        7757.018897752576
+       ],
+       "q_y_mm": [
+        324.59426695964135,
+        7757.018897752576
+       ],
+       "rayleigh_range_x_mm": 7757.018897752576,
+       "rayleigh_range_y_mm": 7757.018897752576,
+       "reason": null,
+       "status": "PASS",
+       "valid": true,
+       "waist_distance_x_mm": 324.59426695964135,
+       "waist_distance_y_mm": 324.59426695964135,
+       "waist_radius_x_mm": 1.0,
+       "waist_radius_y_mm": 1.0,
+       "wavelength_nm": 405.0
+      },
+      "geometric_length_mm": 324.59426695964135,
+      "optical_path_length_mm": 324.59426695964135,
+      "path_id": "L#0",
+      "phase_rad": -1.094366,
+      "polarization": {
+       "ex": [
+        -0.7071067811865472,
+        0.0
+       ],
+       "ey": [
+        -4.3297802811774677e-17,
+        0.0
+       ]
+      },
+      "position_mm": [
+       162.87860305472984,
+       162.87860305472978,
+       20.0
+      ],
+      "power_W": 0.0004999999999999996,
+      "source_id": "L",
+      "spectral_index": 0,
+      "wavelength_nm": 405.0
+     },
+     "capture_margin_mm": 8.905329908598718,
+     "chief_ray_obstructed": false,
+     "coherence_group": "source:L",
+     "coherence_length_mm": 500.0,
+     "crossing_index": 0,
+     "detected_power_W": null,
+     "detected_power_min_W": null,
+     "direction_uvn": [
+      -0.40499999999999986,
+      2.2713677487804764e-16,
+      -0.9143166847433115
+     ],
+     "first_order": {
+      "handedness_preserved": false,
+      "image_rotation_deg": null,
+      "matrix": [
+       [
+        1.093713,
+        0.0,
+        355.01300000000003,
+        0.0
+       ],
+       [
+        -0.0,
+        1.0,
+        -0.0,
+        324.59430000000003
+       ],
+       [
+        0.0,
+        0.0,
+        0.9143169999999999,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+       ]
+      ],
+      "mirror_axis_deg": 0.0,
+      "reflection_count": 1,
+      "transverse_magnification": 1.045807343634572
+     },
+     "first_order_issue": null,
+     "group_delay_dispersion_mm2": 0.0,
+     "group_path_length_mm": 324.59426695964135,
+     "lineage": [
+      "BS/coating:split_transmit",
+      "MA/face:reflect"
+     ],
+     "parent_path_id": null,
+     "polarization_state": {
+      "azimuth_in_plane_deg": 89.99999999999999,
+      "degree_of_polarization": 1.0,
+      "ellipticity_deg": 0.0,
+      "handedness": "LINEAR",
+      "major_axis": [
+       5.712351366230021e-17,
+       -2.2052293384762728e-17,
+       1.0
+      ],
+      "s1": 1.0,
+      "s2": 1.224646799147354e-16,
+      "s3": 0.0
+     },
+     "pupil_centroid_uv_mm": [
+      3.74677141164644e-14,
+      -2.1394922870380622e-17
+     ],
+     "pupil_ray_count": 96,
+     "pupil_rays_arrived": 96,
+     "pupil_rms_radius_mm": 0.7249988076386674,
+     "ray_opl_defined": true,
+     "uv_mm": [
+      4.019436694230464e-14,
+      -4.733165431326071e-30
+     ],
+     "within_acceptance": null
+    },
+    {
+     "acceptance_margin_deg": null,
+     "active_area_power_fraction": 1.0,
+     "aoi_deg": 23.891127140808887,
+     "beam": {
+      "basis": {
+       "direction": [
+        0.9328977743145502,
+        0.3601412815534465,
+        6.283142801548561e-17
+       ],
+       "e1": [
+        -5.3874706761947294e-17,
+        3.1401849173675503e-16,
+        -1.0
+       ],
+       "e2": [
+        -0.3601412815534465,
+        0.9328977743145502,
+        3.123496579713946e-16
+       ]
+      },
+      "direction": [
+       0.9328977743145502,
+       0.3601412815534465,
+       6.283142801548561e-17
+      ],
+      "gaussian": {
+       "beam_radius_x_mm": 1.0008751288576405,
+       "beam_radius_y_mm": 1.0008751288576405,
+       "curvature_radius_x_mm": 185698.6082435282,
+       "curvature_radius_y_mm": 185698.6082435282,
+       "e1": [
+        -0.3601412815534465,
+        0.9328977743145502,
+        3.123496579713946e-16
+       ],
+       "e2": [
+        5.3874706761947324e-17,
+        -3.1401849173675513e-16,
+        1.0000000000000002
+       ],
+       "far_field_half_angle_x_rad": 0.00012891550390443522,
+       "far_field_half_angle_y_rad": 0.00012891550390443522,
+       "local_divergence_x_rad": 5.389782607013815e-06,
+       "local_divergence_y_rad": 5.389782607013815e-06,
+       "m2_x": 1.0,
+       "m2_y": 1.0,
+       "medium_index": 1.0,
+       "q_x_mm": [
+        324.59426695964135,
+        7757.018897752576
+       ],
+       "q_y_mm": [
+        324.59426695964135,
+        7757.018897752576
+       ],
+       "rayleigh_range_x_mm": 7757.018897752576,
+       "rayleigh_range_y_mm": 7757.018897752576,
+       "reason": null,
+       "status": "PASS",
+       "valid": true,
+       "waist_distance_x_mm": 324.59426695964135,
+       "waist_distance_y_mm": 324.59426695964135,
+       "waist_radius_x_mm": 1.0,
+       "waist_radius_y_mm": 1.0,
+       "wavelength_nm": 405.0
+      },
+      "geometric_length_mm": 324.59426695964135,
+      "optical_path_length_mm": 324.59426695964135,
+      "path_id": "L#0.0",
+      "phase_rad": -2.665162,
+      "polarization": {
+       "ex": [
+        0.0,
+        0.7071067811865471
+       ],
+       "ey": [
+        0.0,
+        -2.272472372509963e-16
+       ]
+      },
+      "position_mm": [
+       162.8786030547298,
+       162.8786030547298,
+       20.000000000000043
+      ],
+      "power_W": 0.0004999999999999995,
+      "source_id": "L",
+      "spectral_index": 0,
+      "wavelength_nm": 405.0
+     },
+     "capture_margin_mm": 8.905329908598716,
+     "chief_ray_obstructed": false,
+     "coherence_group": "source:L",
+     "coherence_length_mm": 500.0,
+     "crossing_index": 0,
+     "detected_power_W": null,
+     "detected_power_min_W": null,
+     "direction_uvn": [
+      0.4050000000000001,
+      1.9458508602849394e-16,
+      -0.9143166847433115
+     ],
+     "first_order": {
+      "handedness_preserved": true,
+      "image_rotation_deg": 180.0,
+      "matrix": [
+       [
+        -1.093713,
+        0.0,
+        -355.01300000000003,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0,
+        324.59430000000003
+       ],
+       [
+        0.0,
+        0.0,
+        -0.9143169999999999,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+       ]
+      ],
+      "mirror_axis_deg": null,
+      "reflection_count": 2,
+      "transverse_magnification": 1.045807343634572
+     },
+     "first_order_issue": null,
+     "group_delay_dispersion_mm2": 0.0,
+     "group_path_length_mm": 324.59426695964135,
+     "lineage": [
+      "BS/coating:split_reflect",
+      "MB/face:reflect"
+     ],
+     "parent_path_id": "L#0",
+     "polarization_state": {
+      "azimuth_in_plane_deg": 90.0,
+      "degree_of_polarization": 1.0,
+      "ellipticity_deg": 0.0,
+      "handedness": "LINEAR",
+      "major_axis": [
+       -6.186610273180694e-17,
+       -1.420742006969362e-17,
+       1.0
+      ],
+      "s1": 1.0,
+      "s2": -6.427522498643511e-16,
+      "s3": -0.0
+     },
+     "pupil_centroid_uv_mm": [
+      -6.2704471244974984e-15,
+      4.265395906847639e-14
+     ],
+     "pupil_ray_count": 96,
+     "pupil_rays_arrived": 96,
+     "pupil_rms_radius_mm": 0.7249988076386668,
+     "ray_opl_defined": true,
+     "uv_mm": [
+      2.3665827156630354e-30,
+      4.263256414560601e-14
+     ],
+     "within_acceptance": null
+    }
+   ],
+   "message": "",
+   "observation_id": "sub",
+   "outside_active_area": [],
+   "plane": {
+    "absorbing": false,
+    "absorbing_extent": "NONE",
+    "acceptance_half_angle_deg": null,
+    "aperture": {
+     "center_offset_mm": [
+      0.0,
+      0.0
+     ],
+     "obstruction_radius_mm": 0.0,
+     "radius_mm": 10.0,
+     "shape": "circle"
+    },
+    "device_id": null,
+    "medium": "air",
+    "normal": [
+     -0.7071067811865475,
+     -0.7071067811865475,
+     2.220446049250313e-16
+    ],
+    "origin_mm": [
+     162.8786030547298,
+     162.8786030547298,
+     20.0
+    ],
+    "pose_frame": "DESIGN",
+    "u_axis": [
+     0.7071067811865475,
+     -0.7071067811865475,
+     5.551115123125783e-17
+    ],
+    "v_axis": [
+     5.551115123125783e-17,
+     2.220446049250313e-16,
+     1.0
+    ]
+   },
+   "power_basis": "INCOHERENT_SUM",
+   "power_by_wavelength": [
+    {
+     "complete": true,
+     "power_W": 0.0009999999999999992,
+     "untraced_power_W": 0.0,
+     "wavelength_nm": 405.0
+    }
+   ],
+   "power_complete": true,
+   "power_upper_bound_W": 0.0009999999999999992,
+   "quantity_state": "KNOWN",
+   "status": "PASS",
+   "superpositions": [
+    {
+     "crossing_indices": [
+      0,
+      0
+     ],
+     "incoherent_power_W": 0.0009999999999999992,
+     "interference_power_W": 0.0,
+     "issue_codes": [],
+     "path_ids": [
+      "L#0",
+      "L#0.0"
+     ],
+     "status": "PASS",
+     "total_power_W": 0.0009999999999999992,
+     "wavelength_nm": 405.0
+    }
+   ],
+   "total_power_W": 0.0009999999999999992,
+   "untraced_power_W": 0.0
+  }
+ ],
+ "outcome": {
+  "execution": {
+   "budgets": {
+    "affected_observation_ids": [],
+    "affected_path_ids": [],
+    "affected_source_ids": [],
+    "exhausted": [],
+    "exhausted_by_phase": {},
+    "limits": {
+     "max_interactions_per_path": 64,
+     "max_interference_pairs": 256,
+     "max_paths": 512,
+     "max_return_analysis_work": 4000000,
+     "max_trace_steps": 2048
+    },
+    "untraced_power_W": null
+   },
+   "complete": true,
+   "outcome": "COMPLETED",
+   "reason": "",
+   "termination": "COMPLETED"
+  },
+  "requirements": {
+   "declared": true,
+   "indeterminate": [],
+   "met": [
+    "period",
+    "half_angle",
+    "opd",
+    "visibility",
+    "coherence",
+    "exposure"
+   ],
+   "not_applicable": [],
+   "unmet": []
+  }
+ },
+ "paths": [
+  {
+   "branch_kind": null,
+   "branch_surface_id": null,
+   "final_power_W": 0.0004999999999999996,
+   "geometric_path_length_mm": 324.59426695964135,
+   "lineage": [
+    "BS/coating:split_transmit",
+    "MA/face:reflect",
+    "observation/sub:observe"
+   ],
+   "optical_path_length_mm": 324.59426695964135,
+   "parent_path_id": null,
+   "path_id": "L#0",
+   "segments": [
+    {
+     "angle_of_incidence_deg": 45.0,
+     "beam_radius_end_mm": 1.0000207737931583,
+     "beam_radius_start_mm": 1.0,
+     "end_event": "split_transmit",
+     "end_mm": [
+      -7.105427357601002e-15,
+      0.0,
+      20.0
+     ],
+     "end_surface_id": "BS/coating",
+     "length_mm": 49.99999999999999,
+     "medium_id": "air",
+     "optical_path_length_mm": 49.99999999999999,
+     "power_end_W": 0.001,
+     "power_start_W": 0.001,
+     "refractive_index": 1.0,
+     "start_mm": [
+      -50.0,
+      0.0,
+      20.0
+     ]
+    },
+    {
+     "angle_of_incidence_deg": 55.55443642959555,
+     "beam_radius_end_mm": 1.0001869486055124,
+     "beam_radius_start_mm": 1.0000207737931583,
+     "end_event": "reflect",
+     "end_mm": [
+      100.0,
+      0.0,
+      20.0
+     ],
+     "end_surface_id": "MA/face",
+     "length_mm": 100.0,
+     "medium_id": "air",
+     "optical_path_length_mm": 100.0,
+     "power_end_W": 0.0005000000000000001,
+     "power_start_W": 0.0005000000000000001,
+     "refractive_index": 1.0,
+     "start_mm": [
+      -7.105427357601002e-15,
+      0.0,
+      20.0
+     ]
+    },
+    {
+     "angle_of_incidence_deg": 23.891127140808887,
+     "beam_radius_end_mm": 1.0008751288576405,
+     "beam_radius_start_mm": 1.0001869486055124,
+     "end_event": "observed",
+     "end_mm": [
+      162.87860305472984,
+      162.87860305472978,
+      20.0
+     ],
+     "end_surface_id": "observation/sub",
+     "length_mm": 174.59426695964135,
+     "medium_id": "air",
+     "optical_path_length_mm": 174.59426695964135,
+     "power_end_W": 0.0004999999999999996,
+     "power_start_W": 0.0004999999999999996,
+     "refractive_index": 1.0,
+     "start_mm": [
+      100.0,
+      0.0,
+      20.0
+     ]
+    },
+    {
+     "angle_of_incidence_deg": null,
+     "beam_radius_end_mm": null,
+     "beam_radius_start_mm": null,
+     "end_event": null,
+     "end_mm": null,
+     "end_surface_id": null,
+     "length_mm": null,
+     "medium_id": "air",
+     "optical_path_length_mm": null,
+     "power_end_W": 0.0004999999999999996,
+     "power_start_W": 0.0004999999999999996,
+     "refractive_index": 1.0,
+     "start_mm": [
+      162.87860305472984,
+      162.87860305472978,
+      20.0
+     ]
+    }
+   ],
+   "source_id": "L",
+   "spectral_index": 0,
+   "termination": "ESCAPED",
+   "termination_surface_id": null,
+   "wavelength_nm": 405.0
+  },
+  {
+   "branch_kind": "beam_splitter_reflection",
+   "branch_surface_id": "BS/coating",
+   "final_power_W": 0.0004999999999999995,
+   "geometric_path_length_mm": 324.59426695964135,
+   "lineage": [
+    "BS/coating:split_reflect",
+    "MB/face:reflect",
+    "observation/sub:observe"
+   ],
+   "optical_path_length_mm": 324.59426695964135,
+   "parent_path_id": "L#0",
+   "path_id": "L#0.0",
+   "segments": [
+    {
+     "angle_of_incidence_deg": 55.55443642959555,
+     "beam_radius_end_mm": 1.0001869486055124,
+     "beam_radius_start_mm": 1.0000207737931583,
+     "end_event": "reflect",
+     "end_mm": [
+      1.509903313490214e-14,
+      100.00000000000003,
+      20.000000000000032
+     ],
+     "end_surface_id": "MB/face",
+     "length_mm": 100.00000000000003,
+     "medium_id": "air",
+     "optical_path_length_mm": 100.00000000000003,
+     "power_end_W": 0.0004999999999999999,
+     "power_start_W": 0.0004999999999999999,
+     "refractive_index": 1.0,
+     "start_mm": [
+      -7.105427357601002e-15,
+      0.0,
+      20.0
+     ]
+    },
+    {
+     "angle_of_incidence_deg": 23.891127140808887,
+     "beam_radius_end_mm": 1.0008751288576405,
+     "beam_radius_start_mm": 1.0001869486055124,
+     "end_event": "observed",
+     "end_mm": [
+      162.8786030547298,
+      162.8786030547298,
+      20.000000000000043
+     ],
+     "end_surface_id": "observation/sub",
+     "length_mm": 174.5942669596413,
+     "medium_id": "air",
+     "optical_path_length_mm": 174.5942669596413,
+     "power_end_W": 0.0004999999999999995,
+     "power_start_W": 0.0004999999999999995,
+     "refractive_index": 1.0,
+     "start_mm": [
+      1.509903313490214e-14,
+      100.00000000000003,
+      20.000000000000032
+     ]
+    },
+    {
+     "angle_of_incidence_deg": null,
+     "beam_radius_end_mm": null,
+     "beam_radius_start_mm": null,
+     "end_event": null,
+     "end_mm": null,
+     "end_surface_id": null,
+     "length_mm": null,
+     "medium_id": "air",
+     "optical_path_length_mm": null,
+     "power_end_W": 0.0004999999999999995,
+     "power_start_W": 0.0004999999999999995,
+     "refractive_index": 1.0,
+     "start_mm": [
+      162.8786030547298,
+      162.8786030547298,
+      20.000000000000043
+     ]
+    }
+   ],
+   "source_id": "L",
+   "spectral_index": 0,
+   "termination": "ESCAPED",
+   "termination_surface_id": null,
+   "wavelength_nm": 405.0
+  }
+ ],
+ "power_budget": {
+  "by_element": [],
+  "conserved": true,
+  "entries": [
+   {
+    "detail": "ESCAPED",
+    "element_id": null,
+    "kind": "ESCAPED",
+    "path_id": "L#0",
+    "power_W": 0.0004999999999999996,
+    "source_id": "L",
+    "spectral_index": 0,
+    "surface_id": null,
+    "wavelength_nm": 405.0
+   },
+   {
+    "detail": "ESCAPED",
+    "element_id": null,
+    "kind": "ESCAPED",
+    "path_id": "L#0.0",
+    "power_W": 0.0004999999999999995,
+    "source_id": "L",
+    "spectral_index": 0,
+    "surface_id": null,
+    "wavelength_nm": 405.0
+   }
+  ],
+  "lines": [
+   {
+    "conserved": true,
+    "input_power_W": 0.001,
+    "observed_W": {
+     "sub": 0.0009999999999999992
+    },
+    "residual_W": 8.673617379884035e-19,
+    "sinks": {
+     "ESCAPED": 0.0009999999999999992
+    },
+    "source_id": "L",
+    "spectral_index": 0,
+    "wavelength_nm": 405.0
+   }
+  ],
+  "residual_W": 8.673617379884035e-19,
+  "tolerance_W": 1.0010000000000003e-12,
+  "total_input_W": 0.001,
+  "total_sinks": {
+   "ESCAPED": 0.0009999999999999992
+  }
+ },
+ "status": "PASS",
+ "summary": {
+  "issue_counts": {},
+  "observation_count": 1,
+  "path_count": 2,
+  "target_counts": {
+   "PASS": 6
+  }
+ },
+ "targets": [
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": -5.684341886080802e-14,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "fringe_period_nm",
+   "minimum": null,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "period",
+   "target_value": 500.0,
+   "tolerance": 1e-06,
+   "unit": "nm",
+   "value": 499.99999999999994
+  },
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": -7.105427357601002e-15,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "half_angle_deg",
+   "minimum": null,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "half_angle",
+   "target_value": 23.891127140808894,
+   "tolerance": 1e-09,
+   "unit": "deg",
+   "value": 23.891127140808887
+  },
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": 0.0,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "optical_path_difference_mm",
+   "minimum": null,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "opd",
+   "target_value": 0.0,
+   "tolerance": 1e-09,
+   "unit": "mm",
+   "value": 0.0
+  },
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": null,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "fringe_visibility",
+   "minimum": 0.99,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "visibility",
+   "target_value": null,
+   "tolerance": null,
+   "unit": "1",
+   "value": 1.0
+  },
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": null,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "coherence_margin",
+   "minimum": 0.9,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "coherence",
+   "target_value": null,
+   "tolerance": null,
+   "unit": "1",
+   "value": 1.0
+  },
+  {
+   "assessment": "MET",
+   "device_id": null,
+   "error": null,
+   "issue_codes": [],
+   "maximum": null,
+   "message": "",
+   "metric": "estimated_exposure_time_s",
+   "minimum": 0.0,
+   "observation_id": "sub",
+   "source_revision": null,
+   "status": "PASS",
+   "target_id": "exposure",
+   "target_value": null,
+   "tolerance": null,
+   "unit": "s",
+   "value": 1.5735468281801857
+  }
+ ]
+}

@@ -1,0 +1,308 @@
+{
+ "components": [
+  {
+   "custom_part": {
+    "custom_part_key": "user-laser",
+    "description": "User-supplied laser source."
+   },
+   "instance_id": "S532",
+   "nominal_pose": {
+    "position_mm": [
+     -150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "retained_dofs": [],
+   "selected_parameters": [],
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "power_w": 0.001,
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 1.0,
+    "wavelength_nm": 532.0
+   }
+  },
+  {
+   "custom_part": {
+    "custom_part_key": "user-laser",
+    "description": "User-supplied laser source."
+   },
+   "instance_id": "S633",
+   "nominal_pose": {
+    "position_mm": [
+     -150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "retained_dofs": [],
+   "selected_parameters": [],
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "power_w": 0.001,
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 1.0,
+    "wavelength_nm": 633.0
+   }
+  },
+  {
+   "instance_id": "BS1",
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.27059805007309845,
+     0.27059805007309845,
+     -0.6532814824381883,
+     -0.6532814824381883
+    ]
+   },
+   "optical_role": "splitter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-BS-PLATE-D25P4-R50T50-450-650-AOI45-T3-HK9L-CA22P86"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "F_T",
+   "nominal_pose": {
+    "position_mm": [
+     40.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "filter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-FLT-SP-D25P4-E600-P400-592-B608-1180-AOI0T10-T3P5-CA22-UVFS"
+   },
+   "retained_dofs": [],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "MT",
+   "nominal_pose": {
+    "position_mm": [
+     100.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.27059805007309845,
+     0.27059805007309845,
+     -0.6532814824381883,
+     -0.6532814824381883
+    ]
+   },
+   "optical_role": "mirror",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-MIR-FLAT-D12P7-HR-400-750-R99-AOI0T45-T6-CA10P795-UVFS"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "MR",
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.6532814824381883,
+     0.6532814824381883,
+     0.27059805007309845,
+     0.27059805007309845
+    ]
+   },
+   "optical_role": "mirror",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-MIR-FLAT-D12P7-HR-400-750-R99-AOI0T45-T6-CA10P795-UVFS"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "F_R",
+   "nominal_pose": {
+    "position_mm": [
+     50.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "filter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-FLT-LP-D25P4-E575-P583-2100-B200-566-AOI0T10-T3P5-CA22-UVFS"
+   },
+   "retained_dofs": [],
+   "selected_parameters": []
+  },
+  {
+   "instance_id": "BS2",
+   "nominal_pose": {
+    "position_mm": [
+     100.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.27059805007309845,
+     0.27059805007309845,
+     -0.6532814824381883,
+     -0.6532814824381883
+    ]
+   },
+   "optical_role": "splitter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-BS-PLATE-D25P4-R50T50-450-650-AOI45-T3-HK9L-CA22P86"
+   },
+   "retained_dofs": [
+    {
+     "axis": "Rx",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    },
+    {
+     "axis": "Ry",
+     "control": "MANUAL",
+     "frame": "COMPONENT_LOCAL"
+    }
+   ],
+   "selected_parameters": []
+  }
+ ],
+ "materials": [],
+ "observations": [
+  {
+   "absorbing": false,
+   "aperture": {
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0,
+    "radius_mm": 12.5,
+    "shape": "circle"
+   },
+   "medium": "air",
+   "observation_id": "P",
+   "pose": {
+    "position_mm": [
+     200.0,
+     100.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  }
+ ],
+ "project_schema_version": "2.0",
+ "schema": "opensci.project",
+ "targets": [
+  {
+   "metric": "power_W",
+   "minimum": 0.0001,
+   "observation_id": "P",
+   "parameters": [],
+   "source_id": "S532",
+   "target_id": "g",
+   "unit": "W"
+  },
+  {
+   "metric": "power_W",
+   "minimum": 0.0001,
+   "observation_id": "P",
+   "parameters": [],
+   "source_id": "S633",
+   "target_id": "r",
+   "unit": "W"
+  }
+ ]
+}

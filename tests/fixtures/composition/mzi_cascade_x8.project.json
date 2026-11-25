@@ -1,0 +1,1274 @@
+{
+ "schema": "opensci.project",
+ "project_schema_version": "2.0",
+ "components": [
+  {
+   "instance_id": "LASER",
+   "optical_role": "source",
+   "custom_part": {
+    "custom_part_key": "laser-laser",
+    "description": "632.8 nm laser (fixture)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "source_model": {
+    "model_kind": "GAUSSIAN_BEAM",
+    "wavelength_nm": 632.8,
+    "power_w": 0.001,
+    "waist_radius_mm": 0.5,
+    "waist_position_mm": 0.0,
+    "m2": 1.0,
+    "polarization": {
+     "kind": "LINEAR",
+     "angle_deg": 90.0
+    }
+   }
+  },
+  {
+   "instance_id": "s0_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s0_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     40.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s0_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     40.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s0_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     40.0,
+     40.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s1_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     60.0,
+     40.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s1_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     100.0,
+     40.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s1_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     60.0,
+     80.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s1_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     100.0,
+     80.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s2_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     120.0,
+     80.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s2_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     160.0,
+     80.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s2_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     120.0,
+     120.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s2_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     160.0,
+     120.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s3_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     180.0,
+     120.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s3_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     220.0,
+     120.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s3_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     180.0,
+     160.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s3_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     220.0,
+     160.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s4_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     240.0,
+     160.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s4_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     280.0,
+     160.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s4_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     240.0,
+     200.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s4_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     280.0,
+     200.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s5_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     300.0,
+     200.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s5_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     340.0,
+     200.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s5_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     300.0,
+     240.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s5_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     340.0,
+     240.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s6_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     360.0,
+     240.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s6_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     400.0,
+     240.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s6_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     360.0,
+     280.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s6_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     400.0,
+     280.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s7_BS1",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     420.0,
+     280.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  },
+  {
+   "instance_id": "s7_MA",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     460.0,
+     280.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s7_MB",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "mirror-r1",
+    "description": "Flat mirror (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     420.0,
+     320.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438188,
+     0.653281482438188,
+     0.270598050073099,
+     0.270598050073099
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_mirror-r1"
+  },
+  {
+   "instance_id": "s7_BS2",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "bs50",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     460.0,
+     320.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073099,
+     0.270598050073099,
+     -0.653281482438188,
+     -0.653281482438188
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "s0_bs50"
+  }
+ ],
+ "observations": [
+  {
+   "observation_id": "s0_DUMP",
+   "pose": {
+    "position_mm": [
+     40.0,
+     65.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s1_DUMP",
+   "pose": {
+    "position_mm": [
+     100.0,
+     105.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s2_DUMP",
+   "pose": {
+    "position_mm": [
+     160.0,
+     145.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s3_DUMP",
+   "pose": {
+    "position_mm": [
+     220.0,
+     185.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s4_DUMP",
+   "pose": {
+    "position_mm": [
+     280.0,
+     225.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s5_DUMP",
+   "pose": {
+    "position_mm": [
+     340.0,
+     265.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s6_DUMP",
+   "pose": {
+    "position_mm": [
+     400.0,
+     305.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "s7_DUMP",
+   "pose": {
+    "position_mm": [
+     460.0,
+     345.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781186547,
+     0.707106781186548
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "END",
+   "pose": {
+    "position_mm": [
+     480.0,
+     320.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5,
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  }
+ ],
+ "targets": [
+  {
+   "target_id": "s0_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s0_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s1_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s1_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s2_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s2_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s3_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s3_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s4_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s4_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s5_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s5_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s6_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s6_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "s7_T_DUMP",
+   "metric": "power_W",
+   "observation_id": "s7_DUMP",
+   "minimum": 0.0,
+   "parameters": []
+  },
+  {
+   "target_id": "T_END_MIN",
+   "metric": "power_W",
+   "observation_id": "END",
+   "minimum": 3.8671875e-06,
+   "parameters": []
+  },
+  {
+   "target_id": "T_END_MAX",
+   "metric": "power_W",
+   "observation_id": "END",
+   "maximum": 3.9453125e-06,
+   "parameters": []
+  }
+ ],
+ "materials": [],
+ "design_intent": "OPTICAL_SYSTEM",
+ "optical_models": [
+  {
+   "model_id": "s0_bs50",
+   "display_name": "Plate beamsplitter R = 0.5",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SPECIFICATION_ENVELOPE",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "clear_radius_mm": "11.43",
+      "coating_id": "S0_NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+      "traced": "TRANSMITTED_AND_REFLECTED",
+      "status": "DESIGN_BASIS"
+     }
+    ],
+    "media": [],
+    "edge_radius_mm": "12.7",
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "POLARIZATION_INDEPENDENT_COATING",
+     "SUBSTRATE_NOT_MODELLED"
+    ],
+    "status": "DESIGN_BASIS"
+   },
+   "frame": {
+    "origin": "REFLECTING_FACE_CENTER",
+    "optical_axis": "+Z",
+    "nominal_propagation": "SPLIT_ABOUT_+Z",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "-1",
+    "z_max_mm": "0",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "s0_mirror-r1",
+   "display_name": "Flat mirror",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SPECIFICATION_ENVELOPE",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "clear_radius_mm": "11.43",
+      "coating_id": "S0_NATIVE-METAL_600-700R1T0_AOI0-90",
+      "traced": "REFLECTED",
+      "status": "DESIGN_BASIS"
+     }
+    ],
+    "media": [],
+    "edge_radius_mm": "12.7",
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "POLARIZATION_INDEPENDENT_COATING",
+     "TRANSMITTED_LIGHT_NOT_TRACED"
+    ],
+    "status": "DESIGN_BASIS"
+   },
+   "frame": {
+    "origin": "REFLECTING_FACE_CENTER",
+    "optical_axis": "+Z",
+    "nominal_propagation": "REFLECTED_ABOUT_+Z",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "-6.4",
+    "z_max_mm": "0",
+    "status": "NOMINAL"
+   }
+  }
+ ],
+ "model_coatings": [
+  {
+   "coating_id": "S0_NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+   "kind": "BEAMSPLITTER",
+   "display_name": "Declared beamsplitter R=0.5",
+   "bands": [
+    {
+     "min_nm": "600",
+     "max_nm": "700",
+     "reflectance": "0.5",
+     "transmittance": "0.5",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "0",
+    "max_deg": "90",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared beamsplitter coating"
+  },
+  {
+   "coating_id": "S0_NATIVE-METAL_600-700R1T0_AOI0-90",
+   "kind": "METALLIC_REFLECTOR",
+   "display_name": "Declared metallic reflector R=1",
+   "bands": [
+    {
+     "min_nm": "600",
+     "max_nm": "700",
+     "reflectance": "1",
+     "transmittance": "0",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "0",
+    "max_deg": "90",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+# The pinned build tools of scripts/build_dist.py (the one build entry point of CI and the release workflow).
+# Compile: uv pip compile scripts/build-requirements.in --universal --generate-hashes --python-version 3.11 -o scripts/build-requirements.txt
+build==1.6.1
+hatchling==1.33.0

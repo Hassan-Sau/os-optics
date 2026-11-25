@@ -1,0 +1,3698 @@
+{
+ "_about": "Projects for tests/test_rotation_invariance.py (fixture data): the physics evidence benches c5_acylinder (declared acylinder) and c7_afocal_run (catalog lens pair, chief ray at normal incidence on every surface), and the composition evidence Projects: an expander module, a periscope module, a splitter/window module, a two-source combiner, the integrated system with the rotated layout (group upper turned 23 deg about a tilted axis, case 5) and the system after the relay rotation (case 6).",
+ "projects": {
+  "acylinder": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src",
+      "description": "632.8 nm laser, waist at the lens (fixture)"
+     },
+     "instance_id": "SRC",
+     "nominal_pose": {
+      "position_mm": [
+       -100.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 0.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 1.0,
+      "waist_position_mm": 100.0,
+      "waist_radius_mm": 2.0,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "own-cyl",
+      "description": "Own optic (fixture)."
+     },
+     "instance_id": "CYL",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "pv-acyl",
+     "optical_role": "lens"
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "model_materials": [
+    {
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Glass n 1.5 (fixture)",
+     "material_id": "PVGLASS",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DECLARED"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "aperture": {
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "observation_id": "IN",
+     "pose": {
+      "position_mm": [
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "aperture": {
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "observation_id": "OUT",
+     "pose": {
+      "position_mm": [
+       30.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "model": {
+      "approximations": [
+       "IDEAL_SURFACE_FIGURE"
+      ],
+      "edge_radius_mm": "10",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "PVGLASS"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DECLARED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "8",
+        "conic": "-0.6",
+        "cylinder_axis": "X",
+        "radius_mm": "30",
+        "status": "DECLARED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "8",
+        "status": "DECLARED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "4"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "600",
+       "status": "DECLARED"
+      }
+     },
+     "model_id": "pv-acyl"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "power_W",
+     "minimum": 0.0,
+     "observation_id": "OUT",
+     "target_id": "p_OUT"
+    }
+   ]
+  },
+  "afocal_pair": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC",
+     "nominal_pose": {
+      "position_mm": [
+       -200.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 0.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 1.0,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 1.0,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "instance_id": "L1",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "lens",
+     "product": {
+      "catalog_version": "2026-10-28.1",
+      "optical_sku": "OS-OPT-LENS-PCX-D12P7-F50-T2P6-R25P8-NBK7-AR400-700-W587P6"
+     }
+    },
+    {
+     "instance_id": "L2",
+     "nominal_pose": {
+      "position_mm": [
+       150.95502438632897,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "lens",
+     "product": {
+      "catalog_version": "2026-10-28.1",
+      "optical_sku": "OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-700-W587P6"
+     }
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "observations": [
+    {
+     "aperture": {
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "observation_id": "P",
+     "pose": {
+      "position_mm": [
+       453.15502438632893,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "maximum": 1.0,
+     "metric": "divergence_half_angle_x_rad",
+     "observation_id": "P",
+     "target_id": "div"
+    },
+    {
+     "metric": "waist_radius_x_mm",
+     "minimum": 0.0,
+     "observation_id": "P",
+     "target_id": "wz"
+    }
+   ]
+  },
+  "expander_module": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC",
+     "nominal_pose": {
+      "position_mm": [
+       -60.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 0.5,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "exp4",
+      "description": "Keplerian telescope f1 = 25 mm, f2 = 100 mm (native component compound.keplerian_telescope)"
+     },
+     "instance_id": "EXP",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "exp4",
+     "optical_role": "other_optical",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "900",
+       "min_nm": "400",
+       "reflectance": "0",
+       "status": "DESIGN_BASIS",
+       "transmittance": "1"
+      }
+     ],
+     "basis": "Declared anti-reflection coating (lossless: T = 1 - R)",
+     "coating_id": "NATIVE-AR_400-900R0T1_AOI0-30",
+     "display_name": "Declared anti reflection R=0",
+     "kind": "ANTI_REFLECTION",
+     "valid_aoi_deg": {
+      "max_deg": "30",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "model_materials": [
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "EXP_MON",
+     "pose": {
+      "position_mm": [
+       151.75966699999998,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "OUT",
+     "pose": {
+      "position_mm": [
+       171.75966699999998,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "12.7",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.369",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 25 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "6.35",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "23.420667",
+       "effective_focal_length_mm": "25",
+       "front_focal_length_mm": "25",
+       "front_principal_plane_z_mm": "0",
+       "rear_principal_plane_z_mm": "0.789667",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "12.5",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.369"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp4-L1"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0.1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Stop at the internal focus",
+     "model": {
+      "edge_radius_mm": "12.7",
+      "model_kind": "APERTURE_STOP",
+      "model_version": "1",
+      "opening_radius_mm": "0.1",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "model_id": "exp4-STOP"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.91",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 100 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "100",
+       "effective_focal_length_mm": "100",
+       "front_focal_length_mm": "98.06",
+       "front_principal_plane_z_mm": "1.94",
+       "rear_principal_plane_z_mm": "2.91",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "-50",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.91"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp4-L2"
+    },
+    {
+     "display_name": "Keplerian telescope f1 = 25 mm, f2 = 100 mm",
+     "model": {
+      "envelope": {
+       "diameter_mm": "25.4",
+       "kind": "CYLINDER",
+       "status": "NOMINAL",
+       "z_max_mm": "126.759667",
+       "z_min_mm": "0"
+      },
+      "members": [
+       {
+        "member_id": "L1",
+        "model_id": "exp4-L1",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          0.0
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "STOP",
+        "model_id": "exp4-STOP",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          25.789667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "L2",
+        "model_id": "exp4-L2",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          123.849667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       }
+      ],
+      "model_kind": "COMPOUND",
+      "model_version": "1",
+      "ports": [
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "0"
+        ],
+        "port_id": "IN",
+        "role": "INPUT",
+        "status": "DERIVED"
+       },
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "126.759667"
+        ],
+        "port_id": "OUT",
+        "role": "OUTPUT",
+        "status": "DERIVED"
+       }
+      ]
+     },
+     "model_id": "exp4"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "waist_radius_x_mm",
+     "observation_id": "EXP_MON",
+     "parameters": [],
+     "target_id": "T_WAIST",
+     "target_value": 2.0,
+     "tolerance_abs": 0.002
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.00099,
+     "observation_id": "OUT",
+     "parameters": [],
+     "source_id": "SRC",
+     "target_id": "T_OUT"
+    }
+   ]
+  },
+  "periscope_module": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC",
+     "nominal_pose": {
+      "position_mm": [
+       -100.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 0.5,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "M1",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.653281482438188,
+       0.270598050073099,
+       -0.270598050073099,
+       -0.653281482438188
+      ]
+     },
+     "optical_model_id": "fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "M2",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.270598050073099,
+       0.653281482438188,
+       0.653281482438188,
+       0.270598050073099
+      ]
+     },
+     "optical_model_id": "fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "400",
+       "reflectance": "0.98",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "NATIVE-METAL_400-700R0.98T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=0.98",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "PMON",
+     "pose": {
+      "position_mm": [
+       40.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "OUT",
+     "pose": {
+      "position_mm": [
+       100.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-METAL_400-700R0.98T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "400",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "fold-mirror"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "spot_centroid_u_mm",
+     "observation_id": "PMON",
+     "parameters": [],
+     "target_id": "T_LEVEL_U",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "spot_centroid_v_mm",
+     "observation_id": "PMON",
+     "parameters": [],
+     "target_id": "T_LEVEL_V",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "PMON",
+     "parameters": [],
+     "source_id": "SRC",
+     "target_id": "T_PMON_POWER"
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0009,
+     "observation_id": "OUT",
+     "parameters": [],
+     "source_id": "SRC",
+     "target_id": "T_OUT"
+    }
+   ]
+  },
+  "relay_rotated": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-laser",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "LASER",
+     "nominal_pose": {
+      "position_mm": [
+       -300.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 0.5,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "win2",
+      "description": "Window declared t = 2 mm (native component plate.window)"
+     },
+     "instance_id": "W0",
+     "nominal_pose": {
+      "position_mm": [
+       -250.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "win2",
+     "optical_role": "window",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "exp4",
+      "description": "Keplerian telescope f1 = 25 mm, f2 = 100 mm (native component compound.keplerian_telescope)"
+     },
+     "instance_id": "exp_EXP",
+     "nominal_pose": {
+      "position_mm": [
+       -200.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "exp_exp4",
+     "optical_role": "other_optical",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pa_M1",
+     "nominal_pose": {
+      "position_mm": [
+       13.333333333333334,
+       -13.333333333333334,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.9238795325112865,
+       0.38268343236509056,
+       0.0,
+       0.0
+      ]
+     },
+     "optical_model_id": "pa_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pa_M2",
+     "nominal_pose": {
+      "position_mm": [
+       13.333333333333334,
+       -13.333333333333334,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.0,
+       0.0,
+       0.9238795325112865,
+       0.38268343236509056
+      ]
+     },
+     "optical_model_id": "pa_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pb_M1",
+     "nominal_pose": {
+      "position_mm": [
+       80.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.27059805007309906,
+       -0.6532814824381881,
+       -0.6532814824381881,
+       0.27059805007309906
+      ]
+     },
+     "optical_model_id": "pb_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pb_M2",
+     "nominal_pose": {
+      "position_mm": [
+       80.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.6532814824381881,
+       -0.27059805007309906,
+       0.27059805007309906,
+       -0.6532814824381881
+      ]
+     },
+     "optical_model_id": "pb_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "iris",
+      "description": "Circular aperture 10 mm (native component aperture.circular)"
+     },
+     "instance_id": "foc_IRIS",
+     "nominal_pose": {
+      "position_mm": [
+       195.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "foc_iris",
+     "optical_role": "aperture",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "f100",
+      "description": "Ideal thin lens f = 100 mm (native component lens.ideal_thin)"
+     },
+     "instance_id": "foc_LENS",
+     "nominal_pose": {
+      "position_mm": [
+       200.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "foc_f100",
+     "optical_role": "lens",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "camera-cam",
+      "description": "Camera (fixture)"
+     },
+     "instance_id": "foc_CAM",
+     "nominal_pose": {
+      "position_mm": [
+       300.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "detector",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "900",
+       "min_nm": "400",
+       "reflectance": "0",
+       "status": "DESIGN_BASIS",
+       "transmittance": "1"
+      }
+     ],
+     "basis": "Declared anti-reflection coating (lossless: T = 1 - R)",
+     "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+     "display_name": "Declared anti reflection R=0",
+     "kind": "ANTI_REFLECTION",
+     "valid_aoi_deg": {
+      "max_deg": "30",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "400",
+       "reflectance": "0.98",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "PA_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=0.98",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "400",
+       "reflectance": "0.98",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "PB_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=0.98",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "model_materials": [
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "EXP_INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "SYS_IN",
+     "pose": {
+      "position_mm": [
+       -230.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "exp_EXP_MON",
+     "pose": {
+      "position_mm": [
+       -48.24033300000002,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "pa_PMON",
+     "pose": {
+      "position_mm": [
+       13.333333333333334,
+       26.666666666666664,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.0,
+       0.0,
+       0.7071067811865476,
+       0.7071067811865476
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "pb_PMON",
+     "pose": {
+      "position_mm": [
+       120.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       -0.5,
+       0.5,
+       -0.5
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 3.0,
+      "shape": "circle"
+     },
+     "device_instance_id": "foc_CAM",
+     "medium": "air",
+     "observation_id": "foc_CAM_FACE",
+     "pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2",
+      "z_min_mm": "0"
+     },
+     "display_name": "Window declared t = 2 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "NOMINAL_PRESCRIPTION"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "win2"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "12.7",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.369",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 25 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "6.35",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "EXP_INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "23.420667",
+       "effective_focal_length_mm": "25",
+       "front_focal_length_mm": "25",
+       "front_principal_plane_z_mm": "0",
+       "rear_principal_plane_z_mm": "0.789667",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "12.5",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.369"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp_exp4-L1"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0.1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Stop at the internal focus",
+     "model": {
+      "edge_radius_mm": "12.7",
+      "model_kind": "APERTURE_STOP",
+      "model_version": "1",
+      "opening_radius_mm": "0.1",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "model_id": "exp_exp4-STOP"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.91",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 100 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "EXP_INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "100",
+       "effective_focal_length_mm": "100",
+       "front_focal_length_mm": "98.06",
+       "front_principal_plane_z_mm": "1.94",
+       "rear_principal_plane_z_mm": "2.91",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "-50",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.91"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp_exp4-L2"
+    },
+    {
+     "display_name": "Keplerian telescope f1 = 25 mm, f2 = 100 mm",
+     "model": {
+      "envelope": {
+       "diameter_mm": "25.4",
+       "kind": "CYLINDER",
+       "status": "NOMINAL",
+       "z_max_mm": "126.759667",
+       "z_min_mm": "0"
+      },
+      "members": [
+       {
+        "member_id": "L1",
+        "model_id": "exp_exp4-L1",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          0.0
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "STOP",
+        "model_id": "exp_exp4-STOP",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          25.789667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "L2",
+        "model_id": "exp_exp4-L2",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          123.849667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       }
+      ],
+      "model_kind": "COMPOUND",
+      "model_version": "1",
+      "ports": [
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "0"
+        ],
+        "port_id": "IN",
+        "role": "INPUT",
+        "status": "DERIVED"
+       },
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "126.759667"
+        ],
+        "port_id": "OUT",
+        "role": "OUTPUT",
+        "status": "DERIVED"
+       }
+      ]
+     },
+     "model_id": "exp_exp4"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "PA_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "400",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "pa_fold-mirror"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "PB_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "400",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "pb_fold-mirror"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Circular aperture 10 mm",
+     "model": {
+      "edge_radius_mm": "12.7",
+      "model_kind": "APERTURE_STOP",
+      "model_version": "1",
+      "opening_radius_mm": "5",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "model_id": "foc_iris"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Ideal thin lens f = 100 mm",
+     "model": {
+      "clear_radius_mm": "10",
+      "edge_radius_mm": "12.7",
+      "focal_length_mm": "100",
+      "model_kind": "IDEAL_THIN_LENS",
+      "model_version": "1",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS",
+      "transmittance": "1",
+      "valid_band_nm": {
+       "max_nm": "20000",
+       "min_nm": "200",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "foc_f100"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "power_W",
+     "minimum": 0.0009,
+     "observation_id": "SYS_IN",
+     "parameters": [],
+     "target_id": "T_SYS_IN"
+    },
+    {
+     "metric": "waist_radius_x_mm",
+     "observation_id": "exp_EXP_MON",
+     "parameters": [],
+     "target_id": "exp_T_WAIST",
+     "target_value": 2.0,
+     "tolerance_abs": 0.002
+    },
+    {
+     "metric": "spot_centroid_u_mm",
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "target_id": "pa_T_LEVEL_U",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "spot_centroid_v_mm",
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "target_id": "pa_T_LEVEL_V",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "source_id": "LASER",
+     "target_id": "pa_T_PMON_POWER"
+    },
+    {
+     "metric": "spot_centroid_u_mm",
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "target_id": "pb_T_LEVEL_U",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "spot_centroid_v_mm",
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "target_id": "pb_T_LEVEL_V",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "source_id": "LASER",
+     "target_id": "pb_T_PMON_POWER"
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "foc_CAM_FACE",
+     "parameters": [],
+     "target_id": "foc_T_CAM_POWER"
+    },
+    {
+     "maximum": 0.05,
+     "metric": "beam_radius_mm",
+     "observation_id": "foc_CAM_FACE",
+     "parameters": [],
+     "target_id": "foc_T_SPOT"
+    }
+   ]
+  },
+  "rotated_layout": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-laser",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "LASER",
+     "nominal_pose": {
+      "position_mm": [
+       -300.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 0.5,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "win2",
+      "description": "Window declared t = 2 mm (native component plate.window)"
+     },
+     "instance_id": "W0",
+     "nominal_pose": {
+      "position_mm": [
+       -250.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "win2",
+     "optical_role": "window",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "exp4",
+      "description": "Keplerian telescope f1 = 25 mm, f2 = 100 mm (native component compound.keplerian_telescope)"
+     },
+     "instance_id": "exp_EXP",
+     "nominal_pose": {
+      "position_mm": [
+       -200.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "exp_exp4",
+     "optical_role": "other_optical",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pa_M1",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.653281482438188,
+       0.270598050073099,
+       -0.270598050073099,
+       -0.653281482438188
+      ]
+     },
+     "optical_model_id": "pa_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pa_M2",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.270598050073099,
+       0.653281482438188,
+       0.653281482438188,
+       0.270598050073099
+      ]
+     },
+     "optical_model_id": "pa_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pb_M1",
+     "nominal_pose": {
+      "position_mm": [
+       80.77453744166773,
+       -1.1966229504122117,
+       50.59303664241788
+      ],
+      "quaternion_wxyz": [
+       0.3771775966010467,
+       -0.7373140541770727,
+       -0.5227190533823557,
+       0.2021628980952758
+      ]
+     },
+     "optical_model_id": "pb_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "fold-mirror",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "pb_M2",
+     "nominal_pose": {
+      "position_mm": [
+       78.15409348485186,
+       5.020407819144074,
+       1.0503096092843691
+      ],
+      "quaternion_wxyz": [
+       0.5227190533823557,
+       -0.2021628980952758,
+       0.3771775966010467,
+       -0.7373140541770727
+      ]
+     },
+     "optical_model_id": "pb_fold-mirror",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "iris",
+      "description": "Circular aperture 10 mm (native component aperture.circular)"
+     },
+     "instance_id": "foc_IRIS",
+     "nominal_pose": {
+      "position_mm": [
+       195.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "foc_iris",
+     "optical_role": "aperture",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "f100",
+      "description": "Ideal thin lens f = 100 mm (native component lens.ideal_thin)"
+     },
+     "instance_id": "foc_LENS",
+     "nominal_pose": {
+      "position_mm": [
+       200.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "foc_f100",
+     "optical_role": "lens",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "camera-cam",
+      "description": "Camera (fixture)"
+     },
+     "instance_id": "foc_CAM",
+     "nominal_pose": {
+      "position_mm": [
+       300.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "detector",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "900",
+       "min_nm": "400",
+       "reflectance": "0",
+       "status": "DESIGN_BASIS",
+       "transmittance": "1"
+      }
+     ],
+     "basis": "Declared anti-reflection coating (lossless: T = 1 - R)",
+     "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+     "display_name": "Declared anti reflection R=0",
+     "kind": "ANTI_REFLECTION",
+     "valid_aoi_deg": {
+      "max_deg": "30",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "400",
+       "reflectance": "0.98",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "PA_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=0.98",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "400",
+       "reflectance": "0.98",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "PB_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=0.98",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "model_materials": [
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "EXP_INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "SYS_IN",
+     "pose": {
+      "position_mm": [
+       -230.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "exp_EXP_MON",
+     "pose": {
+      "position_mm": [
+       -48.24033300000002,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "pa_PMON",
+     "pose": {
+      "position_mm": [
+       40.0,
+       0.0,
+       50.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": false,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "pb_PMON",
+     "pose": {
+      "position_mm": [
+       115.22754649690629,
+       -9.513509991428677,
+       -2.73443804921385
+      ],
+      "quaternion_wxyz": [
+       0.40556504293365936,
+       -0.3868100852943804,
+       0.6306245346050072,
+       -0.5368497464086123
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 3.0,
+      "shape": "circle"
+     },
+     "device_instance_id": "foc_CAM",
+     "medium": "air",
+     "observation_id": "foc_CAM_FACE",
+     "pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2",
+      "z_min_mm": "0"
+     },
+     "display_name": "Window declared t = 2 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "NOMINAL_PRESCRIPTION"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "win2"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "12.7",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.369",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 25 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "6.35",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "EXP_INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "23.420667",
+       "effective_focal_length_mm": "25",
+       "front_focal_length_mm": "25",
+       "front_principal_plane_z_mm": "0",
+       "rear_principal_plane_z_mm": "0.789667",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "12.5",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "5.715",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.369"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp_exp4-L1"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0.1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Stop at the internal focus",
+     "model": {
+      "edge_radius_mm": "12.7",
+      "model_kind": "APERTURE_STOP",
+      "model_version": "1",
+      "opening_radius_mm": "0.1",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "model_id": "exp_exp4-STOP"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "2.91",
+      "z_min_mm": "0"
+     },
+     "display_name": "Singlet INDEX-1.5 f = 100 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "NOMINAL_PRESCRIPTION",
+       "POLARIZATION_INDEPENDENT_COATING"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "EXP_INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "paraxial": {
+       "axis": "ROTATIONAL",
+       "back_focal_length_mm": "100",
+       "effective_focal_length_mm": "100",
+       "front_focal_length_mm": "98.06",
+       "front_principal_plane_z_mm": "1.94",
+       "rear_principal_plane_z_mm": "2.91",
+       "status": "DERIVED",
+       "wavelength_nm": "632.8"
+      },
+      "status": "DERIVED",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "status": "DERIVED",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "EXP_NATIVE-AR_400-900R0T1_AOI0-30",
+        "radius_mm": "-50",
+        "status": "DERIVED",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "2.91"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "exp_exp4-L2"
+    },
+    {
+     "display_name": "Keplerian telescope f1 = 25 mm, f2 = 100 mm",
+     "model": {
+      "envelope": {
+       "diameter_mm": "25.4",
+       "kind": "CYLINDER",
+       "status": "NOMINAL",
+       "z_max_mm": "126.759667",
+       "z_min_mm": "0"
+      },
+      "members": [
+       {
+        "member_id": "L1",
+        "model_id": "exp_exp4-L1",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          0.0
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "STOP",
+        "model_id": "exp_exp4-STOP",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          25.789667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       },
+       {
+        "member_id": "L2",
+        "model_id": "exp_exp4-L2",
+        "pose": {
+         "position_mm": [
+          0.0,
+          0.0,
+          123.849667
+         ],
+         "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+         ]
+        }
+       }
+      ],
+      "model_kind": "COMPOUND",
+      "model_version": "1",
+      "ports": [
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "0"
+        ],
+        "port_id": "IN",
+        "role": "INPUT",
+        "status": "DERIVED"
+       },
+       {
+        "direction": [
+         "0",
+         "0",
+         "1"
+        ],
+        "point_mm": [
+         "0",
+         "0",
+         "126.759667"
+        ],
+        "port_id": "OUT",
+        "role": "OUTPUT",
+        "status": "DERIVED"
+       }
+      ]
+     },
+     "model_id": "exp_exp4"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "PA_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "400",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "pa_fold-mirror"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "PB_NATIVE-METAL_400-700R0.98T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "400",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "pb_fold-mirror"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Circular aperture 10 mm",
+     "model": {
+      "edge_radius_mm": "12.7",
+      "model_kind": "APERTURE_STOP",
+      "model_version": "1",
+      "opening_radius_mm": "5",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS"
+     },
+     "model_id": "foc_iris"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Ideal thin lens f = 100 mm",
+     "model": {
+      "clear_radius_mm": "10",
+      "edge_radius_mm": "12.7",
+      "focal_length_mm": "100",
+      "model_kind": "IDEAL_THIN_LENS",
+      "model_version": "1",
+      "plane_z_mm": "0",
+      "status": "DESIGN_BASIS",
+      "transmittance": "1",
+      "valid_band_nm": {
+       "max_nm": "20000",
+       "min_nm": "200",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "foc_f100"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "power_W",
+     "minimum": 0.0009,
+     "observation_id": "SYS_IN",
+     "parameters": [],
+     "target_id": "T_SYS_IN"
+    },
+    {
+     "metric": "waist_radius_x_mm",
+     "observation_id": "exp_EXP_MON",
+     "parameters": [],
+     "target_id": "exp_T_WAIST",
+     "target_value": 2.0,
+     "tolerance_abs": 0.002
+    },
+    {
+     "metric": "spot_centroid_u_mm",
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "target_id": "pa_T_LEVEL_U",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "spot_centroid_v_mm",
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "target_id": "pa_T_LEVEL_V",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "pa_PMON",
+     "parameters": [],
+     "source_id": "LASER",
+     "target_id": "pa_T_PMON_POWER"
+    },
+    {
+     "metric": "spot_centroid_u_mm",
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "target_id": "pb_T_LEVEL_U",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "spot_centroid_v_mm",
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "target_id": "pb_T_LEVEL_V",
+     "target_value": 0.0,
+     "tolerance_abs": 0.05
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "pb_PMON",
+     "parameters": [],
+     "source_id": "LASER",
+     "target_id": "pb_T_PMON_POWER"
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.0008,
+     "observation_id": "foc_CAM_FACE",
+     "parameters": [],
+     "target_id": "foc_T_CAM_POWER"
+    },
+    {
+     "maximum": 0.05,
+     "metric": "beam_radius_mm",
+     "observation_id": "foc_CAM_FACE",
+     "parameters": [],
+     "target_id": "foc_T_SPOT"
+    }
+   ]
+  },
+  "splitter_window_module": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC",
+     "nominal_pose": {
+      "position_mm": [
+       -100.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "coherence_length_mm": 1000000.0,
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 1.0,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "bs50",
+      "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+     },
+     "instance_id": "BS1",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.270598050073099,
+       0.270598050073099,
+       -0.653281482438188,
+       -0.653281482438188
+      ]
+     },
+     "optical_model_id": "bs50",
+     "optical_role": "splitter",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "win1",
+      "description": "Window declared t = 1 mm (native component plate.window)"
+     },
+     "instance_id": "WIN",
+     "nominal_pose": {
+      "position_mm": [
+       50.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_model_id": "win1",
+     "optical_role": "window",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "600",
+       "reflectance": "0.5",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0.5"
+      }
+     ],
+     "basis": "Declared beamsplitter coating",
+     "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+     "display_name": "Declared beamsplitter R=0.5",
+     "kind": "BEAMSPLITTER",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "model_materials": [
+    {
+     "basis": "Declared constant refractive index",
+     "dispersion": {
+      "kind": "CONSTANT_INDEX",
+      "refractive_index": "1.5"
+     },
+     "display_name": "Constant index 1.5",
+     "material_id": "INDEX-1.5",
+     "valid_band_nm": {
+      "max_nm": "900",
+      "min_nm": "400",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "TA",
+     "pose": {
+      "position_mm": [
+       80.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 12.5,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "TB",
+     "pose": {
+      "position_mm": [
+       0.0,
+       80.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.0,
+       0.0,
+       0.707106781186547,
+       0.707106781186548
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-1"
+     },
+     "display_name": "Plate beamsplitter R = 0.5",
+     "frame": {
+      "nominal_propagation": "SPLIT_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "SUBSTRATE_NOT_MODELLED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED_AND_REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "600",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "bs50"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "1",
+      "z_min_mm": "0"
+     },
+     "display_name": "Window declared t = 1 mm",
+     "frame": {
+      "nominal_propagation": "+Z",
+      "optical_axis": "+Z",
+      "origin": "FIRST_SURFACE_VERTEX",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "EDGE_AS_OPAQUE_RIM",
+       "GHOST_REFLECTIONS_NOT_TRACED",
+       "IDEAL_SURFACE_FIGURE",
+       "NOMINAL_PRESCRIPTION"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SURFACE_PRESCRIPTION",
+      "media": [
+       "INDEX-1.5"
+      ],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "0"
+       },
+       {
+        "clear_radius_mm": "11.43",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S2",
+        "traced": "TRANSMITTED",
+        "vertex_z_mm": "1"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "900",
+       "min_nm": "400",
+       "status": "DERIVED"
+      }
+     },
+     "model_id": "win1"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "power_W",
+     "minimum": 0.00045,
+     "observation_id": "TA",
+     "parameters": [],
+     "target_id": "T_A"
+    },
+    {
+     "metric": "power_W",
+     "minimum": 0.00049,
+     "observation_id": "TB",
+     "parameters": [],
+     "target_id": "T_B"
+    }
+   ]
+  },
+  "two_source_combiner": {
+   "components": [
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src_a",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC_A",
+     "nominal_pose": {
+      "position_mm": [
+       60.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "coherence_length_mm": 1000000.0,
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 1.0,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "laser-src_b",
+      "description": "632.8 nm laser (fixture)"
+     },
+     "instance_id": "SRC_B",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       60.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.0,
+       0.0,
+       0.707106781186547,
+       0.707106781186548
+      ]
+     },
+     "optical_role": "source",
+     "retained_dofs": [],
+     "selected_parameters": [],
+     "source_model": {
+      "coherence_length_mm": 1000000.0,
+      "m2": 1.0,
+      "model_kind": "GAUSSIAN_BEAM",
+      "polarization": {
+       "angle_deg": 90.0,
+       "kind": "LINEAR"
+      },
+      "power_w": 0.001,
+      "waist_position_mm": 0.0,
+      "waist_radius_mm": 1.0,
+      "wavelength_nm": 632.8
+     }
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "mirror-r1",
+      "description": "Flat mirror (native component mirror.flat)"
+     },
+     "instance_id": "MB",
+     "nominal_pose": {
+      "position_mm": [
+       0.0,
+       100.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.693519922661074,
+       0.693519922661074,
+       0.137949689641472,
+       0.137949689641472
+      ]
+     },
+     "optical_model_id": "mirror-r1",
+     "optical_role": "mirror",
+     "retained_dofs": [],
+     "selected_parameters": []
+    },
+    {
+     "custom_part": {
+      "custom_part_key": "bs50",
+      "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+     },
+     "instance_id": "BS2",
+     "nominal_pose": {
+      "position_mm": [
+       100.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.137949689641472,
+       0.137949689641472,
+       0.693519922661074,
+       0.693519922661074
+      ]
+     },
+     "optical_model_id": "bs50",
+     "optical_role": "splitter",
+     "retained_dofs": [],
+     "selected_parameters": []
+    }
+   ],
+   "design_intent": "OPTICAL_SYSTEM",
+   "materials": [],
+   "model_coatings": [
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "600",
+       "reflectance": "0.5",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0.5"
+      }
+     ],
+     "basis": "Declared beamsplitter coating",
+     "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+     "display_name": "Declared beamsplitter R=0.5",
+     "kind": "BEAMSPLITTER",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    },
+    {
+     "aoi_reference": "AIR_EQUIVALENT",
+     "bands": [
+      {
+       "max_nm": "700",
+       "min_nm": "600",
+       "reflectance": "1",
+       "status": "DESIGN_BASIS",
+       "transmittance": "0"
+      }
+     ],
+     "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)",
+     "coating_id": "NATIVE-METAL_600-700R1T0_AOI0-90",
+     "display_name": "Declared metallic reflector R=1",
+     "kind": "METALLIC_REFLECTOR",
+     "valid_aoi_deg": {
+      "max_deg": "90",
+      "min_deg": "0",
+      "status": "DESIGN_BASIS"
+     }
+    }
+   ],
+   "observations": [
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "PX",
+     "pose": {
+      "position_mm": [
+       150.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.5,
+       0.5,
+       0.5,
+       0.5
+      ]
+     }
+    },
+    {
+     "absorbing": true,
+     "aperture": {
+      "center_offset_mm": [
+       0.0,
+       0.0
+      ],
+      "obstruction_radius_mm": 0.0,
+      "radius_mm": 10.0,
+      "shape": "circle"
+     },
+     "medium": "air",
+     "observation_id": "PD",
+     "pose": {
+      "position_mm": [
+       135.35533905932738,
+       -35.35533905932738,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       0.653281482438188,
+       0.653281482438188,
+       0.270598050073099,
+       0.270598050073099
+      ]
+     }
+    }
+   ],
+   "optical_models": [
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-1"
+     },
+     "display_name": "Plate beamsplitter R = 0.5",
+     "frame": {
+      "nominal_propagation": "SPLIT_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "SUBSTRATE_NOT_MODELLED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-BS_600-700R0.5T0.5_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "TRANSMITTED_AND_REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "600",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "bs50"
+    },
+    {
+     "design_geometry": {
+      "diameter_mm": "25.4",
+      "kind": "CYLINDER",
+      "status": "NOMINAL",
+      "z_max_mm": "0",
+      "z_min_mm": "-6.4"
+     },
+     "display_name": "Flat mirror",
+     "frame": {
+      "nominal_propagation": "REFLECTED_ABOUT_+Z",
+      "optical_axis": "+Z",
+      "origin": "REFLECTING_FACE_CENTER",
+      "reference_axis": "FACE_NORMAL",
+      "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+     },
+     "model": {
+      "approximations": [
+       "COATING_AT_SPECIFIED_BOUND",
+       "COATING_PHASE_NOT_MODELLED",
+       "EDGE_AS_OPAQUE_RIM",
+       "IDEAL_SURFACE_FIGURE",
+       "LOSSLESS_COATING",
+       "POLARIZATION_INDEPENDENT_COATING",
+       "TRANSMITTED_LIGHT_NOT_TRACED"
+      ],
+      "edge_radius_mm": "12.7",
+      "fidelity": "SPECIFICATION_ENVELOPE",
+      "media": [],
+      "model_kind": "SURFACE_SEQUENCE",
+      "model_version": "2",
+      "status": "DESIGN_BASIS",
+      "surfaces": [
+       {
+        "clear_radius_mm": "11.43",
+        "coating_id": "NATIVE-METAL_600-700R1T0_AOI0-90",
+        "status": "DESIGN_BASIS",
+        "surface_id": "S1",
+        "traced": "REFLECTED",
+        "vertex_z_mm": "0"
+       }
+      ],
+      "valid_band_nm": {
+       "max_nm": "700",
+       "min_nm": "600",
+       "status": "DESIGN_BASIS"
+      }
+     },
+     "model_id": "mirror-r1"
+    }
+   ],
+   "project_schema_version": "2.0",
+   "schema": "opensci.project",
+   "targets": [
+    {
+     "metric": "power_W",
+     "minimum": 0.0009,
+     "observation_id": "PX",
+     "parameters": [],
+     "target_id": "T_PX"
+    }
+   ]
+  }
+ }
+}

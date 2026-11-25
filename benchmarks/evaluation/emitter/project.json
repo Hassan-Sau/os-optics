@@ -1,0 +1,155 @@
+{
+ "components": [
+  {
+   "custom_part": {
+    "custom_part_key": "emitter",
+    "description": "An LED die."
+   },
+   "instance_id": "EM",
+   "nominal_pose": {
+    "position_mm": [
+     -30.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "source_model": {
+    "angular_law": "LAMBERTIAN",
+    "emitting_surface": {
+     "diameter_mm": 1.0,
+     "shape": "DISC"
+    },
+    "model_kind": "EXTENDED_EMITTER",
+    "power_w": 1.0,
+    "sampling": {
+     "sample_count": 1024,
+     "seed": 3
+    },
+    "wavelength_nm": 633.0
+   }
+  },
+  {
+   "custom_part": {
+    "custom_part_key": "own-lens",
+    "description": "My own optic."
+   },
+   "instance_id": "LENS",
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_model_id": "L",
+   "optical_role": "lens"
+  }
+ ],
+ "design_intent": "OPTICAL_SYSTEM",
+ "model_materials": [
+  {
+   "basis": "Schott N-BK7 Sellmeier formula",
+   "dispersion": {
+    "b": [
+     "1.03961212",
+     "0.231792344",
+     "1.01046945"
+    ],
+    "c_um2": [
+     "0.00600069867",
+     "0.0200179144",
+     "103.560653"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "N-BK7",
+   "material_id": "N-BK7",
+   "valid_band_nm": {
+    "max_nm": "1100",
+    "min_nm": "400",
+    "status": "SPECIFIED"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "absorbing": true,
+   "aperture": {
+    "radius_mm": 50.0,
+    "shape": "circle"
+   },
+   "observation_id": "D",
+   "pose": {
+    "position_mm": [
+     60.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  }
+ ],
+ "optical_models": [
+  {
+   "model": {
+    "approximations": [
+     "IDEAL_SURFACE_FIGURE",
+     "NOMINAL_PRESCRIPTION"
+    ],
+    "edge_radius_mm": "13",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "media": [
+     "N-BK7"
+    ],
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "status": "SPECIFIED",
+    "surfaces": [
+     {
+      "clear_radius_mm": "12",
+      "radius_mm": "60",
+      "status": "SPECIFIED",
+      "surface_id": "S1",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "0"
+     },
+     {
+      "clear_radius_mm": "12",
+      "radius_mm": "-60",
+      "status": "SPECIFIED",
+      "surface_id": "S2",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "4"
+     }
+    ],
+    "valid_band_nm": {
+     "max_nm": "1100",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "model_id": "L"
+  }
+ ],
+ "project_schema_version": "2.0",
+ "schema": "opensci.project",
+ "targets": []
+}

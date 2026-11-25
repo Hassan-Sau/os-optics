@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<title>OpenSci Viewer</title>
+<!--STYLE-->
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1 id="title">OpenSci Viewer</h1>
+    <div class="group" id="views"><span class="group-label" data-i18n="views">Views</span></div>
+    <div class="group" id="planes"><span class="group-label" data-i18n="planes">Planes</span></div>
+    <div class="group" id="rotation">
+      <span class="group-label" data-i18n="rotate">Rotate</span>
+      <button id="roll-minus" data-i18n="rollMinus">Roll -15°</button>
+      <button id="roll-plus" data-i18n="rollPlus">Roll +15°</button>
+      <button id="turn-beam" aria-pressed="false" data-i18n="turnBeam" data-i18n-title="turnBeamHint">Turn about beam</button>
+    </div>
+    <div class="group">
+      <button id="fit" data-i18n="fit">Fit</button>
+      <button id="fit-all" data-i18n="fitAll">Fit all</button>
+      <button id="reset" data-i18n="reset">Reset</button>
+    </div>
+    <div class="group" id="modes"><span class="group-label" data-i18n="display">Display</span></div>
+    <div class="group">
+      <button id="toggle-labels" class="active" data-i18n="labels">Labels</button>
+      <button id="toggle-edges" class="active" data-i18n="edges">Outlines</button>
+      <button id="toggle-aperture" aria-pressed="false" data-i18n="clearAperture" data-i18n-title="clearApertureHint">Clear aperture</button>
+      <button id="snapshot" data-i18n="savePng">Save PNG</button>
+      <button id="lang">中文</button>
+    </div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <div id="labels"></div>
+      <svg id="triad" viewBox="-46 -46 92 92"></svg>
+      <div id="banner"></div>
+      <div id="tooltip"></div>
+    </div>
+    <aside>
+      <h2 data-i18n="legend">Legend</h2>
+      <div id="legend"></div>
+      <h2 data-i18n="parts">Parts</h2>
+      <div id="part-legend"></div>
+      <h2 data-i18n="beams">Beams</h2>
+      <div id="beam-legend"></div>
+      <h2 data-i18n="selection">Selection</h2>
+      <div id="details"><span class="count" data-i18n="clickHint">Click a part to see its id, name and size.</span></div>
+      <h2 data-i18n="notes">Notes</h2>
+      <div id="notes" class="count"></div>
+    </aside>
+  </div>
+  <footer id="footer"></footer>
+</div>
+<!--DOCUMENT-->
+<!--SCRIPTS-->
+</body>
+</html>

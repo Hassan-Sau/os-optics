@@ -1,0 +1,1757 @@
+{
+ "catalog_version": "2000-01-01.1",
+ "categories_offered": [
+  "BEAMSPLITTER",
+  "POLARIZER"
+ ],
+ "coatings": [
+  {
+   "aoi_reference": "AIR_EQUIVALENT",
+   "bands": [
+    {
+     "max_nm": "2000",
+     "min_nm": "400",
+     "reflectance": "0.005",
+     "status": "DESIGN_BASIS",
+     "transmittance": "0.995"
+    }
+   ],
+   "basis": "Specified residual reflectance per surface R < 0.5 percent over 400-2000 nm; used for near-normal chief-ray angles of incidence 0-10 deg; modelled as R = bound, T = 1 - R (lossless coating) (bounds used as values).",
+   "coating_id": "AR_400-2000R0.005T0.995_AOI0-10",
+   "display_name": "Anti-reflection coating, R < 0.5 percent over 400-2000 nm",
+   "group_delay_bound_fs": "50",
+   "kind": "ANTI_REFLECTION",
+   "valid_aoi_deg": {
+    "max_deg": "10",
+    "min_deg": "0",
+    "status": "DESIGN_BASIS"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "basis": "Test fixture: Sellmeier coefficients of calcite (G. Ghosh, Opt. Commun. 163, 95, 1999)",
+   "birefringence": {
+    "extraordinary": {
+     "b": [
+      "0.35859695",
+      "0.8242783",
+      "0.14429128"
+     ],
+     "c_um2": [
+      "0",
+      "0.0106689543",
+      "120"
+     ],
+     "kind": "SELLMEIER"
+    },
+    "kind": "UNIAXIAL"
+   },
+   "dispersion": {
+    "b": [
+     "0.73358749",
+     "0.96464345",
+     "1.82831454"
+    ],
+    "c_um2": [
+     "0",
+     "0.0194325203",
+     "120"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "test calcite",
+   "material_id": "TEST-CALCITE",
+   "status": "SPECIFIED",
+   "valid_band_nm": {
+    "max_nm": "2000",
+    "min_nm": "400",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "basis": "Test fixture: constant index 1.55",
+   "dispersion": {
+    "b": [
+     "1.4025",
+     "0",
+     "0"
+    ],
+    "c_um2": [
+     "0",
+     "0",
+     "0"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "test cement",
+   "material_id": "TEST-CEMENT",
+   "status": "SPECIFIED",
+   "valid_band_nm": {
+    "max_nm": "2500",
+    "min_nm": "300",
+    "status": "SPECIFIED"
+   }
+  }
+ ],
+ "mechanical_accessories": "CONFIGURED_PER_DESIGN",
+ "products": [
+  {
+   "category": "BEAMSPLITTER",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "center_mm": [
+     "0",
+     "0",
+     "2.82"
+    ],
+    "half_extents_mm": [
+     "5",
+     "5",
+     "2.82"
+    ],
+    "kind": "BOX",
+    "status": "NOMINAL"
+   },
+   "display_name": "Test fixture Rochon prism, 10 mm, test calcite, 400-2000 nm, extinction 100000 to 1",
+   "display_name_zh_cn": "测试样例 洛匈棱镜",
+   "form": "ROCHON_PRISM",
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [
+    "Synthetic test fixture: not an OpenSci product; every fact of it is a test value.",
+    "The optic axes are those of the Rochon prism type: prism A along local Z, prism B along local Y.",
+    "Light reaching a side face of a prism leaves the model there (the side faces are not traced)."
+   ],
+   "optical_sku": "OS-OPT-TESTFIXTURE-BS-ROC-A10-CUT20-400-2000-ER100000-TEST-CALCITE-CA9-T85",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CRYSTAL_INTERFACE_PER_WAVE",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION",
+      "UNTRACED_FACES_BLOCK"
+     ],
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "joints": [
+      {
+       "member_a": "A",
+       "member_b": "B",
+       "surface_a": "S2",
+       "surface_b": "S1"
+      }
+     ],
+     "members": [
+      {
+       "member_id": "A",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "-1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-0.3420201433256687",
+            "0",
+            "0.9396926207859084"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "2.82"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "-1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "0"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "4.788799",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "-0.3420201433256687",
+           "0",
+           "0.9396926207859084"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "2.82"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.9396926207859084",
+           "0",
+           "0.3420201433256687"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "0",
+          "0",
+          "1"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      },
+      {
+       "member_id": "B",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0.3420201433256687",
+            "0",
+            "-0.9396926207859084"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "2.82"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "5.64"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_half_widths_mm": [
+           "4.788799",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0.3420201433256687",
+           "0",
+           "-0.9396926207859084"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "2.82"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.9396926207859084",
+           "0",
+           "0.3420201433256687"
+          ]
+         },
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "5.64"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "0",
+          "1",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      }
+     ],
+     "model_kind": "JOINED_BODIES",
+     "model_version": "1",
+     "status": "DERIVED",
+     "valid_band_nm": {
+      "max_nm": "2000",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "9"
+    },
+    "coating": "UNCOATED",
+    "extinction_ratio": {
+     "status": "SPECIFIED",
+     "value": "100000"
+    },
+    "materials": [
+     "TEST-CALCITE"
+    ],
+    "outer_dimensions_mm": {
+     "status": "DERIVED",
+     "value": [
+      "10",
+      "10",
+      "5.64"
+     ]
+    },
+    "thickness_mm": {
+     "status": "DERIVED",
+     "value": "5.64"
+    },
+    "transmittance": {
+     "status": "SPECIFIED",
+     "value": "0.85"
+    },
+    "working_band_nm": {
+     "max_nm": "2000",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Rochon prism of two test calcite prisms (in optical contact), entrance face 10 mm, cut angle 20 deg, length 5.64 mm, over 400-2000 nm; both crystal waves traced with their optic axes."
+  },
+  {
+   "category": "BEAMSPLITTER",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "center_mm": [
+     "0",
+     "0",
+     "2.819851"
+    ],
+    "half_extents_mm": [
+     "5",
+     "5",
+     "2.819851"
+    ],
+    "kind": "BOX",
+    "status": "NOMINAL"
+   },
+   "display_name": "Test fixture Wollaston prism, 10 mm, test calcite, 400-2000 nm, extinction 100000 to 1",
+   "display_name_zh_cn": "测试样例 渥拉斯顿棱镜",
+   "form": "WOLLASTON_PRISM",
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [
+    "Synthetic test fixture: not an OpenSci product; every fact of it is a test value.",
+    "The optic axes are those of the Wollaston prism type: prism A along local X, prism B along local Y.",
+    "Light reaching a side face of a prism leaves the model there (the side faces are not traced)."
+   ],
+   "optical_sku": "OS-OPT-TESTFIXTURE-BS-WOL-A10-CUT20-400-2000-ER100000-TEST-CALCITE-CA9-T85",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CRYSTAL_INTERFACE_PER_WAVE",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION",
+      "UNTRACED_FACES_BLOCK"
+     ],
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "joints": [
+      {
+       "member_a": "A",
+       "member_b": "B",
+       "surface_a": "S2",
+       "surface_b": "S1"
+      }
+     ],
+     "members": [
+      {
+       "member_id": "A",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "-1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-0.3420201433256687",
+            "0",
+            "0.9396926207859084"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "2.819851"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "-1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "0"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "4.788799",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "-0.3420201433256687",
+           "0",
+           "0.9396926207859084"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "2.819851"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.9396926207859084",
+           "0",
+           "0.3420201433256687"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "1",
+          "0",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      },
+      {
+       "member_id": "B",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0.3420201433256687",
+            "0",
+            "-0.9396926207859084"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "2.819851"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "5.639702"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_half_widths_mm": [
+           "4.788799",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0.3420201433256687",
+           "0",
+           "-0.9396926207859084"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "2.819851"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.9396926207859084",
+           "0",
+           "0.3420201433256687"
+          ]
+         },
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "5.639702"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "0",
+          "1",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      }
+     ],
+     "model_kind": "JOINED_BODIES",
+     "model_version": "1",
+     "status": "DERIVED",
+     "valid_band_nm": {
+      "max_nm": "2000",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "9"
+    },
+    "coating": "UNCOATED",
+    "extinction_ratio": {
+     "status": "SPECIFIED",
+     "value": "100000"
+    },
+    "materials": [
+     "TEST-CALCITE"
+    ],
+    "outer_dimensions_mm": {
+     "status": "DERIVED",
+     "value": [
+      "10",
+      "10",
+      "5.639702"
+     ]
+    },
+    "thickness_mm": {
+     "status": "DERIVED",
+     "value": "5.639702"
+    },
+    "transmittance": {
+     "status": "SPECIFIED",
+     "value": "0.85"
+    },
+    "working_band_nm": {
+     "max_nm": "2000",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Wollaston prism of two test calcite prisms (in optical contact), entrance face 10 mm, cut angle 20 deg, length 5.64 mm, over 400-2000 nm; both crystal waves traced with their optic axes."
+  },
+  {
+   "category": "POLARIZER",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "center_mm": [
+     "0",
+     "0",
+     "4.1346415"
+    ],
+    "half_extents_mm": [
+     "5",
+     "5",
+     "4.1346415"
+    ],
+    "kind": "BOX",
+    "status": "NOMINAL"
+   },
+   "display_name": "Test fixture Glan-Taylor polarizer, 10 mm, test calcite, 400-2000 nm, extinction 100000 to 1",
+   "display_name_zh_cn": "测试样例 格兰-泰勒棱镜",
+   "form": "GLAN_TAYLOR_PRISM",
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [
+    "Synthetic test fixture: not an OpenSci product; every fact of it is a test value.",
+    "The optic axes are those of the Glan-Taylor polarizer type: prism A along local X, prism B along local X.",
+    "The rejected ordinary wave is followed out of prism A through its side face at local +X (modelled uncoated); light reaching another side face leaves the model there."
+   ],
+   "optical_sku": "OS-OPT-TESTFIXTURE-POL-GT-A10-CUT39P5-400-2000-ER100000-TEST-CALCITE-CA9",
+   "simulation_models": [
+    {
+     "approximations": [
+      "COATING_AT_SPECIFIED_BOUND",
+      "COATING_PHASE_NOT_MODELLED",
+      "CRYSTAL_INTERFACE_PER_WAVE",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "LOSSLESS_COATING",
+      "NOMINAL_PRESCRIPTION",
+      "UNTRACED_FACES_BLOCK"
+     ],
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "members": [
+      {
+       "member_id": "A",
+       "model": {
+        "approximations": [
+         "COATING_AT_SPECIFIED_BOUND",
+         "COATING_PHASE_NOT_MODELLED",
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "LOSSLESS_COATING",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "-1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-0.636078220277764",
+            "0",
+            "0.77162458338772"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "4.121682"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_radius_mm": "4.5",
+          "coating_id": "AR_400-2000R0.005T0.995_AOI0-10",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "-1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "0"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "5.831851",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "-0.636078220277764",
+           "0",
+           "0.77162458338772"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "4.121682"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.77162458338772",
+           "0",
+           "0.636078220277764"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "4.121681",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "1",
+           "0",
+           "0"
+          ],
+          "origin_mm": [
+           "5",
+           "0",
+           "4.121682"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S3",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0",
+           "0",
+           "1"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "1",
+          "0",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      },
+      {
+       "member_id": "B",
+       "model": {
+        "approximations": [
+         "COATING_AT_SPECIFIED_BOUND",
+         "COATING_PHASE_NOT_MODELLED",
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "LOSSLESS_COATING",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0.636078220277764",
+            "0",
+            "-0.77162458338772"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "4.147601"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "8.269283"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_half_widths_mm": [
+           "5.831851",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0.636078220277764",
+           "0",
+           "-0.77162458338772"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "4.147601"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.77162458338772",
+           "0",
+           "0.636078220277764"
+          ]
+         },
+         {
+          "clear_radius_mm": "4.5",
+          "coating_id": "AR_400-2000R0.005T0.995_AOI0-10",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "8.269283"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "1",
+          "0",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      }
+     ],
+     "model_kind": "JOINED_BODIES",
+     "model_version": "1",
+     "status": "DERIVED",
+     "valid_band_nm": {
+      "max_nm": "2000",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "9"
+    },
+    "coating": "ANTI_REFLECTION",
+    "extinction_ratio": {
+     "status": "SPECIFIED",
+     "value": "100000"
+    },
+    "materials": [
+     "TEST-CALCITE"
+    ],
+    "outer_dimensions_mm": {
+     "status": "DERIVED",
+     "value": [
+      "10",
+      "10",
+      "8.269283"
+     ]
+    },
+    "thickness_mm": {
+     "status": "DERIVED",
+     "value": "8.269283"
+    },
+    "working_band_nm": {
+     "max_nm": "2000",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Glan-Taylor polarizer of two test calcite prisms (across an air gap), entrance face 10 mm, cut angle 39.5 deg, length 8.269 mm, over 400-2000 nm; both crystal waves traced with their optic axes."
+  },
+  {
+   "category": "POLARIZER",
+   "commercial_readiness": "SIMULATION_ONLY",
+   "design_geometry": {
+    "center_mm": [
+     "0",
+     "0",
+     "18.6795725"
+    ],
+    "half_extents_mm": [
+     "5",
+     "5",
+     "18.6795725"
+    ],
+    "kind": "BOX",
+    "status": "NOMINAL"
+   },
+   "display_name": "Test fixture Glan-Thompson polarizer, 10 mm, test calcite, 400-2000 nm, extinction 100000 to 1",
+   "display_name_zh_cn": "测试样例 格兰-汤普森棱镜",
+   "form": "GLAN_THOMPSON_PRISM",
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "symmetry": "NONE"
+   },
+   "notices": [
+    "Synthetic test fixture: not an OpenSci product; every fact of it is a test value.",
+    "The optic axes are those of the Glan-Thompson polarizer type: prism A along local Y, prism B along local Y.",
+    "The rejected ordinary wave is followed out of prism A through its side face at local +X (modelled uncoated); light reaching another side face leaves the model there.",
+    "The cement layer is 0.01 mm of test cement; interference within it is not modelled."
+   ],
+   "optical_sku": "OS-OPT-TESTFIXTURE-POL-GTH-A10-CUT75-400-2000-ER100000-TEST-CALCITE-CA9",
+   "simulation_models": [
+    {
+     "approximations": [
+      "CEMENT_LAYER_INTERFERENCE_NOT_MODELLED",
+      "CRYSTAL_INTERFACE_PER_WAVE",
+      "GHOST_REFLECTIONS_NOT_TRACED",
+      "IDEAL_SURFACE_FIGURE",
+      "NOMINAL_PRESCRIPTION",
+      "UNTRACED_FACES_BLOCK"
+     ],
+     "fidelity": "SURFACE_PRESCRIPTION",
+     "joints": [
+      {
+       "cement_material_id": "TEST-CEMENT",
+       "member_a": "A",
+       "member_b": "B",
+       "surface_a": "S2",
+       "surface_b": "S1"
+      }
+     ],
+     "members": [
+      {
+       "member_id": "A",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "-1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-0.9659258262890683",
+            "0",
+            "0.2588190451025207"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "18.660254"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "-1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "0"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "17.386664",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "-0.9659258262890683",
+           "0",
+           "0.2588190451025207"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "18.660254"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.2588190451025207",
+           "0",
+           "0.9659258262890683"
+          ]
+         },
+         {
+          "clear_half_widths_mm": [
+           "18.660254",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "1",
+           "0",
+           "0"
+          ],
+          "origin_mm": [
+           "5",
+           "0",
+           "18.660254"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S3",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0",
+           "0",
+           "1"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "0",
+          "1",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      },
+      {
+       "member_id": "B",
+       "model": {
+        "approximations": [
+         "GHOST_REFLECTIONS_NOT_TRACED",
+         "IDEAL_SURFACE_FIGURE",
+         "NOMINAL_PRESCRIPTION",
+         "UNTRACED_FACES_BLOCK"
+        ],
+        "body": {
+         "faces": [
+          {
+           "outward_normal": [
+            "0.9659258262890683",
+            "0",
+            "-0.2588190451025207"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "18.698891"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "0",
+            "1"
+           ],
+           "point_mm": [
+            "0",
+            "0",
+            "37.359145"
+           ]
+          },
+          {
+           "outward_normal": [
+            "-1",
+            "0",
+            "0"
+           ],
+           "point_mm": [
+            "-5",
+            "0",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "5",
+            "0"
+           ]
+          },
+          {
+           "outward_normal": [
+            "0",
+            "-1",
+            "0"
+           ],
+           "point_mm": [
+            "0",
+            "-5",
+            "0"
+           ]
+          }
+         ],
+         "medium": "TEST-CALCITE"
+        },
+        "fidelity": "SURFACE_PRESCRIPTION",
+        "model_kind": "SURFACE_SET",
+        "model_version": "1",
+        "status": "DERIVED",
+        "surfaces": [
+         {
+          "clear_half_widths_mm": [
+           "17.386664",
+           "4.5"
+          ],
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0.9659258262890683",
+           "0",
+           "-0.2588190451025207"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "18.698891"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S1",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "0.2588190451025207",
+           "0",
+           "0.9659258262890683"
+          ]
+         },
+         {
+          "clear_radius_mm": "4.5",
+          "medium_back": "TEST-CALCITE",
+          "medium_front": "AIR",
+          "normal": [
+           "0",
+           "0",
+           "1"
+          ],
+          "origin_mm": [
+           "0",
+           "0",
+           "37.359145"
+          ],
+          "status": "DERIVED",
+          "surface_id": "S2",
+          "traced": "TRANSMITTED",
+          "u_axis": [
+           "1",
+           "0",
+           "0"
+          ]
+         }
+        ],
+        "valid_band_nm": {
+         "max_nm": "2000",
+         "min_nm": "400",
+         "status": "SPECIFIED"
+        }
+       },
+       "optic_axes": [
+        {
+         "direction": [
+          "0",
+          "1",
+          "0"
+         ],
+         "material_id": "TEST-CALCITE"
+        }
+       ]
+      }
+     ],
+     "model_kind": "JOINED_BODIES",
+     "model_version": "1",
+     "status": "DERIVED",
+     "valid_band_nm": {
+      "max_nm": "2000",
+      "min_nm": "400",
+      "status": "SPECIFIED"
+     }
+    }
+   ],
+   "specifications": {
+    "clear_aperture_diameter_mm": {
+     "status": "SPECIFIED",
+     "value": "9"
+    },
+    "coating": "UNCOATED",
+    "extinction_ratio": {
+     "status": "SPECIFIED",
+     "value": "100000"
+    },
+    "materials": [
+     "TEST-CALCITE",
+     "TEST-CEMENT"
+    ],
+    "outer_dimensions_mm": {
+     "status": "DERIVED",
+     "value": [
+      "10",
+      "10",
+      "37.359145"
+     ]
+    },
+    "thickness_mm": {
+     "status": "DERIVED",
+     "value": "37.359145"
+    },
+    "working_band_nm": {
+     "max_nm": "2000",
+     "min_nm": "400",
+     "status": "SPECIFIED"
+    }
+   },
+   "summary": "Glan-Thompson polarizer of two test calcite prisms (cemented with test cement), entrance face 10 mm, cut angle 75 deg, length 37.359 mm, over 400-2000 nm; both crystal waves traced with their optic axes."
+  }
+ ],
+ "schema": "opensci.design_catalog.public_optical_catalog",
+ "schema_version": "3.5"
+}

@@ -1,0 +1,3 @@
+# The pinned distribution checker of CI and the release workflow (it does not take part in the build).
+# Compile: uv pip compile scripts/check-requirements.in --universal --generate-hashes --python-version 3.11 -o scripts/check-requirements.txt
+twine==7.0.0

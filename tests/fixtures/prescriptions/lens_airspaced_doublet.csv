@@ -1,0 +1,20 @@
+#! format = csv-surface-table/1
+#! name = Air-spaced doublet with distinct clear and edge radii
+#! units = mm
+# Two elements, each surface with its own clear and mechanical semi-diameter. The rear face of the flint is edged
+# smaller than the element's outline, so it has a flat flange.
+# Values chosen for this OpenSci test fixture, in the shape of an optical designer's Lens Data Editor table; not a
+# published design. mech_semi_diameter is the radius the surface is edged to; semi_diameter is the clear aperture.
+[surfaces]
+surface,type,comment,radius,thickness,material,semi_diameter,mech_semi_diameter,conic,a4,a6,a8,cylinder_axis,stop
+OBJ,STANDARD,object at infinity,inf,inf,,,,,,,,,
+1,STANDARD,crown front,60,4,N-BK7,11,12.5,,,,,,yes
+2,STANDARD,crown rear,-40,0.4,,10.4,12.5,,,,,,
+3,STANDARD,flint front,-39.5,2.2,F2,10.2,12,,,,,,
+4,STANDARD,flint rear,-150,96,,10,11,,,,,,
+IMA,STANDARD,image plane,,,,,,,,,,,
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+F2,SELLMEIER,1.34533359,0.209073176,0.937357162,0.00997743871,0.0470450767,111.886764,320,2500,F2 (fixture Sellmeier)
+N-BK7,SELLMEIER,1.03961212,0.231792344,1.01046945,0.00600069867,0.0200179144,103.560653,300,2500,N-BK7 (fixture Sellmeier)

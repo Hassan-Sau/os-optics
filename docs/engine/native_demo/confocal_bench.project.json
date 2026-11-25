@@ -1,0 +1,1064 @@
+{
+ "schema": "opensci.project",
+ "project_schema_version": "2.0",
+ "design_intent": "LAB_ASSEMBLY",
+ "components": [
+  {
+   "instance_id": "LASER",
+   "optical_role": "source",
+   "custom_part": {
+    "custom_part_key": "hene-laser",
+    "description": "HeNe laser 632.8 nm"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -440.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "source_model": {
+    "model_kind": "GAUSSIAN_BEAM",
+    "wavelength_nm": 632.8,
+    "power_w": 0.001,
+    "waist_radius_mm": 0.4,
+    "waist_position_mm": 0.0,
+    "m2": 1.0,
+    "polarization": {
+     "kind": "LINEAR",
+     "angle_deg": 0.0
+    }
+   }
+  },
+  {
+   "instance_id": "POL",
+   "optical_role": "polarizer",
+   "custom_part": {
+    "custom_part_key": "clean-up-polarizer",
+    "description": "Linear polarizer ER = 10000 (native component polarizer.linear)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -410.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "clean-up-polarizer"
+  },
+  {
+   "instance_id": "HWP",
+   "optical_role": "waveplate",
+   "product": {
+    "optical_sku": "OS-OPT-WP-HWP-D25P4-ACH-600-800-TX95-T3-AOI0T15-CA21P5",
+    "catalog_version": "2026-10-28.1"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -390.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "instance_id": "EXPANDER",
+   "optical_role": "other_optical",
+   "custom_part": {
+    "custom_part_key": "spatial-filter-5x",
+    "description": "Keplerian telescope f1 = 25 mm, f2 = 125.037145 mm (native component compound.keplerian_telescope)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -350.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "spatial-filter-5x"
+  },
+  {
+   "instance_id": "IRIS",
+   "optical_role": "aperture",
+   "custom_part": {
+    "custom_part_key": "iris-6mm",
+    "description": "Circular aperture 6 mm (native component aperture.circular)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -170.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "iris-6mm"
+  },
+  {
+   "instance_id": "PBS",
+   "optical_role": "splitter",
+   "custom_part": {
+    "custom_part_key": "polarizing-plate-splitter",
+    "description": "Plate beamsplitter R = 0.5 (native component splitter.plate)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438,
+     0.653281482438,
+     -0.270598050073,
+     -0.270598050073
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "polarizing-plate-splitter"
+  },
+  {
+   "instance_id": "QWP",
+   "optical_role": "waveplate",
+   "product": {
+    "optical_sku": "OS-OPT-WP-QWP-D25P4-ACH-600-800-TX95-T3-AOI0T15-CA21P5",
+    "catalog_version": "2026-10-28.1"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -60.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.270598050073,
+     0.653281482438,
+     0.270598050073,
+     0.653281482438
+    ]
+   }
+  },
+  {
+   "instance_id": "FOLD",
+   "optical_role": "mirror",
+   "product": {
+    "optical_sku": "OS-OPT-MIR-FLAT-D25P4-HR-632P8-R99P99-AOI45-T6-CA22P86-UVFS",
+    "catalog_version": "2026-10-28.1"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.653281482438,
+     0.653281482438,
+     -0.270598050073,
+     -0.270598050073
+    ]
+   }
+  },
+  {
+   "instance_id": "OBJECTIVE",
+   "optical_role": "lens",
+   "product": {
+    "optical_sku": "OS-OPT-LENS-ACH-D25P4-F50-T11P5-R33P34-NBAF10NSF10-AR400-700-W587P6",
+    "catalog_version": "2026-10-28.1"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     -40.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.707106781187,
+     0.707106781187,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "instance_id": "SAMPLE",
+   "optical_role": "mirror",
+   "custom_part": {
+    "custom_part_key": "sample-r50",
+    "description": "Reflective sample (declared R = 0.5) (native component mirror.flat)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     0.0,
+     -94.99282599012096,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781187,
+     0.707106781187
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "sample-r50"
+  },
+  {
+   "instance_id": "TUBE_LENS",
+   "optical_role": "lens",
+   "product": {
+    "optical_sku": "OS-OPT-LENS-ACH-D25P4-F150-T7P9-R91P62-NBK7SF5-AR400-700-W587P6",
+    "catalog_version": "2026-10-28.1"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     60.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781187,
+     0.707106781187
+    ]
+   }
+  },
+  {
+   "instance_id": "PINHOLE",
+   "optical_role": "aperture",
+   "custom_part": {
+    "custom_part_key": "confocal-pinhole-50um",
+    "description": "Circular aperture 0.05 mm (native component aperture.circular)"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     214.09206161533191,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781187,
+     0.707106781187
+    ]
+   },
+   "selected_parameters": [],
+   "retained_dofs": [],
+   "optical_model_id": "confocal-pinhole-50um"
+  },
+  {
+   "instance_id": "DETECTOR",
+   "optical_role": "detector",
+   "custom_part": {
+    "custom_part_key": "photodiode",
+    "description": "Photodiode behind the confocal pinhole"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     219.09206161533191,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781187,
+     0.707106781187
+    ]
+   }
+  },
+  {
+   "instance_id": "MONITOR",
+   "optical_role": "detector",
+   "custom_part": {
+    "custom_part_key": "monitor-photodiode",
+    "description": "Power monitor on the splitter's forward leak"
+   },
+   "nominal_pose": {
+    "position_mm": [
+     -100.0,
+     -60.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.707106781187,
+     0.707106781187,
+     0.0,
+     0.0
+    ]
+   }
+  }
+ ],
+ "observations": [
+  {
+   "observation_id": "EXPANDED",
+   "pose": {
+    "position_mm": [
+     -183.623182,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 12.5
+   },
+   "absorbing": false,
+   "medium": "air"
+  },
+  {
+   "observation_id": "PINHOLE_APPROACH",
+   "pose": {
+    "position_mm": [
+     -100.0,
+     213.59206161533191,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.0,
+     0.0,
+     0.707106781187,
+     0.707106781187
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 5.0
+   },
+   "absorbing": false,
+   "medium": "air"
+  },
+  {
+   "observation_id": "DETECTOR_FACE",
+   "device_instance_id": "DETECTOR",
+   "pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 5.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  },
+  {
+   "observation_id": "MONITOR_FACE",
+   "device_instance_id": "MONITOR",
+   "pose": {
+    "position_mm": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aperture": {
+    "shape": "circle",
+    "radius_mm": 5.0
+   },
+   "absorbing": true,
+   "medium": "air"
+  }
+ ],
+ "targets": [
+  {
+   "target_id": "expanded_beam_radius",
+   "metric": "beam_radius_mm",
+   "observation_id": "EXPANDED",
+   "target_value": 2.0,
+   "tolerance_abs": 0.1,
+   "unit": "mm",
+   "parameters": [
+    {
+     "key": "path_id",
+     "value": "LASER#0"
+    },
+    {
+     "key": "crossing_index",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "target_id": "confocal_spot_radius",
+   "metric": "beam_radius_mm",
+   "observation_id": "PINHOLE_APPROACH",
+   "maximum": 0.03,
+   "unit": "mm"
+  },
+  {
+   "target_id": "detected_power",
+   "metric": "power_W",
+   "observation_id": "DETECTOR_FACE",
+   "minimum": 0.0001,
+   "unit": "W"
+  },
+  {
+   "target_id": "monitor_power",
+   "metric": "power_W",
+   "observation_id": "MONITOR_FACE",
+   "minimum": 1e-06,
+   "unit": "W"
+  }
+ ],
+ "optical_models": [
+  {
+   "model_id": "clean-up-polarizer",
+   "display_name": "Linear polarizer ER = 10000",
+   "model": {
+    "model_kind": "POLARIZATION_ELEMENT",
+    "model_version": "1",
+    "fidelity": "IDEAL_THIN_ELEMENT",
+    "element": "LINEAR_POLARIZER",
+    "plane_z_mm": "0",
+    "axis": "+X",
+    "transmittance": {
+     "value": "0.9",
+     "status": "DESIGN_BASIS"
+    },
+    "extinction_ratio": {
+     "value": "10000",
+     "status": "DESIGN_BASIS"
+    },
+    "clear_radius_mm": "11.43",
+    "edge_radius_mm": "12.7",
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "valid_aoi_deg": {
+     "min_deg": "0",
+     "max_deg": "10",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "THIN_ELEMENT"
+    ],
+    "status": "DESIGN_BASIS"
+   },
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "optical_axis": "+Z",
+    "nominal_propagation": "+Z",
+    "symmetry": "NONE"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "0",
+    "z_max_mm": "1",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "confocal-pinhole-50um",
+   "display_name": "Circular aperture 0.05 mm",
+   "model": {
+    "model_kind": "APERTURE_STOP",
+    "model_version": "1",
+    "opening_radius_mm": "0.025",
+    "edge_radius_mm": "12.7",
+    "plane_z_mm": "0",
+    "status": "DESIGN_BASIS"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "0",
+    "z_max_mm": "0.1",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "iris-6mm",
+   "display_name": "Circular aperture 6 mm",
+   "model": {
+    "model_kind": "APERTURE_STOP",
+    "model_version": "1",
+    "opening_radius_mm": "3",
+    "edge_radius_mm": "12.7",
+    "plane_z_mm": "0",
+    "status": "DESIGN_BASIS"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "0",
+    "z_max_mm": "1",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "polarizing-plate-splitter",
+   "display_name": "Plate beamsplitter R = 0.5",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SPECIFICATION_ENVELOPE",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "clear_radius_mm": "11.43",
+      "coating_id": "NATIVE-BS-5DEB5FBBF1",
+      "traced": "TRANSMITTED_AND_REFLECTED",
+      "status": "DESIGN_BASIS"
+     }
+    ],
+    "media": [],
+    "edge_radius_mm": "12.7",
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "SUBSTRATE_NOT_MODELLED"
+    ],
+    "status": "DESIGN_BASIS"
+   },
+   "frame": {
+    "origin": "REFLECTING_FACE_CENTER",
+    "optical_axis": "+Z",
+    "nominal_propagation": "SPLIT_ABOUT_+Z",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "-1",
+    "z_max_mm": "0",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "sample-r50",
+   "display_name": "Reflective sample (declared R = 0.5)",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SPECIFICATION_ENVELOPE",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "clear_radius_mm": "5",
+      "coating_id": "NATIVE-HR_600-700R0.5T0.5_AOI0-10",
+      "traced": "REFLECTED",
+      "status": "DESIGN_BASIS"
+     }
+    ],
+    "media": [],
+    "edge_radius_mm": "5",
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "POLARIZATION_INDEPENDENT_COATING",
+     "TRANSMITTED_LIGHT_NOT_TRACED"
+    ],
+    "status": "DESIGN_BASIS"
+   },
+   "frame": {
+    "origin": "REFLECTING_FACE_CENTER",
+    "optical_axis": "+Z",
+    "nominal_propagation": "REFLECTED_ABOUT_+Z",
+    "reference_axis": "FACE_NORMAL",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "10",
+    "z_min_mm": "-1",
+    "z_max_mm": "0",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "spatial-filter-5x",
+   "display_name": "Keplerian telescope f1 = 25 mm, f2 = 125.037145 mm",
+   "model": {
+    "model_kind": "COMPOUND",
+    "model_version": "1",
+    "members": [
+     {
+      "member_id": "L1",
+      "model_id": "spatial-filter-5x-L1",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "STOP",
+      "model_id": "spatial-filter-5x-STOP",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        25.785337
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "L2",
+      "model_id": "spatial-filter-5x-L2",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        150.504818
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     }
+    ],
+    "envelope": {
+     "kind": "CYLINDER",
+     "diameter_mm": "25.4",
+     "z_min_mm": "0",
+     "z_max_mm": "156.376818",
+     "status": "NOMINAL"
+    },
+    "ports": [
+     {
+      "port_id": "IN",
+      "role": "INPUT",
+      "point_mm": [
+       "0",
+       "0",
+       "0"
+      ],
+      "direction": [
+       "0",
+       "0",
+       "1"
+      ],
+      "status": "DERIVED"
+     },
+     {
+      "port_id": "OUT",
+      "role": "OUTPUT",
+      "point_mm": [
+       "0",
+       "0",
+       "156.376818"
+      ],
+      "direction": [
+       "0",
+       "0",
+       "1"
+      ],
+      "status": "DERIVED"
+     }
+    ]
+   }
+  },
+  {
+   "model_id": "spatial-filter-5x-L1",
+   "display_name": "Singlet N-BK7 f = 25 mm",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "radius_mm": "12.87723",
+      "clear_radius_mm": "5.715",
+      "coating_id": "NATIVE-AR_600-700R0.005T0.995_AOI0-10",
+      "traced": "TRANSMITTED",
+      "status": "DERIVED"
+     },
+     {
+      "surface_id": "S2",
+      "vertex_z_mm": "2.31",
+      "clear_radius_mm": "5.715",
+      "coating_id": "NATIVE-AR_600-700R0.005T0.995_AOI0-10",
+      "traced": "TRANSMITTED",
+      "status": "DERIVED"
+     }
+    ],
+    "media": [
+     "N-BK7"
+    ],
+    "edge_radius_mm": "6.35",
+    "paraxial": {
+     "wavelength_nm": "632.8",
+     "effective_focal_length_mm": "25",
+     "back_focal_length_mm": "23.475337",
+     "front_focal_length_mm": "25",
+     "front_principal_plane_z_mm": "0",
+     "rear_principal_plane_z_mm": "0.785337",
+     "axis": "ROTATIONAL",
+     "status": "DERIVED"
+    },
+    "valid_band_nm": {
+     "min_nm": "600",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "CATALOG_MATERIAL_DISPERSION",
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "NOMINAL_PRESCRIPTION",
+     "POLARIZATION_INDEPENDENT_COATING"
+    ],
+    "status": "DERIVED"
+   },
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "optical_axis": "+Z",
+    "nominal_propagation": "+Z",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "12.7",
+    "z_min_mm": "0",
+    "z_max_mm": "2.31",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "spatial-filter-5x-L2",
+   "display_name": "Achromatic doublet N-BK7/N-SF5 f = 125 mm",
+   "model": {
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "surfaces": [
+     {
+      "surface_id": "S1",
+      "vertex_z_mm": "0",
+      "radius_mm": "63.401586",
+      "clear_radius_mm": "11.43",
+      "coating_id": "NATIVE-AR_450-700R0.005T0.995_AOI0-10",
+      "traced": "TRANSMITTED",
+      "status": "DERIVED"
+     },
+     {
+      "surface_id": "S2",
+      "vertex_z_mm": "3.84",
+      "radius_mm": "-63.401586",
+      "clear_radius_mm": "11.43",
+      "traced": "TRANSMITTED",
+      "status": "DERIVED"
+     },
+     {
+      "surface_id": "S3",
+      "vertex_z_mm": "5.872",
+      "radius_mm": "-289.813548",
+      "clear_radius_mm": "11.43",
+      "coating_id": "NATIVE-AR_450-700R0.005T0.995_AOI0-10",
+      "traced": "TRANSMITTED",
+      "status": "DERIVED"
+     }
+    ],
+    "media": [
+     "N-BK7",
+     "N-SF5"
+    ],
+    "edge_radius_mm": "12.7",
+    "paraxial": {
+     "wavelength_nm": "587.5618",
+     "effective_focal_length_mm": "125.000001",
+     "back_focal_length_mm": "121.548441",
+     "front_focal_length_mm": "124.688966",
+     "front_principal_plane_z_mm": "0.311034",
+     "rear_principal_plane_z_mm": "2.420441",
+     "axis": "ROTATIONAL",
+     "status": "DERIVED"
+    },
+    "valid_band_nm": {
+     "min_nm": "450",
+     "max_nm": "700",
+     "status": "DESIGN_BASIS"
+    },
+    "approximations": [
+     "CATALOG_MATERIAL_DISPERSION",
+     "CEMENT_LAYER_NOT_MODELLED",
+     "COATING_AT_SPECIFIED_BOUND",
+     "COATING_PHASE_NOT_MODELLED",
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "LOSSLESS_COATING",
+     "NOMINAL_PRESCRIPTION",
+     "POLARIZATION_INDEPENDENT_COATING"
+    ],
+    "status": "DERIVED"
+   },
+   "frame": {
+    "origin": "FIRST_SURFACE_VERTEX",
+    "optical_axis": "+Z",
+    "nominal_propagation": "+Z",
+    "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "0",
+    "z_max_mm": "5.872",
+    "status": "NOMINAL"
+   }
+  },
+  {
+   "model_id": "spatial-filter-5x-STOP",
+   "display_name": "Stop at the internal focus",
+   "model": {
+    "model_kind": "APERTURE_STOP",
+    "model_version": "1",
+    "opening_radius_mm": "0.02",
+    "edge_radius_mm": "12.7",
+    "plane_z_mm": "0",
+    "status": "DESIGN_BASIS"
+   },
+   "design_geometry": {
+    "kind": "CYLINDER",
+    "diameter_mm": "25.4",
+    "z_min_mm": "0",
+    "z_max_mm": "0.1",
+    "status": "NOMINAL"
+   }
+  }
+ ],
+ "model_materials": [
+  {
+   "material_id": "N-BK7",
+   "display_name": "N-BK7",
+   "dispersion": {
+    "kind": "SELLMEIER",
+    "b": [
+     "1.03961212",
+     "0.231792344",
+     "1.01046945"
+    ],
+    "c_um2": [
+     "0.00600069867",
+     "0.0200179144",
+     "103.560653"
+    ]
+   },
+   "valid_band_nm": {
+    "min_nm": "300",
+    "max_nm": "2500",
+    "status": "SPECIFIED"
+   },
+   "basis": "Sellmeier dispersion formula of N-BK7 (SCHOTT); copied from public optical catalog 2026-10-06.3"
+  },
+  {
+   "material_id": "N-SF5",
+   "display_name": "N-SF5",
+   "dispersion": {
+    "kind": "SELLMEIER",
+    "b": [
+     "1.52481889",
+     "0.187085527",
+     "1.42729015"
+    ],
+    "c_um2": [
+     "0.011254756",
+     "0.0588995392",
+     "129.141675"
+    ]
+   },
+   "valid_band_nm": {
+    "min_nm": "370",
+    "max_nm": "2500",
+    "status": "SPECIFIED"
+   },
+   "basis": "Sellmeier dispersion formula of N-SF5 (SCHOTT); copied from public optical catalog 2026-10-06.3"
+  }
+ ],
+ "model_coatings": [
+  {
+   "coating_id": "NATIVE-AR_450-700R0.005T0.995_AOI0-10",
+   "kind": "ANTI_REFLECTION",
+   "display_name": "Declared anti reflection R=0.005",
+   "bands": [
+    {
+     "min_nm": "450",
+     "max_nm": "700",
+     "reflectance": "0.005",
+     "transmittance": "0.995",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "0",
+    "max_deg": "10",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared anti-reflection coating (lossless: T = 1 - R)"
+  },
+  {
+   "coating_id": "NATIVE-AR_600-700R0.005T0.995_AOI0-10",
+   "kind": "ANTI_REFLECTION",
+   "display_name": "Declared anti reflection R=0.005",
+   "bands": [
+    {
+     "min_nm": "600",
+     "max_nm": "700",
+     "reflectance": "0.005",
+     "transmittance": "0.995",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "0",
+    "max_deg": "10",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared anti-reflection coating (lossless: T = 1 - R)"
+  },
+  {
+   "coating_id": "NATIVE-BS-5DEB5FBBF1",
+   "kind": "BEAMSPLITTER",
+   "display_name": "Declared beamsplitter R=0.5",
+   "bands": [
+    {
+     "min_nm": "600",
+     "max_nm": "700",
+     "reflectance": "0.5",
+     "transmittance": "0.5",
+     "reflectance_s": "0.995",
+     "reflectance_p": "0.005",
+     "transmittance_s": "0.005",
+     "transmittance_p": "0.995",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "40",
+    "max_deg": "50",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared beamsplitter coating"
+  },
+  {
+   "coating_id": "NATIVE-HR_600-700R0.5T0.5_AOI0-10",
+   "kind": "DIELECTRIC_HIGH_REFLECTOR",
+   "display_name": "Declared dielectric high reflector R=0.5",
+   "bands": [
+    {
+     "min_nm": "600",
+     "max_nm": "700",
+     "reflectance": "0.5",
+     "transmittance": "0.5",
+     "status": "DESIGN_BASIS"
+    }
+   ],
+   "valid_aoi_deg": {
+    "min_deg": "0",
+    "max_deg": "10",
+    "status": "DESIGN_BASIS"
+   },
+   "aoi_reference": "AIR_EQUIVALENT",
+   "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)"
+  }
+ ]
+}

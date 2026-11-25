@@ -1,0 +1,116 @@
+{
+  "schema": "opensci.idempotency_key_vectors",
+  "schema_version": "1.0",
+  "source": "os_optics.local.submission.idempotency_key_for (os-optics)",
+  "generator": "tests/test_local_json_api.py (OPENSCI_WRITE_IDEMPOTENCY_VECTORS=1 rewrites)",
+  "algorithm": "opensci-<operation>-hex(SHA-256(utf8(operation) || for each part: 0x00 || part)); a text part is its UTF-8 bytes, a bytes part is used as given",
+  "vectors": [
+    {
+      "operation": "order",
+      "parts": [
+        {
+          "text": "0192b4d2-6c1e-7a3f-9d2b-3c4d5e6f7a8b"
+        }
+      ],
+      "key": "opensci-order-1c6d193bc106ff0d4627978982167726fdfa94918b740b98697c9d7fb9377830"
+    },
+    {
+      "operation": "order",
+      "parts": [
+        {
+          "text": "0192b4d2-6c1e-7a3f-9d2b-3c4d5e6f7a8b"
+        },
+        {
+          "text": "0192b4d3-0a1b-7c2d-8e3f-4a5b6c7d8e9f"
+        }
+      ],
+      "key": "opensci-order-48aea326110e25070972a6a8d3f2b94b9a9701f08be764ce02ca1ec4094a35f1"
+    },
+    {
+      "operation": "bank-transfer-report",
+      "parts": [
+        {
+          "text": "0192b4d3-0a1b-7c2d-8e3f-4a5b6c7d8e9f"
+        }
+      ],
+      "key": "opensci-bank-transfer-report-66aa5d930c8aaaf071c4fafda9caf414e73e94772c03d5dfd76f00d556515394"
+    },
+    {
+      "operation": "artifact-set",
+      "parts": [
+        {
+          "text": "sha256:0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f"
+        }
+      ],
+      "key": "opensci-artifact-set-f5044a8c9a8784f67f1a716e333a07bfef0e4a57f3b0ac18bd4ae8c2dbada27b"
+    },
+    {
+      "operation": "submit",
+      "parts": [
+        {
+          "bytes_hex": "7b2270726f6a656374223a7b22636f6d706f6e656e7473223a5b5d2c226e616d65223a22e9808fe9959c20666f63757320c2b56d227d2c2270726f6a6563745f68617368223a226f7363313a61626162616261626162616261626162616261626162616261626162616261626162616261626162616261626162616261626162616261626162616261626162222c22736368656d61223a226f70656e7363692e636f6d6d65726369616c5f7375626d697373696f6e222c22736368656d615f76657273696f6e223a22322e30227d"
+        }
+      ],
+      "key": "opensci-submit-f8c7b9a0ce34773e46c3a5c71f4b2b75b9b3beab7a32b60559554b8fce7fb2ef"
+    },
+    {
+      "operation": "submit",
+      "parts": [
+        {
+          "bytes_hex": ""
+        }
+      ],
+      "key": "opensci-submit-6cb19e1cc54409963f87026ba0994e151e476c5e68c1c0bfa84cc217283d94b8"
+    },
+    {
+      "operation": "order",
+      "parts": [],
+      "key": "opensci-order-3eeb7e96e59ce40f9cb1a089daba079fd699f6867a30f6634af8570967b2375a"
+    },
+    {
+      "operation": "order",
+      "parts": [
+        {
+          "text": ""
+        }
+      ],
+      "key": "opensci-order-07fa2d40a74728819378f010cee954e0e682b3efd4b8b900a171f70f907936d9"
+    },
+    {
+      "operation": "x",
+      "parts": [
+        {
+          "text": "透镜"
+        }
+      ],
+      "key": "opensci-x-3c233f66d8fb5ecd4e2017b50d18e86d7b306aa292095f8a308112a709b1a8fe"
+    },
+    {
+      "operation": "x",
+      "parts": [
+        {
+          "bytes_hex": "e9808fe9959c"
+        }
+      ],
+      "key": "opensci-x-3c233f66d8fb5ecd4e2017b50d18e86d7b306aa292095f8a308112a709b1a8fe"
+    },
+    {
+      "operation": "x",
+      "parts": [
+        {
+          "text": "a\u0000b"
+        },
+        {
+          "text": "😀 µm"
+        },
+        {
+          "bytes_hex": "00ff80"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "key": "opensci-x-8e6ed12bd339aa985055cb1f468d91142ad2a00c3bd8f35e509e1de25c93c285"
+    }
+  ]
+}

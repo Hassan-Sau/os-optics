@@ -1,0 +1,9 @@
+# Deployment defaults of the installed engine: the OpenSci service it uses when no environment variable names one.
+#
+# Read at run time (os_optics.deployment). This file is not part of the engine build identity: engine_build_id hashes the
+# package's .py sources only, so a service host move edits this value without changing engine_build_id or any recorded
+# fixture. OPENSCI_CATALOG_URL and OPENSCI_API_URL override it per process.
+
+[service]
+# Origin of the OpenSci service (scheme://host[:port], no path). The catalog manifest is <origin>/api/v1/catalog.
+origin = "https://opensci-optics.com"

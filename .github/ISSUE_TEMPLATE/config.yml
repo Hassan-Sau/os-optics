@@ -12,3 +12,6 @@ contact_links:
   - name: Tools, cases, skills and presentation (os-optics-kit)
     url: https://github.com/JunLin615/os-optics-kit
     about: Reusable tools, worked cases, agent skills and presentation material.
+  - name: Security vulnerability
+    url: https://github.com/JunLin615/os-optics/security/advisories/new
+    about: Report vulnerabilities privately, not in a public issue.

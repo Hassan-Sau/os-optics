@@ -1,0 +1,27 @@
+#! format = csv-surface-table/1
+#! name = Six-singlet double-Gauss form (OpenSci test fixture)
+#! units = mm
+# A double-Gauss form built from six air-spaced singlets, with values chosen for this fixture; it is not a published design.
+# The crown XSK16 and the flint XF2 are defined below with the Sellmeier coefficients written in this file.
+[surfaces]
+surface,radius,thickness,material,semi_diameter,mech_semi_diameter,stop,comment
+OBJ,inf,inf,,,,,object at infinity
+1,54,8.7,XSK16,24,26,,L1
+2,152,0.5,,24,26,,
+3,36,12,XSK16,20,22,,L2
+4,inf,0.4,,20,22,,
+5,inf,3.8,XF2,16,18,,L3
+6,22.3,14,,14,18,,
+STO,inf,12.4,,10,,yes,iris
+8,-25.7,3.8,XF2,12,16,,L4
+9,inf,0.4,,14,16,,
+10,inf,10.8,XSK16,14,17,,L5
+11,-37,0.5,,15,17,,
+12,196,6.9,XSK16,18,20,,L6
+13,-67,65.9,,18,20,,
+IMA,,,,,,,image plane
+
+[materials]
+name,kind,b1,b2,b3,c1,c2,c3,min_nm,max_nm,display_name
+XSK16,SELLMEIER,1.34317774,0.241144399,0.994317969,0.00704687339,0.0229005,92.7508526,310,2500,Crown XSK16 (fixture Sellmeier)
+XF2,SELLMEIER,1.34533359,0.209073176,0.937357162,0.00997743871,0.0470450767,111.886764,320,2500,Flint XF2 (fixture Sellmeier)

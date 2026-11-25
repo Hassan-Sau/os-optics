@@ -1,0 +1,167 @@
+{
+  "schema": "opensci.project",
+  "project_schema_version": "2.0",
+  "components": [
+    {
+      "instance_id": "SRC",
+      "optical_role": "source",
+      "custom_part": {
+        "custom_part_key": "user-laser",
+        "description": "User-supplied laser source."
+      },
+      "nominal_pose": {
+        "position_mm": [
+          60.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "source_model": {
+        "model_kind": "GAUSSIAN_BEAM",
+        "wavelength_nm": 632.8,
+        "power_w": 0.001,
+        "waist_radius_mm": 0.5,
+        "waist_position_mm": 0.0,
+        "m2": 1.0,
+        "polarization": {
+          "kind": "LINEAR",
+          "angle_deg": 0.0
+        }
+      }
+    },
+    {
+      "instance_id": "M1",
+      "optical_role": "mirror",
+      "custom_part": {
+        "custom_part_key": "mirror-f-60-d-50",
+        "description": "Concave mirror f = 60 mm (native component mirror.curved)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_wxyz": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "mirror-f-60-d-50"
+    },
+    {
+      "instance_id": "M2",
+      "optical_role": "mirror",
+      "custom_part": {
+        "custom_part_key": "mirror-f-60-d-50",
+        "description": "Concave mirror f = 60 mm (native component mirror.curved)"
+      },
+      "nominal_pose": {
+        "position_mm": [
+          120.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_wxyz": [
+          0.7071067811865476,
+          0.0,
+          -0.7071067811865476,
+          0.0
+        ]
+      },
+      "selected_parameters": [],
+      "retained_dofs": [],
+      "optical_model_id": "mirror-f-60-d-50"
+    }
+  ],
+  "observations": [],
+  "targets": [],
+  "materials": [],
+  "optical_models": [
+    {
+      "model_id": "mirror-f-60-d-50",
+      "display_name": "Concave mirror f = 60 mm",
+      "model": {
+        "model_kind": "SURFACE_SEQUENCE",
+        "model_version": "2",
+        "fidelity": "SPECIFICATION_ENVELOPE",
+        "surfaces": [
+          {
+            "surface_id": "S1",
+            "vertex_z_mm": "0",
+            "radius_mm": "120",
+            "clear_radius_mm": "22.5",
+            "coating_id": "NATIVE-METAL_500-800R0.99T0_AOI0-90",
+            "traced": "REFLECTED",
+            "status": "DERIVED"
+          }
+        ],
+        "media": [],
+        "edge_radius_mm": "25",
+        "valid_band_nm": {
+          "min_nm": "500",
+          "max_nm": "800",
+          "status": "DESIGN_BASIS"
+        },
+        "approximations": [
+          "COATING_AT_SPECIFIED_BOUND",
+          "COATING_PHASE_NOT_MODELLED",
+          "EDGE_AS_OPAQUE_RIM",
+          "IDEAL_SURFACE_FIGURE",
+          "POLARIZATION_INDEPENDENT_COATING",
+          "TRANSMITTED_LIGHT_NOT_TRACED"
+        ],
+        "status": "DESIGN_BASIS"
+      },
+      "frame": {
+        "origin": "REFLECTING_FACE_CENTER",
+        "optical_axis": "+Z",
+        "nominal_propagation": "REFLECTED_ABOUT_+Z",
+        "reference_axis": "FACE_NORMAL",
+        "symmetry": "ROTATIONAL_ABOUT_LOCAL_Z"
+      },
+      "design_geometry": {
+        "kind": "CYLINDER",
+        "diameter_mm": "50",
+        "z_min_mm": "-12.5",
+        "z_max_mm": "2.633055",
+        "status": "NOMINAL"
+      }
+    }
+  ],
+  "model_coatings": [
+    {
+      "coating_id": "NATIVE-METAL_500-800R0.99T0_AOI0-90",
+      "kind": "METALLIC_REFLECTOR",
+      "display_name": "Declared metallic reflector R=0.99",
+      "bands": [
+        {
+          "min_nm": "500",
+          "max_nm": "800",
+          "reflectance": "0.99",
+          "transmittance": "0",
+          "status": "DESIGN_BASIS"
+        }
+      ],
+      "valid_aoi_deg": {
+        "min_deg": "0",
+        "max_deg": "90",
+        "status": "DESIGN_BASIS"
+      },
+      "aoi_reference": "AIR_EQUIVALENT",
+      "basis": "Declared mirror coating (transmittance not stated: taken as 0 for a metal film, 1 - R for a dielectric stack)"
+    }
+  ]
+}

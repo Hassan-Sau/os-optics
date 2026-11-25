@@ -1,0 +1,628 @@
+{
+ "configuration": {
+  "include_paths": true,
+  "numerical": {
+   "antiparallel_tol": 1e-12,
+   "aperture_edge_tol_mm": 1e-09,
+   "aperture_quad_angular": 256,
+   "aperture_quad_extent_sigmas": 6.0,
+   "aperture_quad_sector_nodes": 48,
+   "basis_orthonormality_tol": 1e-09,
+   "beam_envelope_k": 2.0,
+   "birefringent_gaussian_rel_tol": 0.01,
+   "birefringent_interface_warn_aoi_deg": 2.0,
+   "capture_min_power_fraction": 0.001,
+   "capture_scan_max_points": 4096,
+   "config_version": "1.7.0",
+   "cross_runtime_abs_tol": 1e-12,
+   "cross_runtime_rel_tol": 1e-09,
+   "design_point_angle_anti_reflection_deg": 3.0,
+   "design_point_angle_beamsplitter_deg": 2.0,
+   "design_point_angle_dielectric_high_reflector_deg": 3.0,
+   "design_point_angle_metallic_reflector_deg": 5.0,
+   "design_point_interference_angle_max_deg": 3.0,
+   "design_point_interference_shift_fraction": 0.25,
+   "design_point_retarder_wavelength_rel": 0.0005,
+   "design_point_wavelength_rel": 0.005,
+   "energy_conservation_tol": 1e-09,
+   "fd_step_rotation_rad": 1e-05,
+   "fd_step_translation_mm": 0.001,
+   "first_order_angle_step_rad": 0.0001,
+   "first_order_b_resolution_mm": 0.0001,
+   "first_order_c_resolution_per_mm": 1e-08,
+   "first_order_position_step_mm": 0.01,
+   "first_order_unitless_resolution": 1e-06,
+   "gaussian_astig_align_tol": 1e-09,
+   "gaussian_clip_scope_fraction": 0.1,
+   "gaussian_clip_warn_fraction": 0.001,
+   "gaussian_max_aoi_deg": 60.0,
+   "gaussian_max_ray_spread_ratio": 2.0,
+   "gaussian_max_w_over_radius": 0.2,
+   "gaussian_plane_axial_spread_fraction": 0.1,
+   "gaussian_round_tol": 1e-09,
+   "gaussian_scope_divergence_rad": 0.3,
+   "gaussian_umbilic_rel_tol": 1e-09,
+   "gaussian_warn_divergence_rad": 0.1,
+   "grazing_fail_aoi_deg": 89.9,
+   "grazing_warn_aoi_deg": 85.0,
+   "hash_float_abs_floor": 1e-12,
+   "hash_float_sig_digits": 9,
+   "interference_collinear_period_ratio": 10.0,
+   "interference_det_tol": 1e-30,
+   "interference_min_crossing_deg": 1e-06,
+   "interference_min_overlap": 0.001,
+   "interference_wavelength_tol_nm": 1e-09,
+   "jacobian_condition_warn": 1000000.0,
+   "jacobian_rcond": 1e-10,
+   "laboratory_reach_mm": 1000.0,
+   "layout_arc_resolution": 32,
+   "layout_geometry_tol_mm": 1e-06,
+   "layout_height_tol_mm": 1e-06,
+   "lm_cost_tol": 1e-18,
+   "lm_damping_down": 0.1,
+   "lm_damping_up": 10.0,
+   "lm_gain_accept": 0.0,
+   "lm_initial_damping": 0.001,
+   "lm_max_damping": 1000000000000.0,
+   "lm_max_iterations": 100,
+   "lm_residual_tol": 1e-06,
+   "lm_scaling_floor": 1e-12,
+   "lm_step_tol": 1e-12,
+   "max_interactions_per_path": 64,
+   "max_interference_pairs": 256,
+   "max_mesh_patches": 1024,
+   "max_paths": 3,
+   "max_return_analysis_work": 4000000,
+   "max_scatter_origins": 64,
+   "max_trace_steps": 2048,
+   "moving_envelope_rotation_samples": 9,
+   "negligible_power_fraction": 1e-09,
+   "nonlinear_beam_quality_tol": 0.05,
+   "nonlinear_depletion_rel_tol": 0.02,
+   "nonlinear_focusing_rel_tol": 0.02,
+   "nonlinear_harmonic_gaussian_rel_tol": 0.02,
+   "nonlinear_linewidth_rel_tol": 0.02,
+   "nonlinear_quadrature_rel_tol": 1e-07,
+   "observability_participation_min": 0.25,
+   "parallel_dot_tol": 1e-12,
+   "power_epsilon_W": 1e-15,
+   "power_ledger_fraction_resolution": 1e-12,
+   "pupil_points_per_ring": 12,
+   "pupil_ring_count": 8,
+   "quaternion_norm_tol": 1e-06,
+   "rating_beam_diameter_tol_rel": 0.05,
+   "rating_polarization_fraction_tol": 0.01,
+   "rating_pulse_duration_tol_rel": 0.1,
+   "rating_repetition_rate_tol_rel": 0.1,
+   "rating_unlocated_light_share": 0.01,
+   "rating_wavelength_tol_rel": 0.02,
+   "ray_min_advance_mm": 1e-07,
+   "retarder_warn_aoi_deg": 20.0,
+   "sag_bracket_samples": 65,
+   "sag_intersection_tol_mm": 1e-12,
+   "sag_max_iterations": 64,
+   "sellmeier_pole_rel_tol": 1e-09,
+   "tabulated_aoi_tol_deg": 1e-09,
+   "tabulated_range_tol_nm": 1e-09,
+   "tir_warn_margin": 0.001,
+   "unit_vector_tol": 1e-09,
+   "zero_vector_tol": 1e-12
+  },
+  "random_seed": null,
+  "run_control": false,
+  "run_layout": false,
+  "run_physics": true
+ },
+ "project": {
+  "baseplate": null,
+  "components": [
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "L0",
+    "ports": [
+     {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "kind": "output",
+      "port_id": "out",
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    "pose": {
+     "position_mm": [
+      -50.0,
+      0.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ]
+    },
+    "role": "source",
+    "source": {
+     "coherence_group": null,
+     "coherence_length_mm": 10000.0,
+     "linewidth_nm": null,
+     "local_pose": {
+      "position_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "quaternion_wxyz": [
+       1.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "m2_x": 1.0,
+     "m2_y": 1.0,
+     "medium": "air",
+     "polarization": {
+      "ex": [
+       6.123233995736766e-17,
+       0.0
+      ],
+      "ey": [
+       1.0,
+       0.0
+      ]
+     },
+     "power_W": 0.001,
+     "pupil_points_per_ring": null,
+     "pupil_ring_count": null,
+     "source_id": "L0",
+     "spectrum": [],
+     "waist_position_z_mm": 0.0,
+     "waist_radius_x_mm": 0.8,
+     "waist_radius_y_mm": 0.8,
+     "wavelength_nm": 532.0
+    },
+    "surfaces": []
+   },
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "BS1",
+    "ports": [],
+    "pose": {
+     "position_mm": [
+      0.0,
+      0.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.2705980500730985,
+      0.2705980500730985,
+      -0.6532814824381882,
+      -0.6532814824381883
+     ]
+    },
+    "role": "splitter",
+    "source": null,
+    "surfaces": [
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": {
+        "kind": "constant",
+        "max_aoi_deg": 90.0,
+        "reflectance_p": 0.5,
+        "reflectance_s": 0.5,
+        "transmittance_p": 0.5,
+        "transmittance_s": 0.5,
+        "valid_wavelength_nm": [
+         100.0,
+         20000.0
+        ]
+       },
+       "kind": "beam_splitter",
+       "phases": {
+        "reflection_p_rad": [
+         4.71238898038469
+        ],
+        "reflection_s_rad": [
+         1.5707963267948966
+        ],
+        "transmission_p_rad": [
+         0.0
+        ],
+        "transmission_s_rad": [
+         0.0
+        ],
+        "wavelength_nm": null
+       },
+       "reflection_phase_rad": 1.5707963267948966,
+       "transmission_phase_rad": 0.0
+      },
+      "medium_negative": "air",
+      "medium_positive": "air",
+      "mount_margin_mm": 0.0,
+      "normal": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "surface_id": "coating"
+     }
+    ]
+   },
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "MA",
+    "ports": [],
+    "pose": {
+     "position_mm": [
+      100.0,
+      0.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.2705980500730985,
+      0.2705980500730985,
+      -0.6532814824381882,
+      -0.6532814824381883
+     ]
+    },
+    "role": "mirror",
+    "source": null,
+    "surfaces": [
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": null,
+       "kind": "mirror",
+       "phase_p_rad": 0.0,
+       "phase_s_rad": 3.141592653589793,
+       "reflective_side": "positive"
+      },
+      "medium_negative": "air",
+      "medium_positive": "air",
+      "mount_margin_mm": 0.0,
+      "normal": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "surface_id": "face"
+     }
+    ]
+   },
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "MB",
+    "ports": [],
+    "pose": {
+     "position_mm": [
+      0.0,
+      100.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.6532814824381883,
+      0.6532814824381882,
+      0.2705980500730985,
+      0.2705980500730985
+     ]
+    },
+    "role": "mirror",
+    "source": null,
+    "surfaces": [
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": null,
+       "kind": "mirror",
+       "phase_p_rad": 0.0,
+       "phase_s_rad": 3.141592653589793,
+       "reflective_side": "positive"
+      },
+      "medium_negative": "air",
+      "medium_positive": "air",
+      "mount_margin_mm": 0.0,
+      "normal": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "surface_id": "face"
+     }
+    ]
+   },
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "BS2",
+    "ports": [],
+    "pose": {
+     "position_mm": [
+      100.0,
+      100.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.2705980500730985,
+      0.2705980500730985,
+      -0.6532814824381882,
+      -0.6532814824381883
+     ]
+    },
+    "role": "splitter",
+    "source": null,
+    "surfaces": [
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": {
+        "kind": "constant",
+        "max_aoi_deg": 90.0,
+        "reflectance_p": 0.5,
+        "reflectance_s": 0.5,
+        "transmittance_p": 0.5,
+        "transmittance_s": 0.5,
+        "valid_wavelength_nm": [
+         100.0,
+         20000.0
+        ]
+       },
+       "kind": "beam_splitter",
+       "phases": {
+        "reflection_p_rad": [
+         4.71238898038469
+        ],
+        "reflection_s_rad": [
+         1.5707963267948966
+        ],
+        "transmission_p_rad": [
+         0.0
+        ],
+        "transmission_s_rad": [
+         0.0
+        ],
+        "wavelength_nm": null
+       },
+       "reflection_phase_rad": 1.5707963267948966,
+       "transmission_phase_rad": 0.0
+      },
+      "medium_negative": "air",
+      "medium_positive": "air",
+      "mount_margin_mm": 0.0,
+      "normal": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "surface_id": "coating"
+     }
+    ]
+   },
+   {
+    "actuators": [],
+    "envelope": null,
+    "instance_id": "WB",
+    "ports": [],
+    "pose": {
+     "position_mm": [
+      50.0,
+      100.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ]
+    },
+    "role": "window",
+    "source": null,
+    "surfaces": [
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": null,
+       "kind": "refract",
+       "trace_fresnel_reflection": true
+      },
+      "medium_negative": "N-BK7",
+      "medium_positive": "air",
+      "mount_margin_mm": 2.0,
+      "normal": [
+       0.0,
+       0.0,
+       -1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       -0.20615
+      ],
+      "surface_id": "front"
+     },
+     {
+      "aperture": {
+       "center_offset_mm": [
+        0.0,
+        0.0
+       ],
+       "obstruction_radius_mm": 0.0,
+       "radius_mm": 12.7,
+       "shape": "circle"
+      },
+      "aperture_u_axis": null,
+      "geometry": "plane",
+      "interaction": {
+       "coating": null,
+       "kind": "refract",
+       "trace_fresnel_reflection": true
+      },
+      "medium_negative": "N-BK7",
+      "medium_positive": "air",
+      "mount_margin_mm": 2.0,
+      "normal": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "origin_mm": [
+       0.0,
+       0.0,
+       0.20615
+      ],
+      "surface_id": "back"
+     }
+    ]
+   }
+  ],
+  "control_spec": null,
+  "materials": [],
+  "name": "Mach-Zehnder with traced window reflections, three paths",
+  "observations": [
+   {
+    "absorbing": false,
+    "acceptance_half_angle_deg": null,
+    "aperture": {
+     "center_offset_mm": [
+      0.0,
+      0.0
+     ],
+     "obstruction_radius_mm": 0.0,
+     "radius_mm": 15.0,
+     "shape": "circle"
+    },
+    "device_id": null,
+    "medium": "air",
+    "observation_id": "port_x",
+    "pose": {
+     "position_mm": [
+      160.0,
+      100.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ]
+    }
+   },
+   {
+    "absorbing": false,
+    "acceptance_half_angle_deg": null,
+    "aperture": {
+     "center_offset_mm": [
+      0.0,
+      0.0
+     ],
+     "obstruction_radius_mm": 0.0,
+     "radius_mm": 15.0,
+     "shape": "circle"
+    },
+    "device_id": null,
+    "medium": "air",
+    "observation_id": "port_y",
+    "pose": {
+     "position_mm": [
+      100.0,
+      160.0,
+      20.0
+     ],
+     "quaternion_wxyz": [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.7071067811865476
+     ]
+    }
+   }
+  ],
+  "project_id": null,
+  "revision_id": null,
+  "targets": []
+ }
+}

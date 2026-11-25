@@ -1,0 +1,505 @@
+{
+ "components": [
+  {
+   "custom_part": {
+    "custom_part_key": "laser",
+    "description": "Gallery source."
+   },
+   "instance_id": "SRC",
+   "nominal_pose": {
+    "position_mm": [
+     -50.004999999999995,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "power_w": 0.001,
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 3.0,
+    "wavelength_nm": 587.5618
+   }
+  },
+  {
+   "custom_part": {
+    "custom_part_key": "lens",
+    "description": "Double-Gauss objective, six glass elements in four groups: imported from a csv-surface-table/1 prescription (4 elements, 1 aperture stop)"
+   },
+   "instance_id": "LENS",
+   "nominal_pose": {
+    "position_mm": [
+     -19.404999999999998,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_model_id": "lens",
+   "optical_role": "lens",
+   "retained_dofs": [],
+   "selected_parameters": []
+  },
+  {
+   "custom_part": {
+    "custom_part_key": "laser",
+    "description": "Gallery source."
+   },
+   "instance_id": "FIELD1",
+   "nominal_pose": {
+    "position_mm": [
+     -50.004999999999995,
+     -4.374870619613829,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.4777144171082609,
+     0.4777144171082609,
+     0.5213338044735969,
+     0.5213338044735969
+    ]
+   },
+   "optical_role": "source",
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "power_w": 0.001,
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 3.0,
+    "wavelength_nm": 587.5618
+   }
+  }
+ ],
+ "design_intent": "OPTICAL_SYSTEM",
+ "model_materials": [
+  {
+   "basis": "Defined in the imported prescription.",
+   "dispersion": {
+    "b": [
+     "1.34533359",
+     "0.209073176",
+     "0.937357162"
+    ],
+    "c_um2": [
+     "0.00997743871",
+     "0.0470450767",
+     "111.886764"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "F2 (fixture Sellmeier)",
+   "material_id": "F2",
+   "valid_band_nm": {
+    "max_nm": "2500",
+    "min_nm": "320",
+    "status": "SPECIFIED"
+   }
+  },
+  {
+   "basis": "Defined in the imported prescription.",
+   "dispersion": {
+    "b": [
+     "1.34317774",
+     "0.241144399",
+     "0.994317969"
+    ],
+    "c_um2": [
+     "0.00704687339",
+     "0.0229005",
+     "92.7508526"
+    ],
+    "kind": "SELLMEIER"
+   },
+   "display_name": "N-SK16 (fixture Sellmeier)",
+   "material_id": "N-SK16",
+   "valid_band_nm": {
+    "max_nm": "2500",
+    "min_nm": "310",
+    "status": "SPECIFIED"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "aperture": {
+    "radius_mm": 13.0,
+    "shape": "circle"
+   },
+   "observation_id": "image",
+   "pose": {
+    "position_mm": [
+     50.004999999999995,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  }
+ ],
+ "optical_models": [
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups (csv-surface-table/1, source SHA-256 9735e88809fdc0246f09fd09c642f71666ee7800f0a62270048617a937256ca0)",
+   "model": {
+    "envelope": {
+     "diameter_mm": "27.6",
+     "kind": "CYLINDER",
+     "status": "DERIVED",
+     "z_max_mm": "38.81",
+     "z_min_mm": "0"
+    },
+    "members": [
+     {
+      "member_id": "L1",
+      "model_id": "lens-L1",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "L2",
+      "model_id": "lens-L2",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        4.62
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "STOP",
+      "model_id": "lens-STOP",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        20.64
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "L3",
+      "model_id": "lens-L3",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        26.85
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     },
+     {
+      "member_id": "L4",
+      "model_id": "lens-L4",
+      "pose": {
+       "position_mm": [
+        0.0,
+        0.0,
+        34.41
+       ],
+       "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     }
+    ],
+    "model_kind": "COMPOUND",
+    "model_version": "1",
+    "ports": [
+     {
+      "direction": [
+       "0",
+       "0",
+       "1"
+      ],
+      "point_mm": [
+       "0",
+       "0",
+       "0"
+      ],
+      "port_id": "IN",
+      "role": "INPUT",
+      "status": "DERIVED"
+     },
+     {
+      "direction": [
+       "0",
+       "0",
+       "1"
+      ],
+      "point_mm": [
+       "0",
+       "0",
+       "38.81"
+      ],
+      "port_id": "OUT",
+      "role": "OUTPUT",
+      "status": "DERIVED"
+     }
+    ]
+   },
+   "model_id": "lens"
+  },
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups: element L1, surfaces 1-2 (rows 11-12, csv-surface-table/1)",
+   "model": {
+    "approximations": [
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "NOMINAL_PRESCRIPTION"
+    ],
+    "edge_radius_mm": "13.8",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "media": [
+     "N-SK16"
+    ],
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "status": "SPECIFIED",
+    "surfaces": [
+     {
+      "clear_radius_mm": "13",
+      "radius_mm": "27.08",
+      "status": "SPECIFIED",
+      "surface_id": "S1",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "0"
+     },
+     {
+      "clear_radius_mm": "12.2",
+      "radius_mm": "76.26",
+      "status": "SPECIFIED",
+      "surface_id": "S2",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "4.37"
+     }
+    ],
+    "valid_band_nm": {
+     "max_nm": "2500",
+     "min_nm": "320",
+     "status": "DERIVED"
+    }
+   },
+   "model_id": "lens-L1"
+  },
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups: cemented element L2, surfaces 3-5 (rows 13-15, csv-surface-table/1)",
+   "model": {
+    "approximations": [
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "NOMINAL_PRESCRIPTION"
+    ],
+    "edge_radius_mm": "11.8",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "media": [
+     "N-SK16",
+     "F2"
+    ],
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "status": "SPECIFIED",
+    "surfaces": [
+     {
+      "clear_radius_mm": "11.2",
+      "radius_mm": "17.98",
+      "status": "SPECIFIED",
+      "surface_id": "S1",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "0"
+     },
+     {
+      "clear_radius_mm": "10.6",
+      "status": "SPECIFIED",
+      "surface_id": "S2",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "7"
+     },
+     {
+      "clear_radius_mm": "8",
+      "edge_radius_mm": "9",
+      "radius_mm": "11.14",
+      "status": "SPECIFIED",
+      "surface_id": "S3",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "8.89"
+     }
+    ],
+    "valid_band_nm": {
+     "max_nm": "2500",
+     "min_nm": "320",
+     "status": "DERIVED"
+    }
+   },
+   "model_id": "lens-L2"
+  },
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups: aperture stop STOP, surface STO (row 16, csv-surface-table/1)",
+   "model": {
+    "edge_radius_mm": "13.8",
+    "model_kind": "APERTURE_STOP",
+    "model_version": "1",
+    "opening_radius_mm": "5.1",
+    "plane_z_mm": "0",
+    "status": "SPECIFIED"
+   },
+   "model_id": "lens-STOP"
+  },
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups: cemented element L3, surfaces 7-9 (rows 17-19, csv-surface-table/1)",
+   "model": {
+    "approximations": [
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "NOMINAL_PRESCRIPTION"
+    ],
+    "edge_radius_mm": "12",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "media": [
+     "F2",
+     "N-SK16"
+    ],
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "status": "SPECIFIED",
+    "surfaces": [
+     {
+      "clear_radius_mm": "7.6",
+      "edge_radius_mm": "9.5",
+      "radius_mm": "-12.84",
+      "status": "SPECIFIED",
+      "surface_id": "S1",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "0"
+     },
+     {
+      "clear_radius_mm": "9.4",
+      "status": "SPECIFIED",
+      "surface_id": "S2",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "1.89"
+     },
+     {
+      "clear_radius_mm": "10.6",
+      "radius_mm": "-18.49",
+      "status": "SPECIFIED",
+      "surface_id": "S3",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "7.31"
+     }
+    ],
+    "valid_band_nm": {
+     "max_nm": "2500",
+     "min_nm": "320",
+     "status": "DERIVED"
+    }
+   },
+   "model_id": "lens-L3"
+  },
+  {
+   "display_name": "Double-Gauss objective, six glass elements in four groups: element L4, surfaces 10-11 (rows 20-21, csv-surface-table/1)",
+   "model": {
+    "approximations": [
+     "EDGE_AS_OPAQUE_RIM",
+     "GHOST_REFLECTIONS_NOT_TRACED",
+     "IDEAL_SURFACE_FIGURE",
+     "NOMINAL_PRESCRIPTION"
+    ],
+    "edge_radius_mm": "12.6",
+    "fidelity": "SURFACE_PRESCRIPTION",
+    "media": [
+     "N-SK16"
+    ],
+    "model_kind": "SURFACE_SEQUENCE",
+    "model_version": "2",
+    "status": "SPECIFIED",
+    "surfaces": [
+     {
+      "clear_radius_mm": "11.6",
+      "radius_mm": "98.21",
+      "status": "SPECIFIED",
+      "surface_id": "S1",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "0"
+     },
+     {
+      "clear_radius_mm": "12",
+      "radius_mm": "-33.57",
+      "status": "SPECIFIED",
+      "surface_id": "S2",
+      "traced": "TRANSMITTED",
+      "vertex_z_mm": "4.4"
+     }
+    ],
+    "valid_band_nm": {
+     "max_nm": "2500",
+     "min_nm": "320",
+     "status": "DERIVED"
+    }
+   },
+   "model_id": "lens-L4"
+  }
+ ],
+ "project_schema_version": "2.0",
+ "schema": "opensci.project"
+}

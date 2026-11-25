@@ -1,0 +1,105 @@
+{
+ "components": [
+  {
+   "custom_part": {
+    "custom_part_key": "user-laser",
+    "description": "User-supplied laser source."
+   },
+   "instance_id": "SRC",
+   "nominal_pose": {
+    "position_mm": [
+     -150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "source",
+   "retained_dofs": [],
+   "selected_parameters": [],
+   "source_model": {
+    "m2": 1.0,
+    "model_kind": "GAUSSIAN_BEAM",
+    "polarization": {
+     "angle_deg": 0.0,
+     "kind": "LINEAR"
+    },
+    "power_w": 1.0,
+    "waist_position_mm": 0.0,
+    "waist_radius_mm": 1.0,
+    "wavelength_nm": 532.0
+   }
+  },
+  {
+   "instance_id": "ND1",
+   "nominal_pose": {
+    "position_mm": [
+     40.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   "optical_role": "filter",
+   "product": {
+    "catalog_version": "2026-10-28.1",
+    "optical_sku": "OS-OPT-FLT-ND-D12P7-OD4-400-700-ABS-T2P5-CA11P43"
+   },
+   "retained_dofs": [],
+   "selected_parameters": []
+  }
+ ],
+ "materials": [],
+ "observations": [
+  {
+   "absorbing": false,
+   "aperture": {
+    "center_offset_mm": [
+     0.0,
+     0.0
+    ],
+    "obstruction_radius_mm": 0.0,
+    "radius_mm": 12.5,
+    "shape": "circle"
+   },
+   "medium": "air",
+   "observation_id": "CAM",
+   "pose": {
+    "position_mm": [
+     150.0,
+     0.0,
+     0.0
+    ],
+    "quaternion_wxyz": [
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   }
+  }
+ ],
+ "project_schema_version": "2.0",
+ "schema": "opensci.project",
+ "targets": [
+  {
+   "maximum": 0.0002,
+   "metric": "power_W",
+   "observation_id": "CAM",
+   "parameters": [],
+   "source_id": "SRC",
+   "target_id": "cam_sat",
+   "unit": "W"
+  }
+ ]
+}

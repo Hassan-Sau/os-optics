@@ -1,0 +1,267 @@
+{
+  "schema": "opensci.commercial.mounting_sheet",
+  "schema_version": "1",
+  "resolution_id": "01a13add-42ff-72cc-92f3-1836370dba62",
+  "order_id": "01a13add-a6a7-7184-b51e-82bb0a0a948b",
+  "order_number": "OS-ORD-20261014-000004",
+  "basis": "DESIGN",
+  "public_catalog_version": "2026-10-06.3",
+  "title": "Mounting sheet",
+  "title_zh_cn": "安装说明",
+  "units": [
+    {
+      "unit_id": "L1",
+      "instance_id": "L1",
+      "quantity": 1,
+      "optic": {
+        "opensci_sku": "OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-1100-W587P6",
+        "line_key": "B01",
+        "display_name": "Plano-convex lens, D12.7 mm, f = 100 mm, N-BK7, AR 400-1100 nm",
+        "display_name_zh_cn": "平凸透镜，直径 12.7 mm，焦距 100 mm，N-BK7，增透膜 400-1100 nm"
+      },
+      "beam_height_mm": 100.0,
+      "incidence_deg": 0.0,
+      "incidence_basis": "DESIGN",
+      "chain": [
+        {
+          "role": "MOUNT",
+          "opensci_sku": "OS-MECH-OPTIC-MOUNT-FIXED-D12P7-H15",
+          "line_key": "B02",
+          "quantity": 1,
+          "display_name": "Optic mount for 12.7 mm round optics, fixed, axis 15 mm",
+          "display_name_zh_cn": "光学元件安装架，适用于 12.7 毫米圆形光学元件，固定式，光轴高度 15 毫米"
+        },
+        {
+          "role": "POST",
+          "opensci_sku": "OS-MECH-POST-D12P7-L50",
+          "line_key": "B03",
+          "quantity": 1,
+          "display_name": "Optical post, 12.7 mm diameter, 50 mm",
+          "display_name_zh_cn": "光学支杆，直径 12.7 毫米，长 50 毫米"
+        },
+        {
+          "role": "POST_HOLDER",
+          "opensci_sku": "OS-MECH-POST-HOLDER-FORK-L75",
+          "line_key": "B04",
+          "quantity": 1,
+          "display_name": "Post holder with integrated fork base, 75 mm",
+          "display_name_zh_cn": "带一体式叉块底座的支杆座，高 75 毫米"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "code": "OPTIC_INTO_MOUNT",
+          "interface_designation": "OD12.7-SEAT",
+          "text": "Seat the optic OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-1100-W587P6 in the mount OS-MECH-OPTIC-MOUNT-FIXED-D12P7-H15 (OD12.7-SEAT).",
+          "text_zh_cn": "将光学元件 OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-1100-W587P6 装入镜架 OS-MECH-OPTIC-MOUNT-FIXED-D12P7-H15（OD12.7-SEAT）。"
+        },
+        {
+          "step": 2,
+          "code": "MOUNT_ONTO_POST",
+          "interface_designation": "M4x0.7",
+          "text": "Screw the mount OS-MECH-OPTIC-MOUNT-FIXED-D12P7-H15 onto the post OS-MECH-POST-D12P7-L50 with the post's top stud (M4x0.7).",
+          "text_zh_cn": "用支杆顶端的螺柱（M4x0.7）把镜架 OS-MECH-OPTIC-MOUNT-FIXED-D12P7-H15 拧到支杆 OS-MECH-POST-D12P7-L50 上。"
+        },
+        {
+          "step": 3,
+          "code": "POST_INTO_HOLDER",
+          "interface_designation": "OD12.7-POST",
+          "insertion_depth_mm": 40.0,
+          "text": "Insert the post into the post holder OS-MECH-POST-HOLDER-FORK-L75 (OD12.7-POST) to 40 mm and lock it.",
+          "text_zh_cn": "将支杆插入支杆座 OS-MECH-POST-HOLDER-FORK-L75（OD12.7-POST），插入深度 40 mm，锁紧。"
+        },
+        {
+          "step": 4,
+          "code": "HOLDER_ONTO_SURFACE",
+          "interface_designation": "M6x1.0",
+          "text": "Fix the post holder on a hole of the surface with one M6x1.0 screw through its base slot; with the slot along the beam it slides along the beam.",
+          "text_zh_cn": "用一颗 M6x1.0 螺钉穿过支杆座底座的槽，把支杆座固定在台面的螺孔上；槽沿光束方向时可沿光束微调位置。"
+        }
+      ],
+      "height_arithmetic": {
+        "holder_height_mm": 75.0,
+        "post_length_mm": 50.0,
+        "mount_axis_height_mm": 15.0,
+        "insertion_depth_mm": 40.0,
+        "terms": [
+          {
+            "code": "HOLDER_HEIGHT",
+            "label": "Post holder height",
+            "label_zh_cn": "支杆座高度",
+            "mm": 75.0
+          },
+          {
+            "code": "POST_LENGTH",
+            "label": "Post length",
+            "label_zh_cn": "支杆长度",
+            "mm": 50.0
+          },
+          {
+            "code": "MOUNT_AXIS_HEIGHT",
+            "label": "Mount axis height",
+            "label_zh_cn": "镜架光轴高度",
+            "mm": 15.0
+          },
+          {
+            "code": "INSERTION_DEPTH",
+            "label": "Insertion depth",
+            "label_zh_cn": "插入深度",
+            "mm": -40.0
+          }
+        ],
+        "total_mm": 100.0,
+        "text": "Holder 75 mm + post 50 mm + mount axis height 15 mm − insertion 40 mm = beam height 100 mm.",
+        "text_zh_cn": "支杆座高 75 mm + 支杆长 50 mm + 镜架光轴高 15 mm − 插入深度 40 mm = 光轴高度 100 mm。"
+      },
+      "height_travel_mm": {
+        "down": -10.0,
+        "up": 15.0
+      },
+      "insertion_interval_mm": [
+        25.0,
+        50.0
+      ],
+      "reachable_axis_height_mm": [
+        40.0,
+        315.0
+      ],
+      "adjustment_axes": [
+        "Ty (POST_HEIGHT_CLAMP, -10 / +15 mm)",
+        "Tz (BASE_SLOT_TRAVEL, -12.5 / +12.5 mm, holder slot along the beam)"
+      ],
+      "adjustment_axes_zh_cn": [
+        "Ty (POST_HEIGHT_CLAMP, -10 / +15 mm)",
+        "Tz (BASE_SLOT_TRAVEL, -12.5 / +12.5 mm, 支杆座的槽沿光束方向)"
+      ],
+      "adjustments": [
+        {
+          "axis": "Tx",
+          "requested_control": "MANUAL",
+          "status": "FIXED",
+          "mechanism_code": null,
+          "travel": null,
+          "condition": null,
+          "text": "Tx: not provided by this hardware; fixed when assembled.",
+          "text_zh_cn": "Tx：这组光机不提供该调节，装配时固定。"
+        },
+        {
+          "axis": "Ty",
+          "requested_control": "MANUAL",
+          "status": "AS_REQUESTED",
+          "mechanism_code": "POST_HEIGHT_CLAMP",
+          "travel": {
+            "minus": -10.0,
+            "plus": 15.0,
+            "unit": "mm"
+          },
+          "condition": null,
+          "text": "Ty: slide the post in its holder, -10 / +15 mm.",
+          "text_zh_cn": "Ty：在支杆座中上下滑动支杆，-10 / +15 mm。"
+        },
+        {
+          "axis": "Tz",
+          "requested_control": "NUMERICAL",
+          "status": "MANUAL_INSTEAD_OF_NUMERICAL",
+          "mechanism_code": "BASE_SLOT_TRAVEL",
+          "travel": {
+            "minus": -12.5,
+            "plus": 12.5,
+            "unit": "mm"
+          },
+          "condition": "BASE_SLOT_ALONG_BEAM",
+          "text": "Tz: move the holder along its base slot (slot along the beam), -12.5 / +12.5 mm.",
+          "text_zh_cn": "Tz：沿底座槽移动支杆座（槽沿光束方向时），-12.5 / +12.5 mm。"
+        }
+      ],
+      "checks": [
+        {
+          "code": "MOUNT_HOLDS_OPTIC",
+          "status": "PASS",
+          "text": "The mount holds the optic (shape, size, thickness, clear aperture) and does not clip the beam at the design's angle.",
+          "text_zh_cn": "镜架能夹持该元件（形状、尺寸、厚度、通光孔径），且在设计的入射角下不遮挡光束。"
+        },
+        {
+          "code": "HEIGHT_CLOSURE",
+          "status": "PASS",
+          "text": "Holder height, post length, mount axis height and insertion depth give the stated beam height.",
+          "text_zh_cn": "支杆座高度、支杆长度、镜架光轴高度和插入深度合起来正好是所述光轴高度。"
+        },
+        {
+          "code": "INTERFACE_FIT",
+          "status": "PASS",
+          "text": "The post diameter fits the holder clamp; the post thread fits the mount's interface.",
+          "text_zh_cn": "支杆直径与支杆座夹持孔一致；支杆螺纹与镜架接口一致。"
+        },
+        {
+          "code": "INTRA_CHAIN_ENVELOPE",
+          "status": "PASS",
+          "text": "The parts of the set do not intersect outside their contacts.",
+          "text_zh_cn": "这组零件之间除接触面外没有干涉。"
+        },
+        {
+          "code": "ENGAGEMENT_RANGE",
+          "status": "NOT_RUN",
+          "text": "The post holder's insertion range is an assumed value, so the insertion depth is not checked against a measured range.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值，因此插入深度未按实测范围检查。"
+        },
+        {
+          "code": "ACCEPTED_ENVELOPES",
+          "status": "PASS",
+          "text": "The part outlines rest on accepted facts.",
+          "text_zh_cn": "零件外形依据已确认的数据。"
+        },
+        {
+          "code": "LAYOUT",
+          "status": "NOT_RUN",
+          "text": "No layout: spacing to other optics and hardware, the beam beyond this optic and fixing hole positions are not checked.",
+          "text_zh_cn": "没有布局：未检查与其他元件和光机的间距、元件之后的光路以及固定孔的位置。"
+        }
+      ],
+      "assumptions": [
+        {
+          "code": "holder.insertion_interval",
+          "text": "The post holder's insertion range is an assumed value.",
+          "text_zh_cn": "支杆座允许的插入深度范围是假定值。"
+        }
+      ],
+      "conditions": [
+        {
+          "code": "BASE_SLOT_ALONG_BEAM",
+          "text": "The slide along the beam needs the holder fixed with its slot along the beam.",
+          "text_zh_cn": "沿光束方向的位置调节要求支杆座的槽沿光束方向固定。"
+        }
+      ],
+      "text": "OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-1100-W587P6, 1 unit(s), beam height 100 mm, angle of incidence 0°.",
+      "text_zh_cn": "OS-OPT-LENS-PCX-D12P7-F100-T2P2-R51P5-NBK7-AR400-1100-W587P6，1 件，光轴高度 100 mm，入射角 0°。"
+    }
+  ],
+  "notes": [
+    {
+      "code": "SURFACE",
+      "text": "Every height is measured from the surface the post holders stand on (the top of a breadboard or table).",
+      "text_zh_cn": "所有高度都从支杆座所立的平面（面包板或台面的上表面）量起。"
+    },
+    {
+      "code": "DESIGN_VALIDATED_LOCALLY",
+      "text": "These optics are ordered from your design: its optical function and the optics' relative positions passed its Local Validation.",
+      "text_zh_cn": "这些光学元件按您的设计订购，设计的光学功能和元件之间的相对位置已由本地验证确认。"
+    },
+    {
+      "code": "NOT_CHECKED_COLLISIONS_BETWEEN_CHAINS",
+      "text": "Collisions between the hardware of different optics are not checked.",
+      "text_zh_cn": "未检查不同元件的光机之间是否碰撞。"
+    },
+    {
+      "code": "NOT_CHECKED_BEAM_PATH_CLEARANCE",
+      "text": "Whether other hardware blocks the beam is not checked.",
+      "text_zh_cn": "未检查光路是否被其他光机遮挡。"
+    },
+    {
+      "code": "NOT_CHECKED_FIXING_HOLES",
+      "text": "The fixing hole positions on your surface are not checked.",
+      "text_zh_cn": "未检查台面上固定孔的位置。"
+    }
+  ],
+  "content_hash": "b6c475cb39e25a582600dcfd40fe2ec152e3a77fe9bf31b099edf01006a14799"
+}
