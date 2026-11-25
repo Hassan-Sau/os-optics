@@ -254,8 +254,8 @@ SCHEMA_VERSION = "1.12.0"
 # both to that release's values. A published version's contracts never change in place, so tests/generate_fixtures.py
 # --freeze --unreleased (re-recording the contract baseline within an unpublished SCHEMA_VERSION) refuses when __version__
 # or SCHEMA_VERSION is not past them (tests/test_fixtures_cli_freeze.py).
-LAST_PUBLISHED_VERSION = "0.13.0"
-LAST_PUBLISHED_SCHEMA_VERSION = "1.11.0"
+LAST_PUBLISHED_VERSION = "0.14.0"
+LAST_PUBLISHED_SCHEMA_VERSION = "1.12.0"
 MANIFEST_VERSION = "1.0.0"
 # The version of the NumericalConfig defaults. Like SCHEMA_VERSION it moves once per release: the first change of a default
 # (or a new setting) after a published release bumps it, and later changes before the next release keep that unreleased

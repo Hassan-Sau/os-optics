@@ -27,6 +27,6 @@ Start with a working optical design, then explore its results and adapt it to yo
 
 Each case states whether it uses the optical catalog and the engine and catalog releases it was verified with. Install os-optics-kit into the same Python environment as os-optics: `python -m pip install os-optics-kit`.
 
-These guides describe **os-optics 0.13.0**; see [version matching](installation.md#match-the-documentation-to-the-installed-version) for the matching installation. Commands expose their options through `--help`; Python APIs are documented in the installed package and the [PyPI reference](https://pypi.org/project/os-optics/).
+These guides describe **os-optics 0.14.0**; see [version matching](installation.md#match-the-documentation-to-the-installed-version) for the matching installation. Commands expose their options through `--help`; Python APIs are documented in the installed package and the [PyPI reference](https://pypi.org/project/os-optics/).
 
 [OpenSci website](https://opensci-optics.com/) · [Package releases](https://pypi.org/project/os-optics/#history) · [Ask a question](https://github.com/JunLin615/os-optics/issues/new/choose)

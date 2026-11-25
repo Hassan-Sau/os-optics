@@ -7,12 +7,12 @@ OS Optics simulates optical designs locally: PyPI `os-optics`, command `os-optic
 ## Install and check
 
 ```bash
-python -m pip install "os-optics[protected]==0.13.0"
+python -m pip install "os-optics[protected]==0.14.0"
 os-optics doctor
 os-optics catalog sync
 ```
 
-Python 3.11+. This guide describes 0.13.0, recorded in [engine-baseline.json](engine-baseline.json).
+Python 3.11+. This guide describes 0.14.0, recorded in [engine-baseline.json](engine-baseline.json).
 `os-optics <command> --help` and `os-optics capabilities` describe every command.
 
 ## Design, run, read
@@ -69,9 +69,9 @@ whenever it answers, including an unmet target.
 
 Saved results retain their identities after edits. Freshness reasons identify
 physical, target or computation-budget changes. Inspect older results as historical
-evidence and rerun when the task needs the edited design. A run made by 0.12.0 reads
+evidence and rerun when the task needs the edited design. A run made by 0.13.0 reads
 `HISTORICAL` (`ENGINE_CHANGED`) and `project verify` reports it `INCONSISTENT`; run the
-Project again with 0.13.0. Hash checks establish
+Project again with 0.14.0. Hash checks establish
 artifact consistency; analytical or experimental checks establish other claims.
 Purchasing eligibility is reported by the commercial operation separately.
 
